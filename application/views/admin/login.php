@@ -45,7 +45,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <button>Đăng nhập</button>
+                        <button name="account" type="submit">Đăng nhập</button>
                     </td>
                 </tr>
             </table>

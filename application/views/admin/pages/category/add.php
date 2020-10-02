@@ -24,6 +24,20 @@
             </td>
         </tr>
         <tr>
+            <th width="150px" align="left">Mô tả ngắn</th>
+            <td>:</td>
+            <td>
+               <textarea style="width:310px" class="ckeditor" name="" rows="4"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th width="150px" align="left">Nội dung</th>
+            <td>:</td>
+            <td>
+               <textarea class="ckeditor" name="" id="ckeditor" rows="4"></textarea>
+            </td>
+        </tr>
+        <tr>
             <th width="150px" align="left">Menu</th>
             <td>:</td>
             <td>

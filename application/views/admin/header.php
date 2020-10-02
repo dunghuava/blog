@@ -5,6 +5,7 @@
     <base href="<?=base_url()?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=base_url('assets/css/admin.css?v='.time())?>">
+    <link rel="stylesheet" href="<?=base_url('assets/lib/font-awesome/css/font-awesome.min.css')?>">
     <title>Admin System</title>
 </head>
 <body>
@@ -15,8 +16,8 @@
   <tr>
     <td class="header_menu">
         [ <a href="admin" class="menu">Xin chào user ! </a> ]
-		[ <a href="admin/info" class="menu">Thông tin</a> ]
-		[ <a href="admin/logout" class="menu">Logout</a> ]
+        [ <a href="admin/info" class="menu">Thông tin</a> ]
+        [ <a href="admin/logout" class="menu">Logout</a> ]
     </td>
   </tr>
   <tr>

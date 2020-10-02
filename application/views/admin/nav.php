@@ -18,6 +18,7 @@
     </div>
     <div class="package">
         <h4>SITE</h4>
+        <p><a href="<?=base_url()?>">Vào trang web</a></p>
         <p><a href="">Thông tin site</a></p>
         <p><a href="">Seo cơ bản</a></p>
         <p><a href="">Account</a></p>
