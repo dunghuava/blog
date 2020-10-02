@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=base_url('assets/css/admin.css?v='.time())?>">
     <link rel="stylesheet" href="<?=base_url('assets/lib/font-awesome/css/font-awesome.min.css')?>">
+    <script src="<?=base_url('assets/lib/jquery.min.js')?>"></script>
+
     <title>Admin System</title>
 </head>
 <body>
