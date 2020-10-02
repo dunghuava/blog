@@ -18,6 +18,22 @@ button {
   padding: 8px 10px;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.pbt0 {
+  padding-bottom: 0px !important;
+}
+
 .php {
   padding: 1em;
 }

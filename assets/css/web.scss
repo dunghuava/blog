@@ -1,1 +1,82 @@
 @import "_common.scss";
+@import "_variable.scss";
+
+.main-nav{
+    .top-nav{
+        padding: 9px 0px;
+        background: #094e34;
+        li{
+            padding-right: 15px ;
+            color: #fff;
+            display: inline-block;
+            .fa{
+                margin-right: 5px;
+            }
+            a{
+                color: #fff;
+            }
+        }
+    }
+    .main-menu{
+        background: linear-gradient(to bottom,$main_color,$main_color);
+        transition: box-shadow .25s ease;
+        padding: 2px 0px;
+        .ls-main-menu{
+            padding-top: 2px;
+            li{
+                font-size: 16px;
+                padding: 20px 10px;
+                display: inline-block;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.footer{
+    color: #fff;
+    background: #202736; 
+    padding: 15px 0px;   
+
+    .ls-ft-pro{
+        li{
+            display: block;
+            a{
+                text-decoration: none;;
+                color: #737373;
+                transition: color .25s;
+                transition: color .25s;
+                border-bottom: 1px solid #3f3f3e;
+                display: block;
+                margin: 2px 0;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .bottom{
+        font-size: 14px;
+        padding: 8px 0px;
+        background: #191E29;
+    }
+    .frm-ft{
+        *{
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        input{
+            height: 40px;
+        }
+        button{
+            background: $main_color;
+            color: #fff;
+            border:none;
+            outline: none;
+        }
+    }
+}
+
+.sec-slider{
+    color: #fff;
+    background: $main_color;
+}

@@ -23,4 +23,11 @@ class MY_Controller extends CI_Controller {
         $data['data']=$page;
 		$this->load->view('admin/layout',$data);
 	}
+	public function load($page=array()){
+
+		$data['data']=$page;
+		$this->load->view('header', $data);
+		$this->load->view('pages/'.$data['data']['path'],$data);
+		$this->load->view('footer', $data);
+	}
 }
