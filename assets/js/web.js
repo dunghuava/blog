@@ -58,7 +58,6 @@ $('.main-slider').slick({
 $('.item-question').click(function (e) { 
     e.preventDefault();
     $(this).toggleClass('opened');
-    $(this).find('.item-anwser').slideToggle('400');
     if ($(this).hasClass('opened')){
       $(this).find('.q-btn').html('<span class="fa fa-angle-up"></span>');
     }else{

@@ -40,6 +40,7 @@
             </div>
         </div>
     </footer>
+    <script src="<?=base_url('assets/lib/bootstrap/js/bootstrap.js')?>"></script>
     <script src="<?=base_url('assets/js/web.js?v='.time())?>"></script>
 </body>
 </html>
