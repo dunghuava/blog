@@ -27,3 +27,38 @@ img{
 .pbt0{
     padding-bottom: 0px !important;
 }
+
+.btn-arrow{
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    padding: 8px 15px;
+    z-index: 99;
+    border-radius: 4px;
+    background: #0C714B;
+    cursor: pointer;
+
+    &.btn-next{
+        right: 10px;
+    }
+    &.btn-prev{
+        left: 10px;
+    }
+}
+.slick-dots{
+    text-align: center !important;
+    display: inline-flex !important;
+}
+.custom-slick-dots{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    margin: auto !important;
+    background: #0C714B;
+    margin-left: 5px;
+}
+.slick{
+    border: none !important;
+    outline: none !important;
+}
