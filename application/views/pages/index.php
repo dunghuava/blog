@@ -124,7 +124,7 @@
                     <div class="col-md-6">
                         <div class="item-question">
                             <div class="q-border">
-                                <p><span class="q-btn">+</span>&nbsp;<?=$i?>.Contact Center sử dụng cho nhóm khách hàng nào?</p>
+                                <p><span class="q-btn"><span class="fa fa-angle-down"></span></span>&nbsp;<?=$i?>.Contact Center sử dụng cho nhóm khách hàng nào?</p>
                             </div>
                             <div class="item-anwser">
                                 <p>Gói chức năng Contact Center dành cho tất cả các doanh nghiệp muốn xây dựng trung tâm Chăm sóc khách hàng với đầy đủ các tính năng mạnh mẽ và phù hợp nhất. Có thêm các tính năng live chat, email, facebook, campaign hỗ trợ doanh nghiệp chăm sóc khách hàng tốt hơn và thuận tiện hơn.</p>

@@ -60,9 +60,9 @@ $('.item-question').click(function (e) {
     $(this).toggleClass('opened');
     $(this).find('.item-anwser').slideToggle('400');
     if ($(this).hasClass('opened')){
-      $(this).find('.q-btn').html('--');
+      $(this).find('.q-btn').html('<span class="fa fa-angle-up"></span>');
     }else{
-      $(this).find('.q-btn').html('+');
+      $(this).find('.q-btn').html('<span class="fa fa-angle-down"></span>');
     }
 });
 
