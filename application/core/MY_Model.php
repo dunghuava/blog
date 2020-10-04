@@ -12,12 +12,16 @@ class MY_Model extends CI_Model {
 		parent::__construct();
 	}
 	
-	public function all($where=array()){
+	public function all($where=array(),$sort=''){
 		if (!empty($where)){
 			$this->db->where($where);
 		}
+		if (!empty($sort)){
+			$this->db->order_by($this->key,$sort);
+		}
 		return $this->db->get($this->table)->result_array();
 	}
+	
 	public function find($where){
 		$this->db->where($where);
 		return $this->db->get($this->table)->row_array();

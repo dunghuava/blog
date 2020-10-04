@@ -20,6 +20,11 @@ class MY_Controller extends CI_Controller {
 	 */
 	public function include($page=array())
 	{
+		if (!$this->session->has_userdata('admin_infor')){
+			redirect(base_url('admin/login'),'location');
+		}
+		$this->admin_infor = $this->session->get_userdata('admin_infor');
+		$data['admin_infor']=$this->admin_infor['admin_infor'];
         $data['data']=$page;
 		$this->load->view('admin/layout',$data);
 	}

@@ -6,7 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=base_url('assets/css/admin.css?v='.time())?>">
     <link rel="stylesheet" href="<?=base_url('assets/lib/font-awesome/css/font-awesome.min.css')?>">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="<?=base_url('assets/css/sweetalert2.css')?>">
     <script src="<?=base_url('assets/lib/jquery.min.js')?>"></script>
+
+    <style type="text/css">
+      .dataTables_wrapper .dataTables_filter input {
+        height: 30px;
+        margin-bottom: 10px;
+      }
+
+      .dataTables_wrapper .dataTables_length select {
+        height: 30px;
+      }
+    </style>
 
     <title>Admin System</title>
 </head>
@@ -17,8 +30,8 @@
   </tr>
   <tr>
     <td class="header_menu">
-        [ <a href="admin" class="menu">Xin chào user ! </a> ]
-        [ <a href="admin/info" class="menu">Thông tin</a> ]
+        [ <a href="admin" class="menu">Xin chào <?php echo $admin_infor['user_fullname'] ?> ! </a> ]
+        [ <a href="admin/info" class="menu">Đổi mật khẩu</a> ]
         [ <a href="admin/logout" class="menu">Logout</a> ]
     </td>
   </tr>

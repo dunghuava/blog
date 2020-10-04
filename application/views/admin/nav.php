@@ -1,13 +1,13 @@
 <td width="200" class="menu"><br>
     <div class="package">
-        <h4>QUẢN LÝ</h4>
-        <p><a href="admin/category">Tất cả danh mục</a></p>
-        <p><a href="admin/category/add">Tạo mới</a></p>
+        <h4>DANH MỤC</h4>
+        <p><a href="<?=base_url()?>admin/category">Tất cả danh mục</a></p>
+        <p><a href="<?=base_url()?>admin/category/add">Tạo mới</a></p>
     </div>
     <div class="package">
-        <h4>BÀI VIẾT</h4>
-        <p><a href="">Tất cả bài viết</a></p>
-        <p><a href="">Tạo mới</a></p>
+        <h4>BLOG</h4>
+        <p><a href="<?=base_url()?>admin/post">Tất cả bài viết</a></p>
+        <p><a href="<?=base_url()?>admin/post/add">Tạo mới</a></p>
     </div>
     <div class="package">
         <h4>MỞ RỘNG</h4>

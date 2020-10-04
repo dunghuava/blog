@@ -3,39 +3,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Account extends MY_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/Account
-	 *	- or -
-	 * 		http://example.com/index.php/Account/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/Account/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	public function __construct()
+    {
+        parent::__construct();
+		$this->load->model('Account_M');
 
-	function check(){
-		if (!isset($_SESSION['account'])){
-			return false;
-		}
-		return true;
 	}
 	public function login()
 	{
-		if (isset($_POST['account'])){
-			$username = $this->input->post('username');
-			$password = $this->input->post('password');
-			
+		if ($this->session->has_userdata('admin_infor')){
+			redirect(base_url('admin/category'),'location');
+		}
+		$post = $this->input->post();
+		if ($post){
+			$user_name = $post['username'];
+			$user_password = md5($post['password']);
+			if (isset($post['account'])){
+				$is_login = $this->Account_M->CheckLogin($user_name,$user_password,1);
+				if ($is_login){
+					$infor = $this->Account_M->all(['user_name'=>$user_name,'is_admin'=>'1']);
+					// print_r($infor);die();
+					$this->session->set_userdata('admin_infor', $infor[0] );
+					redirect(base_url('admin'),'location');
+				}else{
+					$this->session->set_flashdata('reponse','Tên đăng nhập hoặc mật khẩu không đúng.');
+				}
+			}
 		}
 		$this->load->view('admin/login');
 	}
 	public function logout()
 	{
-		$this->load->view('admin/login');
+		$this->session->unset_userdata('admin_infor');
+		redirect(base_url().'admin/login','location');
 	}
 }

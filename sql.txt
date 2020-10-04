@@ -1,1 +1,41 @@
 ALTER TABLE `db_danhmuc` ADD `hinh_anh` VARCHAR(255) NOT NULL AFTER `noi_dung_vn`;
+ALTER TABLE `db_danhmuc` ADD `alias_vn` VARCHAR(225) NOT NULL AFTER `ten_vn`;
+ALTER TABLE `db_danhmuc` ADD `module_id` INT NOT NULL AFTER `id`;
+ALTER TABLE `db_danhmuc` ADD `stt` VARCHAR(10) NOT NULL AFTER `id`;
+ALTER TABLE `db_danhmuc` CHANGE `seo_vn` `keyword_vn` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+
+CREATE TABLE `db_module` (
+ `module_id` int(11) NOT NULL,
+ `module_title` varchar(255) NOT NULL,
+ `created_at` varchar(50) NOT NULL,
+ `updated_at` varchar(50) NOT NULL,
+ PRIMARY KEY (`module_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+CREATE TABLE `db_tintuc` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `ten_vn` varchar(500) NOT NULL,
+ `alias_vn` text NOT NULL,
+ `hinh_anh` varchar(255) NOT NULL,
+ `mo_ta_vn` mediumtext NOT NULL,
+ `noi_dung_vn` text NOT NULL,
+ `id_loai` int(11) NOT NULL DEFAULT 0,
+ `ngay_dang` varchar(50) NOT NULL,
+ `keyword` varchar(500) NOT NULL,
+ `hien_thi` int(11) NOT NULL COMMENT '	0=ẩn/1=hiển thị',
+ `noi_bac` int(11) NOT NULL COMMENT '0=khong;1=co;',
+ `nguon` varchar(500) NOT NULL,
+ `created_at` varchar(50) NOT NULL,
+ `updated_at` varchar(50) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+CREATE TABLE `db_user` (
+ `user_id` int(11) NOT NULL AUTO_INCREMENT,
+ `user_name` varchar(255) DEFAULT NULL,
+ `user_fullname` varchar(255) DEFAULT NULL,
+ `user_password` varchar(255) DEFAULT NULL,
+ `user_email` varchar(50) NOT NULL,
+ `is_admin` int(2) NOT NULL DEFAULT 0,
+ `created_at` varchar(50) DEFAULT NULL,
+ `updated_at` varchar(50) DEFAULT NULL,
+ PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4

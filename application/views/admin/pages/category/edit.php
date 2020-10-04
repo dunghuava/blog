@@ -3,21 +3,28 @@
         <tr>
             <th width="150px" align="left">Hình ảnh</th>
             <td>
-                <input style="width:300px" type="file" name="hinh_anh" id="hinh_anh" required="">
+                <input style="width:300px" type="file" name="hinh_anh" id="hinh_anh">
+            </td>
+        </tr>
+
+        <tr id="tr_image">
+            <th width="150px" align="left"></th>
+            <td>
+                <img src="<?=base_url().'upload/images/'.$data['category']['hinh_anh']?>" onclick="onDelete()" title="Bấm vào đây để xóa" style="cursor: pointer;max-height: 150px;">
             </td>
         </tr>
 
         <tr>
             <th width="150px" align="left">Tên danh mục</th>
             <td>
-                <input style="width:300px" onkeyup="addText(this,'#alias_vn')" type="text" name="ten_vn" id="ten_vn" required="">
+                <input style="width:300px" onkeyup="addText(this,'#alias_vn')" type="text" name="ten_vn" id="ten_vn" value="<?=$data['category']['ten_vn']?>" required="">
             </td>
         </tr>
 
         <tr>
             <th width="150px" align="left">Đường dẫn</th>
             <td>
-                <input style="width:300px" type="text" name="alias_vn" id="alias_vn" placeholder="Tạo đường dẫn tự động">
+                <input style="width:300px" type="text" name="alias_vn" id="alias_vn" value="<?=$data['category']['alias_vn']?>" placeholder="Tạo đường dẫn tự động" required="">
             </td>
         </tr>
 
@@ -47,20 +54,20 @@
         <tr>
             <th width="150px" align="left">Mô tả ngắn</th>
             <td>
-               <textarea style="width:310px" id="mo_ta_vn" name="mo_ta_vn" rows="4"></textarea>
+               <textarea style="width:310px" id="mo_ta_vn" name="mo_ta_vn" rows="4"><?=$data['category']['mo_ta_vn']?></textarea>
             </td>
         </tr>
         <tr>
             <th width="150px" align="left">Nội dung</th>
             <td>
-               <textarea class="ckeditor" name="noi_dung_vn" id="noi_dung_vn" rows="4"></textarea>
+               <textarea class="ckeditor" name="noi_dung_vn" id="noi_dung_vn" rows="4"><?=$data['category']['noi_dung_vn']?></textarea>
             </td>
         </tr>
 
         <tr>
             <th width="150px" align="left">Keyword (SEO)</th>
             <td>
-               <textarea style="width:310px" id="keyword_vn" name="keyword_vn" rows="4"></textarea>
+               <textarea style="width:310px" id="keyword_vn" name="keyword_vn" rows="4"><?=$data['category']['keyword_vn']?></textarea>
             </td>
         </tr>
 
@@ -72,8 +79,14 @@
         </tr> -->
         <tr>
             <th width="150px" align="left">Hiển thị</th>
+            <?php if ($data['category']['hien_thi'] == 1) {
+            		$checked = 'checked';
+            	}else{
+            		$checked = '';
+            	} 
+            ?>
             <td>
-                <input style="width:18px;height:18px" type="checkbox" name="hien_thi" id="hien_thi" value="1" checked>
+                <input style="width:18px;height:18px" type="checkbox" name="hien_thi" id="hien_thi" value="1" <?php echo $checked; ?>>
             </td>
         </tr>
         <tr>
@@ -86,8 +99,29 @@
 </form>
 
 <script type="text/javascript">
+
+	$('#module_id').val(<?=$data['category']['module_id']?>);
+    $('#id_loai').val(<?=$data['category']['id_loai']?>);
     function addText(e,target){
         var val = make_alias(e.value);
         $(target).val(val);
     }
+
+    function onDelete(){
+        Swal.fire({
+            title: 'Bạn có muốn xóa mục này?',
+            text: "Dữ liệu đã xóa sẽ không thể phục hồi",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'Hủy',
+            confirmButtonText: 'Xóa'
+            }).then((result) => {
+            if (result.value) {
+            	$('#tr_image').css("display","none");
+            	$('#hinh_anh').attr("required","required");
+            }
+        });
+        }
 </script>

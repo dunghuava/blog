@@ -21,24 +21,25 @@
 </head>
 <body>
         <form action="" method="post">
+            
             <table>
                 <tr>
                     <td colspan="3" align="center">
-                        <h2>>> Login Admin <<</h2><hr>
+                        <h2>Login Admin</h2><hr>
                     </td>
                 </tr>
                 <tr>
                     <td>Tên đăng nhập</td>
-                    <td>:</td>
+                    <td></td>
                     <td>
-                        <input type="text" name="username">
+                        <input type="text" id="username" name="username" required="">
                     </td>
                 </tr>
                 <tr>
                     <td>Mật khẩu</td>
-                    <td>:</td>
+                    <td></td>
                     <td>
-                        <input type="password" name="username">
+                        <input type="password" id="password" name="password" required="">
                     </td>
                 </tr>
                 <tr>
@@ -49,6 +50,7 @@
                     </td>
                 </tr>
             </table>
+            <p style="margin:5px 0px;color:red;font-size:12px"><?php if ($this->session->flashdata('reponse')) {echo $this->session->flashdata('reponse');} ?></p>
         </form>
 </body>
 </html>
