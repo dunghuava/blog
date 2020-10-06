@@ -25,37 +25,33 @@ class Post extends MY_Controller {
 		$post = $this->input->post();
 
 		if ($this->input->post()) {
-			if (isset($_FILES['post_img']['name'])){
-				$file = $_FILES['post_img'];
+			if (isset($_FILES['hinh_anh']['name'])){
+				$file = $_FILES['hinh_anh'];
 				$filename = md5($file['name'].time());
 				$path='upload/images/'.$filename;
 				move_uploaded_file($file['tmp_name'],$path);
 			}
 
-			if ($post['post_active'] == '') {
-				$post['post_active'] = 0;
+			if ($post['hien_thi'] == '') {
+				$post['hien_thi'] = 0;
 			}
 
 			
 
-			$date_post_format = substr($post['date_post'],  6, 4). substr($post['date_post'],  3, 2).substr($post['date_post'],  0, 2);
-			$date_time = $date_post_format.$post['time_post'];
-
-			$content = preg_replace('/h>|h1>|h2>|h3>|h4>|em>/', 'p>', $post['post_content']);
+			$date_post_format = substr($post['ngay_dang'],  6, 4). substr($post['ngay_dang'],  3, 2).substr($post['ngay_dang'],  0, 2);
 
 			$data_insert = array(
-				'post_category_id' => $post['post_category_id'], 
-				'post_title' => $post['post_title'], 
-				'post_alias' => $post['post_alias'], 
-				'post_introduce' => $post['post_introduce'], 
-				'post_content' => $content, 
-				'post_author' => $post['post_author'], 
-				'post_keyword' => $post['post_keyword'], 
-				'post_description' => $post['post_description'], 
-				'post_highlights' => 0, 
-				'post_active' => $post['post_active'], 
-				'post_date_time' => $date_time,
-				'post_img' => $filename, 
+				'id_loai' => $post['id_loai'], 
+				'ten_vn' => $post['ten_vn'], 
+				'alias_vn' => $post['alias_vn'], 
+				'mo_ta_vn' => $post['mo_ta_vn'], 
+				'noi_dung_vn' => $post['noi_dung_vn'], 
+				'nguon' => $post['nguon'], 
+				'keyword_vn' => $post['keyword_vn'],
+				'noi_bac' => 0, 
+				'hien_thi' => $post['hien_thi'], 
+				'ngay_dang' => $date_post_format,
+				'hinh_anh' => $filename, 
 			);
 
 			$this->Post_M->create($data_insert);
@@ -69,10 +65,10 @@ class Post extends MY_Controller {
 
 		}
 		
-		// $list_category = $this->get_option_category(1);
+		$list_category = $this->get_option_category(1);
 
 		// print_r($list_category);die();
-		// $data['list_category'] = $list_category;
+		$data['arr_category'] = $list_category;
 		$data['page_title']='Tạo mới blog';
 		$data['path']='post/add';
         
@@ -81,48 +77,45 @@ class Post extends MY_Controller {
 
 	public function edit($id)
 	{
-		$info_post = $this->Post_M->find_row(['post_id' => $id]);
+		$info_blog = $this->Post_M->find(['id' => $id]);
 
 		$post = $this->input->post();
 
 		if ($this->input->post()) {
-			if (!empty($_FILES['post_img']['name'])){
-				$file = $_FILES['post_img'];
+			if (!empty($_FILES['hinh_anh']['name'])){
+				$file = $_FILES['hinh_anh'];
 				$filename = md5($file['name'].time());
 				$path='upload/images/'.$filename;
 				move_uploaded_file($file['tmp_name'],$path);
-				@unlink('upload/images/'.$info_post['post_img']);
+				@unlink('upload/images/'.$info_blog['hinh_anh']);
 
 			}else{
-				$filename = $info_post['post_img'];
+				$filename = $info_blog['hinh_anh'];
 			}
 
-			if ($post['post_active'] == '') {
-				$post['post_active'] = 0;
+			if ($post['hien_thi'] == '') {
+				$post['hien_thi'] = 0;
 			}
 
 			
 
-			$date_post_format = substr($post['date_post'],  6, 4). substr($post['date_post'],  3, 2).substr($post['date_post'],  0, 2);
-			$date_time = $date_post_format.$post['time_post'];
-
-			$content = preg_replace('/h>|h1>|h2>|h3>|h4>|em>/', 'p>', $post['post_content']);
+			$date_post_format = substr($post['ngay_dang'],  6, 4). substr($post['ngay_dang'],  3, 2).substr($post['ngay_dang'],  0, 2);
 
 			$data_update = array(
-				'post_category_id' => $post['post_category_id'], 
-				'post_title' => $post['post_title'], 
-				'post_alias' => $post['post_alias'], 
-				'post_introduce' => $post['post_introduce'], 
-				'post_content' => $content, 
-				'post_author' => $post['post_author'], 
-				'post_keyword' => $post['post_keyword'], 
-				'post_description' => $post['post_description'], 
-				'post_active' => $post['post_active'], 
-				'post_date_time' => $date_time,
-				'post_img' => $filename, 
+				'id_loai' => $post['id_loai'], 
+				'ten_vn' => $post['ten_vn'], 
+				'alias_vn' => $post['alias_vn'], 
+				'mo_ta_vn' => $post['mo_ta_vn'], 
+				'noi_dung_vn' => $post['noi_dung_vn'], 
+				'nguon' => $post['nguon'], 
+				'keyword_vn' => $post['keyword_vn'],
+				'hien_thi' => $post['hien_thi'], 
+				'ngay_dang' => $date_post_format,
+				'hinh_anh' => $filename, 
 			);
 
-			$this->Post_M->update(['post_id' => $id],$data_update);
+
+			$this->Post_M->update(['id' => $id],$data_update);
 
 			$status = array(
 				'code'=>'success',
@@ -134,14 +127,12 @@ class Post extends MY_Controller {
 		}
 
 		$list_category = $this->get_option_category(1);
-		$info_post = $this->Post_M->find_row(['post_id' => $id]);
-		$data['list_category'] = $list_category;
-		$data['info_post'] = $info_post;
-		$data['page_name']='Chỉnh sửa bài viết';
-		$data['page_menu']='post';
-		$this->getHeader($data);
-		$this->load->view('admin/pages/post/edit.php',$data);
-		$this->getFooter();
+		$data['arr_category'] = $list_category;
+		$data['blog'] = $info_blog;
+		$data['page_title']='Chỉnh sửa blog';
+		$data['path']='post/edit';
+        
+		$this->include($data);
 	}
 
 	public function update(){
@@ -161,7 +152,7 @@ class Post extends MY_Controller {
 	}
 
 	public function get_option_category($cate_module_id=0){
-		$where['cate_parent_id']=0;
+		$where['id_loai']=0;
 		// if ($cate_module_id!=0){
 		// 	$where['cate_module_id']=$cate_module_id;
 		// }
@@ -169,28 +160,28 @@ class Post extends MY_Controller {
 		$all = $this->Category_M->all($where,$oder_by);
 		$str='';
 		foreach ($all as $val){
-			if ($val['cate_module_id'] == $cate_module_id) {
-				$str.='<option value="'.$val['cate_id'].'">'.$val['cate_title'].'</option>';
-			}
+			// if ($val['module_id'] == $cate_module_id) {
+			// 	$str.='<option value="'.$val['id'].'">'.$val['ten_vn'].'</option>';
+			// }
 			
-			$sub1 = $this->Category_M->all(['cate_parent_id'=>$val['cate_id'],'cate_module_id'=> $cate_module_id],$oder_by);
+			$sub1 = $this->Category_M->all(['id_loai'=>$val['id'],'module_id'=> $cate_module_id],$oder_by);
 			// echo'<pre>';
 			// print_r($sub1);
 			if (count($sub1) >0){
 				foreach ($sub1 as $val1){
-					$str.='<option value="'.$val1['cate_id'].'">|__'.$val1['cate_title'].'</option>';
-					$sub2 = $this->Category_M->all(['cate_parent_id'=>$val1['cate_id'],'cate_module_id'=> $cate_module_id],$oder_by);
+					$str.='<option value="'.$val1['id'].'">|__'.$val1['ten_vn'].'</option>';
+					$sub2 = $this->Category_M->all(['id_loai'=>$val1['id'],'module_id'=> $cate_module_id],$oder_by);
 					if (count($sub2) >0){
 						foreach ($sub2 as $val2){
-							$str.='<option value="'.$val2['cate_id'].'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__'.$val2['cate_title'].'</option>';
-							$sub3 = $this->Category_M->all(['cate_parent_id'=>$val2['cate_id'],'cate_module_id'=> $cate_module_id],$oder_by);
+							$str.='<option value="'.$val2['id'].'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__'.$val2['ten_vn'].'</option>';
+							$sub3 = $this->Category_M->all(['id_loai'=>$val2['id'],'module_id'=> $cate_module_id],$oder_by);
 							if (count($sub3) >0){
 								foreach ($sub3 as $val3){
-									$str.='<option value="'.$val3['cate_id'].'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__'.$val3['cate_title'].'</option>';
-									$sub4 = $this->Category_M->all(['cate_parent_id'=>$val3['cate_id'],'cate_module_id'=> $cate_module_id],$oder_by);
+									$str.='<option value="'.$val3['id'].'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__'.$val3['ten_vn'].'</option>';
+									$sub4 = $this->Category_M->all(['id_loai'=>$val3['id'],'module_id'=> $cate_module_id],$oder_by);
 									if (count($sub4) >0){
 										foreach ($sub4 as $val4){
-											$str.='<option value="'.$val4['cate_id'].'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__'.$val4['cate_title'].'</option>';
+											$str.='<option value="'.$val4['id'].'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__'.$val4['ten_vn'].'</option>';
 										}
 									}
 								}

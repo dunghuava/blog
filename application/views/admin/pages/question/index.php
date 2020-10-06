@@ -1,44 +1,31 @@
 <form action="" method="post">
+    <a href="<?=base_url('admin/question/add/')?>">[Thêm câu hỏi]</a>
+    <br>
+    <br>
     <table border="1" style="width:99%" class="list-table datatable">
         <thead>
             <tr class="heading">
-                
-                <th>Blog</th>
-                <th>Hình ảnh</th>
-                <th>Chủ đề</th>
-                <!-- <th width="8%">Ngày đăng</th> -->
-                <th width="8%">Nổi bậc</th>
+                <th>Câu hỏi</th>
+                <th>Trả lời</th>
                 <th width="8%">Hiển thị</th>
                 <th width="10%">Quản lý</th>
-                
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($data['list_post'] as $key => $val) {?>
+            <?php foreach ($data['list_question'] as $key => $val) {?>
 
                 <tr>
                     <td>
-                        <?=$val['ten_vn']?>
-                    </td>
-                    <td class="text-center">
-                        <?php if (!empty($val['hinh_anh'])){ ?>
-                            <img onclick="onDeleteImg(<?=$val['id']?>,'<?=$val['hinh_anh']?>')" style="cursor:pointer;max-height: 100px;max-width: 150px;" src="<?=base_url('upload/images/'.$val['hinh_anh'])?>" alt="">
-                        <?php } ?>
+                        <?=$val['cau_hoi_vn']?>
                     </td>
                     <td>
-                        <?php 
-                        $category = $this->Category_M->find(['id'=>$val['id_loai']]);
-                        echo $category['ten_vn'];
-                        ?>
-                    </td>
-                    <td class="text-center">
-                        <input class="ip-ckb" onchange="setCkb(this,'noi_bac',<?=$val['id']?>)" type="checkbox" <?=$val['noi_bac']==1 ? 'checked':''?> >
+                       <?=$val['dap_an_vn']?>
                     </td>
                     <td class="text-center">
                         <input class="ip-ckb" onchange="setCkb(this,'hien_thi',<?=$val['id']?>)" type="checkbox" <?=$val['hien_thi']==1 ? 'checked':''?> >
                     </td>
                     <td>
-                        <a href="<?=base_url('admin/post/edit/'.$val['id'])?>">
+                        <a href="<?=base_url('admin/question/edit/'.$val['id'])?>">
                             [Xem / Sửa]
                         </a>
 
@@ -70,7 +57,7 @@
             if (result.value) {
                 $.ajax({
                     type: "post",
-                    url: "<?=base_url('admin/post/destroy')?>",
+                    url: "<?=base_url('admin/question/destroy')?>",
                     data: {'id':id},
                     success: function (response) {
                         location.reload();
@@ -86,24 +73,11 @@
         colset = colset.toString();
         $.ajax({
             type: "post",
-            url: "<?=base_url('admin/post/update')?>",
+            url: "<?=base_url('admin/question/update')?>",
             data: {'id':id,[colset]:ckb},
             success: function (response) {
                 
             }
         });
     }
-
-    // function setStt(ckb,colset,id){
-    //     ckb = ckb.value;
-    //     colset = colset.toString();
-    //     $.ajax({
-    //         type: "post",
-    //         url: "<?=base_url('admin/post/update')?>",
-    //         data: {'id':id,[colset]:ckb},
-    //         success: function (response) {
-                
-    //         }
-    //     });
-    // }
 </script>

@@ -6,12 +6,12 @@
     </div>
     <div class="package">
         <h4>BLOG</h4>
-        <p><a href="<?=base_url()?>admin/post">Tất cả bài viết</a></p>
+        <p><a href="<?=base_url()?>admin/post">Tất cả blog</a></p>
         <p><a href="<?=base_url()?>admin/post/add">Tạo mới</a></p>
     </div>
     <div class="package">
         <h4>MỞ RỘNG</h4>
-        <p><a href="">Câu hỏi thường gặp</a></p>
+        <p><a href="<?=base_url()?>admin/question/index">Câu hỏi thường gặp</a></p>
         <p><a href="">Đối tác - khách hàng</a></p>
         <p><a href="">Phản hồi - khách hàng</a></p>
         <p><a href="">Nội dung khác</a></p>

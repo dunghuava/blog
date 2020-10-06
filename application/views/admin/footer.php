@@ -3,6 +3,7 @@
     <script src="<?=base_url('assets/js/admin.js?v='.time())?>"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="<?=base_url('assets/js/datetimepicker.js')?>"></script>
     <script src="<?=base_url('assets/js/sweetalert2.js')?>"></script>
 
     <script>
@@ -14,6 +15,9 @@
             height: 300,
             baseFloatZIndex: 10005
         });
+
+
+        $('.datepicker').datepicker({ format: 'dd-mm-yyyy', });
 
 
         function make_alias(str){

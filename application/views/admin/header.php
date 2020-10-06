@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="<?=base_url('assets/lib/font-awesome/css/font-awesome.min.css')?>">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="<?=base_url('assets/css/sweetalert2.css')?>">
+    <link rel="stylesheet" href="<?=base_url('assets/css/datetimepicker.css')?>">
     <script src="<?=base_url('assets/lib/jquery.min.js')?>"></script>
 
     <style type="text/css">
       .dataTables_wrapper .dataTables_filter input {
         height: 30px;
         margin-bottom: 10px;
+        margin-right: 10px;
       }
 
       .dataTables_wrapper .dataTables_length select {
