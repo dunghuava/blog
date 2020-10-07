@@ -65,6 +65,15 @@ $('.item-question').click(function (e) {
     }
 });
 
+$('.have-menu').hover(function () {
+    // over
+    $(this).find('.sub-menu').fadeIn();
+  }, function () {
+    // out
+    $(this).find('.sub-menu').fadeOut('fast');
+  }
+);
+
 window.onscroll = function() {myFunction()};
 var navbar = document.getElementById("over-section");
 var sticky = navbar.offsetTop;

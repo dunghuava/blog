@@ -265,7 +265,7 @@
     background: #fff;
     width: fit-content;
     display: inline-flex;
-    margin-right: 2px;
+    margin-right: 1px;
     margin-bottom: 2px;
     a{
         color: #000;
@@ -282,5 +282,34 @@
         height: 50px;
         margin-right: 5px;
         border: double;
+    }
+}
+
+li.have-menu{
+    position: relative;
+    ul.sub-menu{
+        position: absolute;
+        width: max-content;
+        background: #ffffff;
+        z-index: 999;
+        right: 0%;
+        top: 100%;
+        border-radius: 5px;
+        display: none;
+        &::after{
+            content: '';
+            border: 17px solid transparent;
+            border-bottom: 17px solid #ffffff;
+            top: -30px;
+            right: 30px;
+            position: absolute;
+        }
+        li{
+            width: 30.30%;
+            a{
+                color: $main_color !important;
+                font-weight: bold;
+            }
+        }
     }
 }

@@ -47,10 +47,28 @@
                 <div class="col-md-8">
                     <ul class="ls-main-menu">
                         <li><a href="">Trang chủ</a></li>
-                        <li><a href="">Giới thiệu</a></li>
+                        <li class="have-menu">
+                            <a href="">Giới thiệu</a>
+                            <ul class="sub-menu">
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 1</a></li>
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 2</a></li>
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 3</a></li>
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 4</a></li>
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 5</a></li>
+                            </ul>
+                        </li>
                         <li><a href="">Tính năng</a></li>
                         <li><a href="">Giải pháp</a></li>
-                        <li><a href="">Lĩnh vực</a></li>
+                        <li class="have-menu">
+                            <a href="">Lĩnh vực</a>
+                            <ul class="sub-menu">
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 1</a></li>
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 2</a></li>
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 3</a></li>
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 4</a></li>
+                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 5</a></li>
+                            </ul>
+                        </li>
                         <li><a href="">Bảng giá</a></li>
                         <li><a href="">Blog</a></li>
                         <li><a href="">Liên hệ</a></li>
