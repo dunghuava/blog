@@ -11,16 +11,20 @@
     </div>
     <div class="package">
         <h4>MỞ RỘNG</h4>
-        <p><a href="<?=base_url()?>admin/question/index">Câu hỏi thường gặp</a></p>
-        <p><a href="">Đối tác - khách hàng</a></p>
-        <p><a href="">Phản hồi - khách hàng</a></p>
+        <p><a href="<?=base_url()?>admin/question">Câu hỏi thường gặp</a></p>
+        <p><a href="<?=base_url()?>admin/customer">Đối tác - khách hàng</a></p>
+        <p><a href="<?=base_url()?>admin/feedback">Phản hồi - khách hàng</a></p>
         <p><a href="">Nội dung khác</a></p>
     </div>
     <div class="package">
         <h4>SITE</h4>
         <p><a target="_blank" href="<?=base_url()?>">Vào trang web</a></p>
-        <p><a href="">Thông tin site</a></p>
-        <p><a href="">Seo cơ bản</a></p>
-        <p><a href="">Account</a></p>
+        <p><a href="<?=base_url()?>admin/info">Thông tin site</a></p>
+    </div>
+
+    <div class="package">
+        <h4>TÀI KHOẢN</h4>
+        <p><a href="<?=base_url()?>admin/changePass">Đổi mật khẩu</a></p>
+        <p><a href="<?=base_url()?>admin/logout">Đăng xuất</a></p>
     </div>
 </td>

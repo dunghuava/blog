@@ -100,7 +100,7 @@
         <tr>
             <td><br>
                 <button type="submit">Lưu lại</button>
-                <button onclick="history.back()" type="button">Hủy</button>
+                <button onclick="location.href='<?=base_url()?>admin/post'" type="button">Quay lại</button>
             </td>
         </tr>
     </table>

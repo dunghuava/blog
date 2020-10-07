@@ -33,8 +33,8 @@
   <tr>
     <td class="header_menu">
         [ <a href="admin" class="menu">Xin chào <?php echo $admin_infor['user_fullname'] ?> ! </a> ]
-        [ <a href="admin/info" class="menu">Đổi mật khẩu</a> ]
-        [ <a href="admin/logout" class="menu">Logout</a> ]
+        [ <a href="admin/changePass" class="menu">Đổi mật khẩu</a> ]
+        [ <a href="admin/logout" class="menu">Đăng xuất</a> ]
     </td>
   </tr>
   <tr>

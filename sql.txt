@@ -52,3 +52,45 @@ CREATE TABLE `db_cauhoi` (
  `updated_at` varchar(25) NOT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `db_khachhang` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `hinh_anh` varchar(225) NOT NULL,
+ `ten_vn` varchar(225) NOT NULL,
+ `hien_thi` int(11) NOT NULL COMMENT '0=ẩn/1=hiển thị	',
+ `created_at` varchar(25) NOT NULL,
+ `updated_at` varchar(25) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `db_phanhoi` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `hinh_anh` varchar(225) NOT NULL,
+ `noi_dung_vn` text NOT NULL,
+ `ten_vn` varchar(225) NOT NULL,
+ `chucvu_vn` varchar(225) NOT NULL,
+ `congty_vn` varchar(225) NOT NULL,
+ `link` varchar(225) NOT NULL,
+ `hien_thi` int(11) NOT NULL COMMENT '0=ẩn/1=hiển thị	',
+ `created_at` varchar(25) NOT NULL,
+ `updated_at` varchar(25) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `db_thongtin` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `mo_ta_vn` text COLLATE utf8_unicode_ci NOT NULL,
+ `dia_chi_vn` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `facebook` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `google` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `youtube` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `instagram` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `coppy_right_vn` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `logo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `icon` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+ `hotline` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+ `created_at` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+ `updated_at` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci

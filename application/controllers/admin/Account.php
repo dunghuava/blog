@@ -32,6 +32,35 @@ class Account extends MY_Controller {
 		}
 		$this->load->view('admin/login');
 	}
+
+	public function changePass()
+	{
+		if ($this->session->has_userdata('admin_infor')){
+			$this->admin_infor = $this->session->get_userdata('admin_infor');
+			$post = $this->input->post();
+			if ($post){
+
+				$user_password = md5($post['user_password']);
+
+				$this->Account_M->update(['user_id' => $this->admin_infor['admin_infor']['user_id']],['user_password' => $user_password]);
+
+				$status = array(
+					'code'=>'success',
+					'message'=>'Đã thay đổi'
+				);
+				$this->session->set_flashdata('reponse',$status);
+				redirect(base_url('admin/changePass'),'location');
+
+			}
+			$data['page_title']='Đổi mật khẩu';
+			$data['path']='change_pass';
+			$this->include($data);
+		}else{
+			redirect(base_url('admin/login'),'location');
+		}
+		
+	}
+
 	public function logout()
 	{
 		$this->session->unset_userdata('admin_infor');

@@ -1,17 +1,17 @@
 <form action="" method="post" enctype="multipart/form-data">
     <table style="width:99%" class="basic-table">
-        
+
         <tr>
-            <th width="150px" align="left">Câu hỏi</th>
+            <th width="150px" align="left">Tên khách hàng</th>
             <td>
-               <textarea class="ckeditor" name="cau_hoi_vn" id="cau_hoi_vn" rows="4" required=""></textarea>
+                <input style="width:300px" type="text" name="ten_vn" id="ten_vn" required="">
             </td>
         </tr>
 
         <tr>
-            <th width="150px" align="left">Câu trả lời</th>
+            <th width="150px" align="left">Hình ảnh</th>
             <td>
-               <textarea class="ckeditor" name="dap_an_vn" id="dap_an_vn" rows="4" required=""></textarea>
+                <input style="width:300px" type="file" name="hinh_anh" id="hinh_anh" required="">
             </td>
         </tr>
 
@@ -24,7 +24,7 @@
         <tr>
             <td><br>
                 <button type="submit">Lưu lại</button>
-                <button onclick="location.href='<?=base_url()?>admin/question'" type="button">Quay lại</button>
+                <button onclick="location.href='<?=base_url()?>admin/customer'" type="button">Quay lại</button>
             </td>
         </tr>
     </table>
