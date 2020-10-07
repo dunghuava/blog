@@ -22,7 +22,7 @@
                     <div class="text-left">
                         <li><span class="fa fa-home"></span><a href="">Trang chủ</a></li>
                         <li><span class="fa fa-phone"></span><a href="">0383868205</a></li>
-                        <li><span class="fa fa-evenlop"></span><a href="">dunghua@pavietnam.vn</a></li>
+                        <li><span class="fa fa-envelope"></span><a href="">dunghua@pavietnam.vn</a></li>
                     </div>
                 </div>
                 <div class="col-md-6">

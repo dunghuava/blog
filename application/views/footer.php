@@ -1,4 +1,24 @@
 
+    <?php if (!check_isMobile()){ ?>
+        <scction class="sec-contact fixed-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <p><span class="fa fa-cog"></span>&nbsp;Hỗ trợ 24/7</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p><span class="fa fa-envelope"></span>&nbsp;Chi tiết tiện ich tính năng</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p><span class="fa fa-address-book"></span>&nbsp;Blog</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p><span class="fa fa-phone"></span>&nbsp;Hotline: 0383868205</p>
+                    </div>
+                </div>
+            </div>
+        </scction>
+    <?php } ?>
     <footer class="footer pbt0">
         <div class="container">
             <div class="row">
@@ -8,6 +28,17 @@
                 </div>
                 <div class="col-md-3">
                     <h3 class="footer-title">Blog</h3>
+                    <?php for ($i=1;$i<=4;$i++){ ?>
+                    <li class="small-blog">
+                        <a href="" style="color:#fff">
+                            <div style="display:flex">
+                                <img src="<?=base_url('upload/blog.png')?>" alt="">
+                                <p>Tại sao tổng đài Callcenetr cần tích hợp CRM</p>
+                            </div>
+                            <p>November, 09, 2020</p>
+                        </a>
+                    </li>
+                    <?php } ?>
                 </div>
                 <div class="col-md-3">
                     <h3 class="footer-title">Sản phẩm khác của MITEK</h3>

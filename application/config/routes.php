@@ -53,6 +53,9 @@ $route['default_controller'] = 'web';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['blog'] = 'web/blog';
+$route['blog-detail'] = 'web/blog_detail';
+
 $route['admin'] = 'admin/Dasboard';
 $route['admin/login'] = 'admin/account/login';
 $route['admin/logout'] = 'admin/account/logout';

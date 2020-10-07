@@ -23,4 +23,14 @@ class Web extends MY_Controller {
 		$data['path']='index';
 		$this->load($data);
 	}
+	public function blog()
+	{
+		$data['path']='blog';
+		$this->load($data);
+	}
+	public function blog_detail()
+	{
+		$data['path']='blog-detail';
+		$this->load($data);
+	}
 }

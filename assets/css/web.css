@@ -77,6 +77,28 @@ img {
   outline: none !important;
 }
 
+.main-color {
+  background: #0C714B;
+}
+
+.mg0 {
+  margin: 0px;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.blog-detail img {
+  max-width: auto !important;
+  width: auto !important;
+  height: auto !important;
+}
+
 .main-nav .top-nav {
   padding: 9px 0px;
   background: #094e34;
@@ -300,5 +322,115 @@ img {
 .btn-contact-now a {
   text-decoration: none;
   color: yellow;
+}
+
+.fixed-contact {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 8px 0px;
+  z-index: 99;
+  background: #000000;
+}
+
+.fixed-contact p {
+  margin: 0px;
+}
+
+.item-blog {
+  margin-bottom: 15px;
+}
+
+.item-blog a {
+  color: #000;
+  text-decoration: none;
+}
+
+.item-blog .title-blog {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.item-blog .desc-blog, .item-blog .date-blog {
+  color: gray;
+}
+
+.item-blog .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff6b;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  padding-top: 25%;
+}
+
+.item-blog .overlay .fa {
+  margin-top: 45%;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+  background: #0c714bba;
+  line-height: 70px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.item-blog:hover .overlay {
+  opacity: 1;
+}
+
+.item-blog:hover .overlay .fa {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.cate-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-category {
+  border: 1px solid #dcdcdc;
+  padding: 5px 10px;
+  background: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.btn-category a {
+  color: #000;
+  text-decoration: none;
+}
+
+.small-blog a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.small-blog img {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  border: double;
 }
 /*# sourceMappingURL=web.css.map */
