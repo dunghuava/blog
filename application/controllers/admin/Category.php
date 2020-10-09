@@ -116,8 +116,7 @@ class Category extends MY_Controller {
 		$post = $this->input->post();
 		$this->Category_M->update(['id'=>$post['id']],$post);
 	}
-
-
+	
 	public function get_option_category($cate_module_id=0){
 		$where['id_loai']=0;
 		if ($cate_module_id!=0){

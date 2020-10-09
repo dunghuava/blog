@@ -143,7 +143,6 @@
 }
 
 .item-question{
-    display: inline-block;
     margin-bottom: 10px;
     position: relative;
     .q-border{
@@ -182,9 +181,10 @@
 .btn-contact-now{
     font-size: 25px;
     color: #fff;
+    width: fit-content;
+    margin: auto;
     background: $main_color;
     padding: 15px 25px;
-    width: max-content;
     border-radius: 5px;
     text-transform: uppercase;
     a{
@@ -285,31 +285,44 @@
     }
 }
 
-li.have-menu{
-    position: relative;
-    ul.sub-menu{
-        position: absolute;
-        width: max-content;
-        background: #ffffff;
-        z-index: 999;
-        right: 0%;
-        top: 100%;
-        border-radius: 5px;
-        display: none;
-        &::after{
-            content: '';
-            border: 17px solid transparent;
-            border-bottom: 17px solid #ffffff;
-            top: -30px;
-            right: 30px;
+.ls-main-menu{
+    li.have-menu{
+        position: relative;
+        ul.sub-menu{
             position: absolute;
+            width: 500px;
+            background: #ffffff;
+            z-index: 999;
+            right: 0%;
+            top: 95%;
+            border-radius: 5px;
+            display: none;
+            animation: fadeOut 0.4s;
+            &::after{
+                content: '';
+                border: 17px solid transparent;
+                border-bottom: 17px solid #ffffff;
+                top: -30px;
+                right: 30px;
+                position: absolute;
+            }
+            li{
+                width: 30.30%;
+                a{
+                    color: $main_color !important;
+                    font-weight: bold;
+                }
+            }
         }
-        li{
-            width: 30.30%;
-            a{
-                color: $main_color !important;
-                font-weight: bold;
+        &:hover{
+            .sub-menu{
+                display: block;
             }
         }
     }
+}
+@keyframes fadeOut{
+    0%{opacity: 0;}
+    90%{opacity: 0.8;}
+    100%{opacity: 1;}
 }

@@ -1,6 +1,11 @@
 <form id="change_pass" action="" method="post" enctype="multipart/form-data">
     <table style="width:99%" class="basic-table">
-
+        <tr>
+            <th width="150px" align="left">Tên đăng nhập</th>
+            <td>
+                <h3><?php echo $admin_infor['user_name'] ?></h3>
+            </td>
+        </tr>
         <tr>
             <th width="150px" align="left">Mật khẩu mới</th>
             <td>

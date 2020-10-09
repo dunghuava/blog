@@ -36,25 +36,25 @@
 <section class="over-section" id="over-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon1.png')?>" alt=""></p>
                     <p>Dịch vụ Mixci là gì ?</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon2.png')?>" alt=""></p>
                     <p>Đối tượng sử dụng Mixci</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon3.png')?>" alt=""></p>
                     <p>Tại sao nên chọn Mixci ?</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon4.png')?>" alt=""></p>
                     <p>Khách hàng của Mixci</p>
@@ -70,7 +70,7 @@
             <div class="col-md-12 text-center">
                 <p>MiCXM hay còn gọi là Contact Center là hệ thống tổng đài chăm sóc khách hàng, bán hàng được tích hợp qua nhiều kênh như thoại, live chat, email, sms, facebook…..tại một nơi duy nhất. Đây được xem là công cụ liên kết đa chiều giữa doanh nghiệp và khách hàng giúp tiếp cận, chăm sóc khách hàng một cách hiệu quả và nâng cao tính trải nghiệm của người dùng.</p>
                 <br><p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gssduBBhbc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="frm-reponsive" width="560" height="315" src="https://www.youtube.com/embed/gssduBBhbc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </p>
             </div>
         </div>
@@ -105,7 +105,7 @@
                 <br>
             </div>
             <?php for ($i=0;$i<=7;$i++){ ?>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-6">
                 <div class="item-view">
                     <p><img src="<?=base_url('upload/icon6.png')?>" alt=""></p>
                     <h4><b>Telesales</b></h4>
@@ -124,7 +124,7 @@
                     <div class="col-md-6">
                         <div class="item-question">
                             <div class="q-border" data-toggle="collapse" data-target="#content_<?=$i?>">
-                                <p><span class="q-btn"><span class="fa fa-angle-down"></span></span>&nbsp;<?=$i?>.Contact Center sử dụng cho nhóm khách hàng nào?</p>
+                                <p class="text-overflow-mb"><span class="q-btn"><span class="fa fa-angle-down"></span></span>&nbsp;<?=$i?>.Contact Center sử dụng cho nhóm khách hàng nào?</p>
                             </div>
                             <div class="item-anwser collapse" id="content_<?=$i?>">
                                 <p>Gói chức năng Contact Center dành cho tất cả các doanh nghiệp muốn xây dựng trung tâm Chăm sóc khách hàng với đầy đủ các tính năng mạnh mẽ và phù hợp nhất. Có thêm các tính năng live chat, email, facebook, campaign hỗ trợ doanh nghiệp chăm sóc khách hàng tốt hơn và thuận tiện hơn.</p>
@@ -182,7 +182,7 @@
     <div class="container">
         <h3 class="main-title">Liên hệ ngay để được tư vấn</h3><br>
         <div class="row">
-            <div class="slick-cus">
+            <div class="sov text-center">
                 <div class="text-center">
                     <div class="btn-contact-now">
                         <a href="tel:0383868205"><span class="fa fa-phone"></span>&nbsp;Liên hệ tư vấn</a>
@@ -192,3 +192,18 @@
         </div>
     </div>
 </section>
+
+<?php if (!check_isMobile()){ ?>
+    <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("over-section");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        }
+    </script>
+<?php } ?>

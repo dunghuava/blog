@@ -14,7 +14,7 @@
         <p><a href="<?=base_url()?>admin/question">Câu hỏi thường gặp</a></p>
         <p><a href="<?=base_url()?>admin/customer">Đối tác - khách hàng</a></p>
         <p><a href="<?=base_url()?>admin/feedback">Phản hồi - khách hàng</a></p>
-        <p><a href="">Nội dung khác</a></p>
+        <p><a href="<?=base_url('admin/content')?>">Nội dung khác</a></p>
     </div>
     <div class="package">
         <h4>SITE</h4>

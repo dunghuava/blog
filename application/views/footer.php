@@ -1,6 +1,6 @@
 
     <?php if (!check_isMobile()){ ?>
-        <scction class="sec-contact fixed-contact">
+        <scction class="sec-contact fixed-contact hidden-xs">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">

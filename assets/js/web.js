@@ -38,14 +38,14 @@ $('.main-slider').slick({
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 3,
+          slidesToScroll: 1
         }
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1
         }
       }
@@ -64,23 +64,3 @@ $('.item-question').click(function (e) {
       $(this).find('.q-btn').html('<span class="fa fa-angle-down"></span>');
     }
 });
-
-$('.have-menu').hover(function () {
-    // over
-    $(this).find('.sub-menu').fadeIn();
-  }, function () {
-    // out
-    $(this).find('.sub-menu').fadeOut('fast');
-  }
-);
-
-window.onscroll = function() {myFunction()};
-var navbar = document.getElementById("over-section");
-var sticky = navbar.offsetTop;
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}

@@ -262,7 +262,6 @@ img {
 }
 
 .item-question {
-  display: inline-block;
   margin-bottom: 10px;
   position: relative;
 }
@@ -310,11 +309,12 @@ img {
 .btn-contact-now {
   font-size: 25px;
   color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
   background: #0C714B;
   padding: 15px 25px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   border-radius: 5px;
   text-transform: uppercase;
 }
@@ -434,24 +434,24 @@ img {
   border: double;
 }
 
-li.have-menu {
+.ls-main-menu li.have-menu {
   position: relative;
 }
 
-li.have-menu ul.sub-menu {
+.ls-main-menu li.have-menu ul.sub-menu {
   position: absolute;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 500px;
   background: #ffffff;
   z-index: 999;
   right: 0%;
-  top: 100%;
+  top: 95%;
   border-radius: 5px;
   display: none;
+  -webkit-animation: fadeOut 0.4s;
+          animation: fadeOut 0.4s;
 }
 
-li.have-menu ul.sub-menu::after {
+.ls-main-menu li.have-menu ul.sub-menu::after {
   content: '';
   border: 17px solid transparent;
   border-bottom: 17px solid #ffffff;
@@ -460,12 +460,40 @@ li.have-menu ul.sub-menu::after {
   position: absolute;
 }
 
-li.have-menu ul.sub-menu li {
+.ls-main-menu li.have-menu ul.sub-menu li {
   width: 30.30%;
 }
 
-li.have-menu ul.sub-menu li a {
+.ls-main-menu li.have-menu ul.sub-menu li a {
   color: #0C714B !important;
   font-weight: bold;
+}
+
+.ls-main-menu li.have-menu:hover .sub-menu {
+  display: block;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=web.css.map */

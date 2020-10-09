@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=base_url('assets/lib/bootstrap/css/bootstrap.min.css')?>">
     <link rel="stylesheet" href="<?=base_url('assets/css/web.css?v='.time())?>">
+    <link rel="stylesheet" href="<?=base_url('assets/css/reponsive.css?v='.time())?>">
     <link rel="stylesheet" href="<?=base_url('assets/lib/font-awesome/css/font-awesome.min.css')?>">
     <link rel="stylesheet" href="<?=base_url('assets/lib/slick/slick.css')?>">
     <script src="<?=base_url('assets/lib/jquery.min.js')?>"></script>
@@ -15,7 +16,8 @@
 </head>
 <body>
 <nav class="main-nav">
-    <div class="top-nav">
+    <?php if (!check_isMobile()){ ?>
+    <div class="top-nav hidden-xs">
         <div class="container"> 
             <div class="row">
                 <div class="col-md-6">
@@ -36,6 +38,7 @@
             </div>    
         </div>
     </div>
+    <?php } ?>
     <div class="main-menu">
         <div class="container">
             <div class="row">
