@@ -2,7 +2,7 @@
     <table style="width:99%" class="basic-table">
 
         <tr>
-            <th width="150px" align="left">Tên khách hàng</th>
+            <th width="150px" align="left">Tên</th>
             <td>
                 <input style="width:300px" type="text" name="ten_vn" id="ten_vn" required="">
             </td>
@@ -12,6 +12,18 @@
             <th width="150px" align="left">Hình ảnh</th>
             <td>
                 <input style="width:300px" type="file" name="hinh_anh" id="hinh_anh" required="">
+            </td>
+        </tr>
+
+
+        <tr>
+            <th width="150px" align="left">Loại</th>
+            <td>
+                <select style="width:312px" name="loai" id="loai" required="">
+                    <option value="">chọn loại</option>
+                    <option value="1">Khách hàng</option>
+                    <option value="2">Đối tác</option>
+                </select>
             </td>
         </tr>
 

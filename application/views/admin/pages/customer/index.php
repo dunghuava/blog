@@ -1,13 +1,14 @@
 <form action="" method="post">
-    <a href="<?=base_url('admin/customer/add/')?>">[Thêm khách hàng]</a>
+    <a href="<?=base_url('admin/customer/add/')?>">[Thêm đối tác - khách hàng]</a>
     <br>
     <br>
     <table border="1" style="width:99%" class="list-table datatable">
         <thead>
             <tr class="heading">
                 
-                <th>Khách hàng</th>
+                <th>Tên</th>
                 <th>Hình ảnh</th>
+                <th>Loại</th>
                 <th width="8%">Hiển thị</th>
                 <th width="10%">Quản lý</th>
                 
@@ -20,11 +21,21 @@
                     <td>
                         <?=$val['ten_vn']?>
                     </td>
+
                     <td class="text-center">
                         <?php if (!empty($val['hinh_anh'])){ ?>
                             <img style="cursor:pointer;max-height: 100px;max-width: 150px;" src="<?=base_url('upload/images/'.$val['hinh_anh'])?>" alt="">
                         <?php } ?>
                     </td>
+
+                    <td>
+                        <?php if ($val['loai'] == 1) {
+                            echo "Khách hàng";
+                        }else{
+                            echo "Đối tác";
+                        } ?>
+                    </td>
+                    
                     <td class="text-center">
                         <input class="ip-ckb" onchange="setCkb(this,'hien_thi',<?=$val['id']?>)" type="checkbox" <?=$val['hien_thi']==1 ? 'checked':''?> >
                     </td>

@@ -11,7 +11,7 @@ class Customer extends MY_Controller {
 
 	public function index()
 	{
-		$data['page_title']='Tất cả khách hàng';
+		$data['page_title']='Tất cả đối tác - khách hàng';
 		$data['list_customer']=$this->Customer_M->all('','desc');
 		$data['path']='customer/index';
         
@@ -39,6 +39,7 @@ class Customer extends MY_Controller {
 			$data_insert = array(
 				'ten_vn' => $post['ten_vn'], 
 				'hinh_anh' => $filename, 
+				'loai' => $post['loai'], 
 				'hien_thi' => $post['hien_thi'], 
 				
 			);
@@ -54,7 +55,7 @@ class Customer extends MY_Controller {
 
 		}
 		
-		$data['page_title']='Tạo mới khách hàng';
+		$data['page_title']='Tạo mới đối tác - khách hàng';
 		$data['path']='customer/add';
         
 		$this->include($data);
@@ -86,6 +87,7 @@ class Customer extends MY_Controller {
 			$data_update = array(
 				'ten_vn' => $post['ten_vn'], 
 				'hinh_anh' => $filename, 
+				'loai' => $post['loai'], 
 				'hien_thi' => $post['hien_thi'], 
 			);
 
@@ -102,7 +104,7 @@ class Customer extends MY_Controller {
 		}
 
 		$data['customer'] = $info_customer;
-		$data['page_title']='Chỉnh sửa khách hàng';
+		$data['page_title']='Chỉnh sửa đối tác - khách hàng';
 		$data['path']='customer/edit';
         
 		$this->include($data);

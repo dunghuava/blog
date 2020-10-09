@@ -23,6 +23,17 @@
         </tr>
 
         <tr>
+            <th width="150px" align="left">Loại</th>
+            <td>
+                <select style="width:312px" name="loai" id="loai" required="">
+                    <option value="">chọn loại</option>
+                    <option value="1" <?php if ($data['customer']['loai']==1) echo "selected='selected'";?>>Khách hàng</option>
+                    <option value="2" <?php if ($data['customer']['loai']==2) echo "selected='selected'";?>>Đối tác</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
             <th width="150px" align="left">Hiển thị</th>
             <?php if ($data['customer']['hien_thi'] == 1) {
                     $checked = 'checked';
