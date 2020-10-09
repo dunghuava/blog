@@ -106,6 +106,13 @@ class Content extends MY_Controller {
 		$this->include($data);
 	}
 	public function destroy(){
+		$check = $this->Content_M->one(['id'=>$this->input->post('id')]);
+		if ($check['id_loai']==0){
+			$get = $this->Content_M->all(['id_loai'=>$check['id']]);
+			foreach ($get as $cld){
+				$this->Content_M->update(['id'=>$cld['id']],['id_loai'=>0]);
+			}
+		}
 		$this->Content_M->delete(['id'=>$this->input->post('id')]);
 	}
 	public function update(){

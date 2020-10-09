@@ -11,6 +11,56 @@
         text-overflow: ellipsis;
         overflow: hidden;
     }
+    .ls-main-menu{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        background: $main_color;
+        z-index: 999;
+        height: 100%;
+        overflow-y: auto;
+        width: calc(100% - 150px);
+        transition: all 1s;
+
+        &.closed{
+            right: -1000px;
+        }
+        li{
+            padding: 10px !important;
+            display: block !important;
+        }
+        li.have-menu{
+            position: relative;
+            &::after{
+                content: '\f107';
+                font-family: 'FontAwesome';
+                color: #ffffff;
+                right: 10px;
+                top: 8px;
+                position: absolute;
+            }
+            ul.sub-menu{
+                width: 100% !important;
+                position: relative !important;
+                background: $main_color !important;
+
+                &::after{
+                    display: none !important;
+                }
+                img{
+                    display: none;
+                }
+                li{
+                    width: 100%;
+                    padding-left: 0px !important;
+                    a{
+                        font-weight: unset;
+                        color: #ffffff !important;
+                    }
+                }
+            }
+        }
+    }
 }
   
 /* Small devices (portrait tablets and large phones, 600px and up) */

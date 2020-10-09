@@ -25,7 +25,9 @@
             <td>
                 <select style="width:312px" name="id_loai" id="id_loai">
                     <option value="0">Chọn làm danh mục cha</option>
-                    <?php foreach ($data['cate'] as $val){ ?>
+                    <?php 
+                        foreach ($data['cate'] as $val){ 
+                    ?>
                         <option <?=$content['id_loai']==$val['id'] ? 'selected':''?> value="<?=$val['id']?>"><?=$val['ten_vn']?></option>
                     <?php } ?>
                 </select>

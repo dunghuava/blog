@@ -64,3 +64,14 @@ $('.item-question').click(function (e) {
       $(this).find('.q-btn').html('<span class="fa fa-angle-down"></span>');
     }
 });
+
+$('.mobile li.have-menu').click(function (e) { 
+    $(this).find('.sub-menu').slideToggle();
+});
+
+$('.btn-close').click(function (e) { 
+   $('.ls-main-menu').addClass('closed');
+});
+$('#btn-bars').click(function (e) { 
+  $('.ls-main-menu').removeClass('closed');
+});

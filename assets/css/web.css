@@ -116,6 +116,7 @@ img {
 
 .main-nav .top-nav li a {
   color: #fff;
+  text-decoration: none;
 }
 
 .main-nav .main-menu {
@@ -332,7 +333,7 @@ img {
   color: #fff;
   padding: 8px 0px;
   z-index: 99;
-  background: #000000;
+  background: #000000b8;
 }
 
 .fixed-contact p {

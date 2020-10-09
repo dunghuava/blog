@@ -3,7 +3,7 @@
         <div class="slider-item">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 hidden-xs">
                         <img src="<?=base_url('upload/img01.png')?>" alt="">
                     </div>
                     <div class="col-md-6">

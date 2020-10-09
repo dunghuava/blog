@@ -15,7 +15,7 @@
 
 </head>
 <body>
-<nav class="main-nav">
+<nav class="main-nav <?=check_isMobile() ? 'mobile':''?>">
     <?php if (!check_isMobile()){ ?>
     <div class="top-nav hidden-xs">
         <div class="container"> 
@@ -46,9 +46,20 @@
                     <a href="">
                         <img src="<?=base_url('upload/logo.png')?>" alt="">
                     </a>
+                    <a id="btn-bars" class="hidden-lg hidden-md" style="color:#fff;float:right;font-size:25px;margin-top:15px" href="#">
+                        <span class="fa fa-bars"></span>
+                    </a>
                 </div>
                 <div class="col-md-8">
-                    <ul class="ls-main-menu">
+                    <ul class="ls-main-menu closed">
+                        <li class="btn-close hidden-lg hidden-md text-right" style="color:#fff;font-size:20px">
+                            <span class="fa fa-close"></span>
+                        </li>
+                        <li class="hidden-lg hidden-md">
+                            <a href="">
+                                <img src="<?=base_url('upload/logo.png')?>" alt="">
+                            </a>
+                        </li>
                         <li><a href="">Trang chủ</a></li>
                         <li class="have-menu">
                             <a href="">Giới thiệu</a>

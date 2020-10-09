@@ -110,6 +110,55 @@ img {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+  .ls-main-menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background: #0C714B;
+    z-index: 999;
+    height: 100%;
+    overflow-y: auto;
+    width: calc(100% - 150px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .ls-main-menu.closed {
+    right: -1000px;
+  }
+  .ls-main-menu li {
+    padding: 10px !important;
+    display: block !important;
+  }
+  .ls-main-menu li.have-menu {
+    position: relative;
+  }
+  .ls-main-menu li.have-menu::after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    color: #ffffff;
+    right: 10px;
+    top: 8px;
+    position: absolute;
+  }
+  .ls-main-menu li.have-menu ul.sub-menu {
+    width: 100% !important;
+    position: relative !important;
+    background: #0C714B !important;
+  }
+  .ls-main-menu li.have-menu ul.sub-menu::after {
+    display: none !important;
+  }
+  .ls-main-menu li.have-menu ul.sub-menu img {
+    display: none;
+  }
+  .ls-main-menu li.have-menu ul.sub-menu li {
+    width: 100%;
+    padding-left: 0px !important;
+  }
+  .ls-main-menu li.have-menu ul.sub-menu li a {
+    font-weight: unset;
+    color: #ffffff !important;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
