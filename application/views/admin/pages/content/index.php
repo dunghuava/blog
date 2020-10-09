@@ -2,7 +2,7 @@
     <a href="<?=base_url('admin/content/add')?>">[Thêm mới]</a>
     <br>
     <br>
-    <table style="width:99%" class="list-table">
+    <table style="width:99%" class="list-table datatable">
         <thead>
             <tr>
                 <td style="display:flex;padding-left:0px">

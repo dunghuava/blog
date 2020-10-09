@@ -46,9 +46,9 @@
                     <a href="">
                         <img src="<?=base_url('upload/logo.png')?>" alt="">
                     </a>
-                    <a id="btn-bars" class="hidden-lg hidden-md" style="color:#fff;float:right;font-size:25px;margin-top:15px" href="#">
-                        <span class="fa fa-bars"></span>
-                    </a>
+                    <span id="btn-bars" class="hidden-lg hidden-md" style="color:#fff;float:right;font-size:20px;margin-top:15px">
+                        <span class="fa fa-bars"></span>&nbsp;menu
+                    </span>
                 </div>
                 <div class="col-md-8">
                     <ul class="ls-main-menu closed">
@@ -92,3 +92,10 @@
         </div>
     </div>
 </nav>
+<?php 
+    if (check_isMobile()){
+?>
+<script>
+    $('li.have-menu .sub-menu').hide();
+</script>
+<?php } ?>

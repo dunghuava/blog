@@ -33,4 +33,9 @@ class Web extends MY_Controller {
 		$data['path']='blog-detail';
 		$this->load($data);
 	}
+	public function bang_gia()
+	{
+		$data['path']='bang-gia';
+		$this->load($data);
+	}
 }

@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['blog'] = 'web/blog';
 $route['blog-detail'] = 'web/blog_detail';
+$route['bang-gia'] = 'web/bang_gia';
 
 $route['admin'] = 'admin/Dasboard';
 $route['admin/login'] = 'admin/account/login';

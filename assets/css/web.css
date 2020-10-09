@@ -497,4 +497,71 @@ img {
     opacity: 1;
   }
 }
+
+.item-banggia {
+  color: #fff;
+  border-radius: 5px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+}
+
+.item-banggia .btn {
+  padding: 4px 8px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.item-banggia .hd {
+  padding: 5px;
+  background: #0C714B;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.item-banggia .bdy {
+  padding: 5px 0px;
+  background: #248a63;
+}
+
+.item-banggia .ft {
+  padding: 10px 0px;
+  color: black;
+}
+
+.item-banggia .ft a {
+  color: #000;
+  text-decoration: none;
+}
+
+.item-banggia .ft a.btn-color {
+  color: #fff;
+  background: #0C714B;
+}
+
+.table-banggia {
+  width: 100%;
+}
+
+.table-banggia thead tr {
+  background: #0C714B;
+}
+
+.table-banggia thead tr td {
+  padding: 5px 2px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.table-banggia tbody tr.title-row {
+  cursor: pointer;
+  font-weight: bold;
+  background: #ebebeb;
+}
+
+.table-banggia tbody tr td {
+  padding: 5px 2px;
+  border-bottom: 1px solid #dadada;
+}
 /*# sourceMappingURL=web.css.map */
