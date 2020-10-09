@@ -2,7 +2,7 @@
     <table style="width:99%" class="basic-table">
 
         <tr>
-            <th width="150px" align="left">Tên khách hàng</th>
+            <th width="150px" align="left">Tên</th>
             <td>
                 <input style="width:300px" type="text" name="ten_vn" id="ten_vn" value="<?=$data['customer']['ten_vn']?>" required="">
             </td>
