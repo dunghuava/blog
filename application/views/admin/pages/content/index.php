@@ -19,7 +19,7 @@
                 </td>
             </tr>
             <tr class="heading">
-                <th width="6%">STT</th>
+                <th style="width:50px">STT</th>
                 <th>Tiêu đề</th>
                 <th>Loại</th>
                 <th width="10%">Hình ảnh</th>

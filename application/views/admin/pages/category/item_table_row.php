@@ -1,6 +1,6 @@
 <tr>
     <td>
-        <input type="text" onkeyup="setStt(this,'stt',<?=$val['id']?>)" value="<?=$val['stt']?>" class="ip-text">
+        <input type="text" onkeyup="setStt(this,'stt',<?=$val['id']?>)" value="<?=$val['stt']?>" class="ip-text" style="width:55px">
     </td>
     <td><a style="color:#000" href="<?=base_url('admin/category/edit/'.$val['id'])?>"><?=$str.' '.$val['ten_vn']?></a></td>
     <td class="text-center">
@@ -8,16 +8,17 @@
             <img onclick="onDeleteImg(<?=$val['id']?>,'<?=$val['hinh_anh']?>')" style="cursor:pointer;max-height: 100px;max-width: 150px;" src="<?=base_url('upload/images/'.$val['hinh_anh'])?>" alt="">
         <?php } ?>
     </td>
-    <td>
+    <td>[
         <?php 
             $module = $this->Module_M->find(['module_id'=>$val['module_id']]);
             echo $module['module_title'];
         ?>
+        ]
     </td>
-    <td class="text-center">
+    <td align="center" class="text-center">
         <input class="ip-ckb" onchange="setCkb(this,'menu',<?=$val['id']?>)" type="checkbox" <?=$val['menu']==1 ? 'checked':''?> >
     </td>
-    <td class="text-center">
+    <td align="center" class="text-center">
         <input class="ip-ckb" onchange="setCkb(this,'hien_thi',<?=$val['id']?>)" type="checkbox" <?=$val['hien_thi']==1 ? 'checked':''?> >
     </td>
     <td>

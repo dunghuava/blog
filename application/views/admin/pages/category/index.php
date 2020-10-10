@@ -1,10 +1,10 @@
 <form action="" method="post">
     <table border="1" style="width:99%" class="list-table datatable">
         <tr class="heading">
-            <th width="5%">STT</th>
+            <th width="2%">STT</th>
             <th>Tên danh mục</th>
             <th>Hình ảnh</th>
-            <th>Danh mục cha</th>
+            <th>Module</th>
             <th width="8%">Menu</th>
             <th width="8%">Hiển thị</th>
             <th width="10%">Quản lý</th>

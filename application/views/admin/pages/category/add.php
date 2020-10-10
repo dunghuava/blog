@@ -3,7 +3,7 @@
         <tr>
             <th width="150px" align="left">Hình ảnh</th>
             <td>
-                <input style="width:300px" type="file" name="hinh_anh" id="hinh_anh" required="">
+                <input style="width:300px" type="file" name="hinh_anh" id="hinh_anh">
             </td>
         </tr>
 
@@ -35,8 +35,8 @@
         <tr>
             <th width="150px" align="left">Module</th>
             <td>
-                <select style="width:312px" name="module_id" id="module_id" required="">
-                    <option value="">Chọn loại module</option>
+                <select style="width:312px" name="module_id" id="module_id">
+                    <option value="0">Chọn loại module</option>
                     <?php foreach ($data['arr_module'] as $value){ ?>
                     <option value="<?=$value['module_id']?>"><?=$value['module_title']?></option>
                 <?php } ?>
