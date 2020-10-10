@@ -15,6 +15,7 @@ class Web extends MY_Controller {
 	{	
 		$data['list_question']=$this->Question_M->all();
 		$data['list_customer']=$this->Customer_M->all(['loai' => 1]);
+		$data['list_feedback']=$this->Feedback_M->all();
 		$data['path']='index';
 		$this->load($data);
 	}

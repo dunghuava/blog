@@ -173,16 +173,17 @@
         <h3 class="main-title">Phản hồi của khách hàng</h3><br>
         <div class="row">
             <div class="slick-feedback">
-                <?php for ($i=0;$i<=12;$i++){ ?>
+                <?php foreach ($data['list_feedback'] as $feedback) {?>
                 <div class="col-md-12">
                     <div class="item-feedback">
                         <blockquote>
-                           <p> Hệ thống có đầy đủ tính năng, dễ dàng sử dụng giao diện trực quan. Có thể phân tầng theo từng lớp : Admin, Senior, Staff, Reporter, QC,.... Có hỗ trợ phần knowledge base tích hợp trên CRM dễ dàng hỗ trợ cho Agent</p>
+                           <p><?=$feedback['noi_dung_vn']?></p>
                         </blockquote>
                         <div class="item-cus">
-                            <img src="<?=base_url('upload/img.jpg')?>" alt="">
-                            <h3>Anh. Văn Dũng</h3>
-                            <p>Fullstack developper tại Tokyo</p>
+                            <img src="<?=base_url('upload/').$feedback['hinh_anh']?>" alt="">
+                            <h3><?=$feedback['ten_vn']?></h3>
+                            <p><?=$feedback['chucvu_vn']?></p>
+                            <p><?=$feedback['congty_vn']?></p>
                             <a href="">>> Xem chi tiết</a>
                         </div>
                     </div>
