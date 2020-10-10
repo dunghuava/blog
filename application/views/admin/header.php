@@ -21,6 +21,9 @@
       .dataTables_wrapper .dataTables_length select {
         height: 30px;
       }
+      table.dataTable{
+        border-collapse: collapse !important;
+      }
     </style>
 
     <title>Admin System</title>

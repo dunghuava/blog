@@ -2,22 +2,21 @@
     <a href="<?=base_url('admin/content/add')?>">[Thêm mới]</a>
     <br>
     <br>
-    <table style="width:99%" class="list-table datatable">
+    <div style="display:flex">
+    <span>Filter : &nbsp;</span>
+    <select onchange="mfilter(this.value)" name="filter" id="filter">
+        <option value="0">Tìm kiếm theo loại</option>
+        <?php 
+            $list_content = $this->Content_M->all(['id_loai'=>0]);
+            foreach ($list_content as $key => $val) 
+            {
+        ?>
+            <option <?=$data['filter']==$val['id'] ? 'selected':''?> value="<?=$val['id']?>"><?=$val['ten_vn']?></option>
+        <?php } ?>
+    </select><br>
+    </div><hr>
+    <table border="1" style="width:99%" class="list-table datatable">
         <thead>
-            <tr>
-                <td style="display:flex;padding-left:0px">
-                    <select onchange="mfilter(this.value)" name="filter" id="filter">
-                        <option value="0">Tìm kiếm theo loại</option>
-                        <?php 
-                            $list_content = $this->Content_M->all(['id_loai'=>0]);
-                            foreach ($list_content as $key => $val) 
-                            {
-                        ?>
-                            <option <?=$data['filter']==$val['id'] ? 'selected':''?> value="<?=$val['id']?>"><?=$val['ten_vn']?></option>
-                        <?php } ?>
-                    </select><br>
-                </td>
-            </tr>
             <tr class="heading">
                 <th style="width:50px">STT</th>
                 <th>Tiêu đề</th>
@@ -44,7 +43,7 @@
                     </td>
                     <td align="center">
                         <?php if (!empty($val['hinh_anh'])){ ?>
-                            <img src="<?=resizeImg($val['hinh_anh'],90,80,2)?>" alt="">
+                            <img src="<?=resizeImg($val['hinh_anh'],50,35)?>" alt="">
                         <?php } ?>
                     </td>
                     <td align="center">
@@ -75,7 +74,7 @@
                                 </td>
                                 <td align="center">
                                     <?php if (!empty($val2['hinh_anh'])){ ?>
-                                        <img src="<?=resizeImg($val2['hinh_anh'],90,80,2)?>" alt="">
+                                        <img src="<?=resizeImg($val2['hinh_anh'],50,35)?>" alt="">
                                     <?php } ?>
                                 </td>
                                 <td align="center">
