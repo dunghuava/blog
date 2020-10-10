@@ -120,28 +120,32 @@
         <h3 class="main-title">Những câu hỏi thường gặp</h3><br>
         <div class="row">
            <div class="col-md-6">
-               <?php for($i=0;$i<6;$i++){ ?>
+               <?php foreach ($data['list_question'] as $key => $question) {
+                    if($key<5){
+                ?>
                     <div class="item-question">
-                        <div class="q-border" data-toggle="collapse" data-target="#content_<?=$i?>">
-                            <p class="text-overflow-mb"><span class="q-btn"><span class="fa fa-angle-down"></span></span>&nbsp;<?=$i?>.Contact Center sử dụng cho nhóm khách hàng nào?</p>
+                        <div class="q-border" data-toggle="collapse" data-target="#content_<?=$key?>">
+                            <p class="text-overflow-mb" style="width: 10%;float: left;"><span class="q-btn"><span class="fa fa-angle-down"></span></span>&nbsp;<?=$question['cau_hoi_vn']?></p>
                         </div>
-                        <div class="item-anwser collapse" id="content_<?=$i?>">
-                            <p>Gói chức năng Contact Center dành cho tất cả các doanh nghiệp muốn xây dựng trung tâm Chăm sóc khách hàng với đầy đủ các tính năng mạnh mẽ và phù hợp nhất. Có thêm các tính năng live chat, email, facebook, campaign hỗ trợ doanh nghiệp chăm sóc khách hàng tốt hơn và thuận tiện hơn.</p>
+                        <div class="item-anwser collapse" id="content_<?=$key?>">
+                            <p><?=$question['dap_an_vn']?></p>
                         </div>
                     </div>
-               <?php } ?>
+               <?php } } ?>
            </div>
            <div class="col-md-6">
-               <?php for($i=6;$i<12;$i++){ ?>
+                <?php foreach ($data['list_question'] as $key1 => $question) {
+                    if($key1>4 && $key1<10){
+                ?>
                     <div class="item-question">
-                        <div class="q-border" data-toggle="collapse" data-target="#content_<?=$i?>">
-                            <p class="text-overflow-mb"><span class="q-btn"><span class="fa fa-angle-down"></span></span>&nbsp;<?=$i?>.Contact Center sử dụng cho nhóm khách hàng nào?</p>
+                        <div class="q-border" data-toggle="collapse" data-target="#content_<?=$key1?>">
+                            <p class="text-overflow-mb" style="width: 10%;float: left;"><span class="q-btn"><span class="fa fa-angle-down"></span></span>&nbsp;<?=$question['cau_hoi_vn']?></p>
                         </div>
-                        <div class="item-anwser collapse" id="content_<?=$i?>">
-                            <p>Gói chức năng Contact Center dành cho tất cả các doanh nghiệp muốn xây dựng trung tâm Chăm sóc khách hàng với đầy đủ các tính năng mạnh mẽ và phù hợp nhất. Có thêm các tính năng live chat, email, facebook, campaign hỗ trợ doanh nghiệp chăm sóc khách hàng tốt hơn và thuận tiện hơn.</p>
+                        <div class="item-anwser collapse" id="content_<?=$key1?>">
+                            <p><?=$question['dap_an_vn']?></p>
                         </div>
                     </div>
-               <?php } ?>
+               <?php } } ?>
            </div>
         </div>
     </div>
@@ -151,11 +155,11 @@
         <h3 class="main-title">Khách hàng của MiCXM</h3><br>
         <div class="row">
             <div class="slick-cus">
-                <?php for ($i=0;$i<=12;$i++){ ?>
+                <?php foreach ($data['list_customer'] as $customer) {?>
                 <div class="col-md-2">
                     <div class="item-small-slide">
                         <a href="">
-                            <img src="<?=base_url('upload/icon7.png')?>" alt="">
+                            <img src="<?=resizeImg($customer['hinh_anh'],145,145,0)?>" alt="">
                         </a>
                     </div>
                 </div>
