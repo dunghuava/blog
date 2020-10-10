@@ -564,4 +564,53 @@ img {
   padding: 5px 2px;
   border-bottom: 1px solid #dadada;
 }
+
+#form-dangky {
+  position: fixed;
+  top: 0px;
+  right: -500px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  padding: 10px;
+  background: #FBFBFB;
+  z-index: 999;
+  -webkit-box-shadow: 0 1px 3px #000;
+          box-shadow: 0 1px 3px #000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#form-dangky.opened {
+  right: 0px;
+}
+
+#form-dangky p {
+  margin-bottom: 0px;
+}
+
+#form-dangky tr td {
+  padding: 5px;
+}
+
+#form-dangky .input {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+}
+
+#form-dangky textarea {
+  width: 100%;
+}
+
+#form-dangky .title {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #0C714B;
+}
+
+#form-dangky .t {
+  font-size: 11px;
+}
 /*# sourceMappingURL=web.css.map */

@@ -1,4 +1,50 @@
 
+    <form action="" id="form-dangky">
+        <table>
+            <tr>
+                <td align="center">
+                    <h3 class="title">Đăng ký thử nghiệm</h3>
+                    <p class="t">(Vui lòng để lại thông tin, chúng tôi sẽ liên hệ với bạn)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Tên doanh nghiệp <span style="color:red">(*)</span></p>
+                    <input type="text" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Họ tên <span style="color:red">(*)</span></p>
+                    <input type="text" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Số điện thoại <span style="color:red">(*)</span></p>
+                    <input type="text" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Email <span style="color:red">(*)</span></p>
+                    <input type="text" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Nội dung <span style="color:red">(*)</span></p>
+                    <textarea name="" id="" rows="3"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="$('#form-dangky').removeClass('opened')" type="button">Đóng <span style="color:red">(x)</span></button>
+                    <button type="submit">Đăng ký</button>
+                </td>
+            </tr>
+        </table>
+    </form>
     <?php if (!check_isMobile()){ ?>
         <scction class="sec-contact fixed-contact hidden-xs">
             <div class="container">

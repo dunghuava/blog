@@ -30,7 +30,7 @@
                 <div class="col-md-6">
                     <div class="text-right">
                         <li><span class="fa fa-home"></span><a href="">FAQ</a></li>
-                        <li><span class="fa fa-phone"></span><a href="">Đăng ký thử nghiệm</a></li>
+                        <li><span class="fa fa-phone"></span><a onclick="$('#form-dangky').addClass('opened')" href="<?=base_url('#')?>">Đăng ký thử nghiệm</a></li>
                         <li><span class="fa fa-facebook"></span><a href=""></a></li>
                         <li><span class="fa fa-youtube"></span><a href=""></a></li>
                     </div>
