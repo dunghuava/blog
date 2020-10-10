@@ -30,7 +30,7 @@
                 <div class="col-md-6">
                     <div class="text-right">
                         <li><span class="fa fa-home"></span><a href="">FAQ</a></li>
-                        <li><span class="fa fa-phone"></span><a onclick="$('#form-dangky').addClass('opened')" href="<?=base_url('#')?>">Đăng ký thử nghiệm</a></li>
+                        <li><span class="fa fa-phone"></span><a onclick="$('#form-dangky').addClass('opened')" href="javascript:void(0)">Đăng ký thử nghiệm</a></li>
                         <li><span class="fa fa-facebook"></span><a href=""></a></li>
                         <li><span class="fa fa-youtube"></span><a href=""></a></li>
                     </div>
@@ -60,9 +60,14 @@
                                 <img src="<?=base_url('upload/logo.png')?>" alt="">
                             </a>
                         </li>
-                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="<?=base_url()?>">Trang chủ</a></li>
+                        <?php 
+                            $all_category = $this->Category_M->all(['hien_thi'=>1,'id_loai'=>0]);
+                            foreach ($all_category as $item)
+                            {
+                        ?>
                         <li class="have-menu">
-                            <a href="">Giới thiệu</a>
+                            <a href="<?=base_url($item['alias_vn'])?>.html"><?=$item['ten_vn']?></a>
                             <ul class="sub-menu">
                                 <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 1</a></li>
                                 <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 2</a></li>
@@ -71,21 +76,9 @@
                                 <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 5</a></li>
                             </ul>
                         </li>
-                        <li><a href="">Tính năng</a></li>
-                        <li><a href="">Giải pháp</a></li>
-                        <li class="have-menu">
-                            <a href="">Lĩnh vực</a>
-                            <ul class="sub-menu">
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 1</a></li>
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 2</a></li>
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 3</a></li>
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 4</a></li>
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Bảng giá</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Liên hệ</a></li>
+                        <?php 
+                            } 
+                        ?>
                     </ul>
                 </div>
             </div>

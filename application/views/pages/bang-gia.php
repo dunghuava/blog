@@ -11,25 +11,25 @@
             <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon1.png')?>" alt=""></p>
-                    <p>Dịch vụ Mixci là gì ?</p>
+                    <p>Dịch vụ IPCALL là gì ?</p>
                 </div>
             </div>
             <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon2.png')?>" alt=""></p>
-                    <p>Đối tượng sử dụng Mixci</p>
+                    <p>Đối tượng sử dụng IPCALL</p>
                 </div>
             </div>
             <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon3.png')?>" alt=""></p>
-                    <p>Tại sao nên chọn Mixci ?</p>
+                    <p>Tại sao nên chọn IPCALL ?</p>
                 </div>
             </div>
             <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon4.png')?>" alt=""></p>
-                    <p>Khách hàng của Mixci</p>
+                    <p>Khách hàng của IPCALL</p>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
 </section>
 <section class="sec-content">
     <div class="container">
-        <h3 class="main-title">Dịch vụ MiCXM là gì ?</h3>
+        <h3 class="main-title">Dịch vụ IPCALL là gì ?</h3>
         <div class="row">
             <?php for ($i=0;$i<4;$i++){ ?>
                 <div class="col-md-3">
