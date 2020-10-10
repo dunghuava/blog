@@ -10,30 +10,30 @@
             <tr>
                 <td>
                     <p>Tên doanh nghiệp <span style="color:red">(*)</span></p>
-                    <input type="text" class="input">
+                    <input type="text" class="input" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>Họ tên <span style="color:red">(*)</span></p>
-                    <input type="text" class="input">
+                    <input type="text" class="input" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>Số điện thoại <span style="color:red">(*)</span></p>
-                    <input type="text" class="input">
+                    <input type="text" class="input" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>Email <span style="color:red">(*)</span></p>
-                    <input type="text" class="input">
+                    <input type="text" class="input" required>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <p>Nội dung <span style="color:red">(*)</span></p>
+                    <p>Nội dung <span style="color:red"></span></p>
                     <textarea name="" id="" rows="3"></textarea>
                 </td>
             </tr>
@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <h3 class="footer-title">Giới thiệu</h3>
-                    <p>MiCXM là sản phẩm được nghiên cứu và phát triển bởi CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MITEK giúp các doanh nghiệp triển khai một giải pháp là sự kết hợp thống nhất các phương thức tương tác giữa khách hàng với doanh nghiệp bằng các hình thức như điện thoại, email, website, chat hay gửi SMS Brandname</p>
+                    <p>IPCALL là sản phẩm được nghiên cứu và phát triển bởi CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MITEK giúp các doanh nghiệp triển khai một giải pháp là sự kết hợp thống nhất các phương thức tương tác giữa khách hàng với doanh nghiệp bằng các hình thức như điện thoại, email, website, chat hay gửi SMS Brandname</p>
                 </div>
                 <div class="col-md-3">
                     <h3 class="footer-title">Blog</h3>

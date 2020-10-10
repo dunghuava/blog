@@ -3,7 +3,7 @@
         <input type="text" onkeyup="setStt(this,'stt',<?=$val['id']?>)" value="<?=$val['stt']?>" class="ip-text" style="width:55px">
     </td>
     <td><a style="color:#000" href="<?=base_url('admin/category/edit/'.$val['id'])?>"><?=$str.' '.$val['ten_vn']?></a></td>
-    <td class="text-center">
+    <td align="center" class="text-center">
         <?php if (!empty($val['hinh_anh'])){ ?>
             <img onclick="onDeleteImg(<?=$val['id']?>,'<?=$val['hinh_anh']?>')" style="cursor:pointer;" src="<?=resizeImg($val['hinh_anh'],50,35)?>" alt="">
         <?php } ?>

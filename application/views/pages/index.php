@@ -39,25 +39,25 @@
             <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon1.png')?>" alt=""></p>
-                    <p>Dịch vụ Mixci là gì ?</p>
+                    <p>Dịch vụ IPCALL là gì ?</p>
                 </div>
             </div>
             <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon2.png')?>" alt=""></p>
-                    <p>Đối tượng sử dụng Mixci</p>
+                    <p>Đối tượng sử dụng IPCALL</p>
                 </div>
             </div>
             <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon3.png')?>" alt=""></p>
-                    <p>Tại sao nên chọn Mixci ?</p>
+                    <p>Tại sao nên chọn IPCALL ?</p>
                 </div>
             </div>
             <div class="col-md-3 col-xs-6">
                 <div class="item-over">
                     <p><img src="<?=base_url('upload/icon4.png')?>" alt=""></p>
-                    <p>Khách hàng của Mixci</p>
+                    <p>Khách hàng của IPCALL</p>
                 </div>
             </div>
         </div>
@@ -65,10 +65,10 @@
 </section>
 <section class="sec-content">
     <div class="container">
-        <h3 class="main-title">Dịch vụ MiCXM là gì ?</h3>
+        <h3 class="main-title">Dịch vụ IPCALL là gì ?</h3>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>MiCXM hay còn gọi là Contact Center là hệ thống tổng đài chăm sóc khách hàng, bán hàng được tích hợp qua nhiều kênh như thoại, live chat, email, sms, facebook…..tại một nơi duy nhất. Đây được xem là công cụ liên kết đa chiều giữa doanh nghiệp và khách hàng giúp tiếp cận, chăm sóc khách hàng một cách hiệu quả và nâng cao tính trải nghiệm của người dùng.</p>
+                <p>IPCALL hay còn gọi là Contact Center là hệ thống tổng đài chăm sóc khách hàng, bán hàng được tích hợp qua nhiều kênh như thoại, live chat, email, sms, facebook…..tại một nơi duy nhất. Đây được xem là công cụ liên kết đa chiều giữa doanh nghiệp và khách hàng giúp tiếp cận, chăm sóc khách hàng một cách hiệu quả và nâng cao tính trải nghiệm của người dùng.</p>
                 <br><p>
                     <iframe class="frm-reponsive" width="560" height="315" src="https://www.youtube.com/embed/gssduBBhbc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </p>
@@ -78,10 +78,10 @@
 </section>
 <section class="sec-content bg-blue">
     <div class="container">
-        <h3 class="main-title">Đối tượng sử dụng MiCXM</h3>
+        <h3 class="main-title">Đối tượng sử dụng IPCALL</h3>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>Đối tượng sử dụng dịch vụ MiCXM là các doanh nghiệp, các tổ chức, các cửa hàng, siêu thị,… có thể phân loại theo mục đích sử dụng như sau</p>
+                <p>Đối tượng sử dụng dịch vụ IPCALL là các doanh nghiệp, các tổ chức, các cửa hàng, siêu thị,… có thể phân loại theo mục đích sử dụng như sau</p>
                 <br>
             </div>
             <?php for ($i=0;$i<=7;$i++){ ?>
@@ -98,10 +98,10 @@
 </section>
 <section class="sec-content">
     <div class="container">
-        <h3 class="main-title">Tại sao nên chọn MiCXM</h3>
+        <h3 class="main-title">Tại sao nên chọn IPCALL</h3>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>Đối tượng sử dụng dịch vụ MiCXM là các doanh nghiệp, các tổ chức, các cửa hàng, siêu thị,… có thể phân loại theo mục đích sử dụng như sau</p>
+                <p>Đối tượng sử dụng dịch vụ IPCALL là các doanh nghiệp, các tổ chức, các cửa hàng, siêu thị,… có thể phân loại theo mục đích sử dụng như sau</p>
                 <br>
             </div>
             <?php for ($i=0;$i<=7;$i++){ ?>
@@ -152,7 +152,7 @@
 </section>
 <section class="sec-content">
     <div class="container">
-        <h3 class="main-title">Khách hàng của MiCXM</h3><br>
+        <h3 class="main-title">Khách hàng của IPCALL</h3><br>
         <div class="row">
             <div class="slick-cus">
                 <?php foreach ($data['list_customer'] as $customer) {?>

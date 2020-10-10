@@ -22,7 +22,7 @@
 
 <p>Vấn đề của AgriCo đ&atilde; chỉ ra một trong những sai lầm phổ biến trong nỗ lực kết nối với kh&aacute;ch h&agrave;ng của doanh nghiệp. Đ&oacute; l&agrave; qu&aacute; ch&uacute; t&acirc;m v&agrave;o ph&aacute;t triển ho&agrave;n chỉnh c&aacute;c t&iacute;nh năng thanh to&aacute;n, đặt h&agrave;ng&hellip; m&agrave; bỏ s&oacute;t kh&iacute;a cạnh cảm x&uacute;c của người d&ugrave;ng.</p>
 
-<p><img alt="trải nghiệm khách hàng" src="http://micxm.vn/blog/wp-content/uploads/2018/09/blog-01.jpg" style="height:1875px; width:3334px" /></p>
+<p><img alt="trải nghiệm khách hàng" src="http://IPCALL.vn/blog/wp-content/uploads/2018/09/blog-01.jpg" style="height:1875px; width:3334px" /></p>
 
 <p>Đừng qu&aacute; ch&uacute; t&acirc;m v&agrave;o ph&aacute;t triển ho&agrave;n chỉnh c&aacute;c t&iacute;nh năng thanh to&aacute;n, đặt h&agrave;ng&hellip; m&agrave; bỏ s&oacute;t kh&iacute;a cạnh cảm x&uacute;c của người d&ugrave;ng.</p>
 
