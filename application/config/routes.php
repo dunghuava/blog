@@ -53,6 +53,7 @@ $route['default_controller'] = 'web';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['(:any)'] = 'web/index/$1';
 $route['blog'] = 'web/blog';
 $route['blog-detail'] = 'web/blog_detail';
 $route['bang-gia'] = 'web/bang_gia';
