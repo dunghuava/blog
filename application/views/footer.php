@@ -40,7 +40,7 @@
             <tr>
                 <td>
                     <button onclick="$('#form-dangky').removeClass('opened')" type="button">Đóng <span style="color:red">(x)</span></button>
-                    <button type="submit">Đăng ký</button>
+                    <button type="submit">Gửi yêu cầu</button>
                 </td>
             </tr>
         </table>
