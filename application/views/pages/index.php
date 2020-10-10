@@ -180,8 +180,8 @@
                            <p><?=$feedback['noi_dung_vn']?></p>
                         </blockquote>
                         <div class="item-cus">
-                            <img src="<?=base_url('upload/').$feedback['hinh_anh']?>" alt="">
-                            <h3><?=$feedback['ten_vn']?></h3>
+                            <img src="<?=base_url('upload/images/').$feedback['hinh_anh']?>" alt="">
+                            <h3 style="font-weight: bold;"><?=$feedback['ten_vn']?></h3>
                             <p><?=$feedback['chucvu_vn']?></p>
                             <p><?=$feedback['congty_vn']?></p>
                             <a href="">>> Xem chi tiết</a>

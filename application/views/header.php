@@ -16,15 +16,16 @@
 </head>
 <body>
 <nav class="main-nav <?=check_isMobile() ? 'mobile':''?>">
-    <?php if (!check_isMobile()){ ?>
+    <?php 
+    if (!check_isMobile()){ ?>
     <div class="top-nav hidden-xs">
         <div class="container"> 
             <div class="row">
                 <div class="col-md-6">
                     <div class="text-left">
                         <li><span class="fa fa-home"></span><a href="">Trang chủ</a></li>
-                        <li><span class="fa fa-phone"></span><a href="">0383868205</a></li>
-                        <li><span class="fa fa-envelope"></span><a href="">dunghua@pavietnam.vn</a></li>
+                        <li><span class="fa fa-phone"></span><a href=""><?=$info[0]['hotline']?></a></li>
+                        <li><span class="fa fa-envelope"></span><a href=""><?=$info[0]['email']?></a></li>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -44,7 +45,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <a href="">
-                        <img src="<?=base_url('upload/logo.png')?>" alt="">
+                        <img src="<?=resizeImg($info[0]['logo'],154,66,0)?>" alt="">
                     </a>
                     <span id="btn-bars" class="hidden-lg hidden-md" style="color:#fff;float:right;font-size:20px;margin-top:15px">
                         <span class="fa fa-bars"></span>&nbsp;menu
