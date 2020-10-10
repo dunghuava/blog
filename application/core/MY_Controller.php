@@ -20,6 +20,8 @@ class MY_Controller extends CI_Controller {
 	 */
 	public function include($page=array())
 	{
+		session_start();
+		
 		if (!$this->session->has_userdata('admin_infor')){
 			redirect(base_url('admin/login'),'location');
 		}

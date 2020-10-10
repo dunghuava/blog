@@ -5,12 +5,13 @@ class Account extends MY_Controller {
 
 	public function __construct()
     {
-        parent::__construct();
+		parent::__construct();
 		$this->load->model('Account_M');
-
 	}
 	public function login()
 	{
+		session_start();
+		
 		if ($this->session->has_userdata('admin_infor')){
 			redirect(base_url('admin/category'),'location');
 		}
@@ -21,10 +22,11 @@ class Account extends MY_Controller {
 			if (isset($post['account'])){
 				$is_login = $this->Account_M->CheckLogin($user_name,$user_password,1);
 				if ($is_login){
-					$infor = $this->Account_M->all(['user_name'=>$user_name,'is_admin'=>'1']);
-					// print_r($infor);die();
-					$this->session->set_userdata('admin_infor', $infor[0] );
+					$infor = $this->Account_M->one(['user_name'=>$user_name,'is_admin'=>'1']);
+					//print_r($infor);die();
+					$this->session->set_userdata('admin_infor', $infor);
 					redirect(base_url('admin'),'location');
+
 				}else{
 					$this->session->set_flashdata('reponse','Tên đăng nhập hoặc mật khẩu không đúng.');
 				}
