@@ -24,6 +24,7 @@ $('.main-slider').slick({
     speed: 300,
     slidesToShow: 6,
     slidesToScroll: 1,
+    cssEase: 'linear',
     prevArrow:"<span class='btn-arrow btn-prev fa fa-angle-left'></span>",
     nextArrow:"<span class='btn-arrow btn-next fa fa-angle-right'></span>",
     responsive: [
