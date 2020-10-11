@@ -10,6 +10,7 @@ class Web extends MY_Controller {
 		$this->load->model('Feedback_M');
 		$this->load->model('Customer_M');
 		$this->load->model('Category_M');
+		$this->load->model('Post_M');
 	}
 	
 	public function index($alias="")
@@ -33,13 +34,28 @@ class Web extends MY_Controller {
 			$this->load($data);
 		}
 	}
-	public function blog()
-	{
+	public function blog($alias = '')
+	{	
+		$info_category = $this->Category_M->find(['alias_vn'=>$alias]);
+		if ($alias!='') {
+			$data['list_blog']=$this->Post_M->all(['id_loai'=>$info_category['id']],'desc');
+		}else{
+			$data['list_blog']=$this->Post_M->all('','desc');
+		}
+
+		$data['list_blog_nearest']=$this->Post_M->all('','desc');
+		
+		$data['list_category']=$this->Category_M->all(['id_loai'=>6]);
 		$data['path']='blog';
 		$this->load($data);
 	}
-	public function blog_detail()
+	public function blog_detail($alias = '')
 	{
+
+		$id = get_id($alias);
+		$data['info_blog']=$this->Post_M->find(['id'=>$id]);
+		$data['list_blog_nearest']=$this->Post_M->all('','desc');
+		$data['list_category']=$this->Category_M->all(['id_loai'=>6]);
 		$data['path']='blog-detail';
 		$this->load($data);
 	}

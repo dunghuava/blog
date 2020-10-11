@@ -1,27 +1,32 @@
 
+<!--  -->
 <section class="sec-cate-right">
     <h4 class="cate-title">Phân loại theo chủ đề</h4>
-    <?php for ($i=1;$i<=10;$i++){ ?>
-        <li><a href="">Chủ đề (<?=rand(10,50)?>)</a></li>
+    <?php foreach ($data['list_category'] as $key => $category) {
+        $count = $this->Post_M->all(['id_loai' => $category['id']]);
+    ?>
+        <li><a href="<?=base_url('blog/'.$category['alias_vn'])?>"><?=$category['ten_vn'].' ('.count($count).')';?></a></li>
     <?php } ?>
 </section>
 <section class="sec-cate-right">
     <h4 class="cate-title">Bài viết gần nhất</h4>
-    <?php for ($i=1;$i<=6;$i++){ ?>
+    <?php foreach ($data['list_blog_nearest'] as $key => $blog) {
+        if ($key<3) {
+    ?>
         <li class="small-blog">
-            <a href="">
+            <a href="<?=base_url('blog-detail/'.$blog['alias_vn'].'-'.$blog['id'])?>">
                 <div style="display:flex">
-                    <img src="<?=base_url('upload/blog.png')?>" alt="">
-                    <p><b>Tại sao tổng đài Callcenetr cần tích hợp CRM</b></p>
+                    <img style="border: none" src="<?=resizeImg($blog['hinh_anh'],50,50,0)?>" alt="">
+                    <p><b><?=mb_substr($blog['ten_vn'], 0, 45,"UTF-8").' ...';?></b></p>
                 </div>
-                <p>November, 09, 2020</p>
+                <p><span class="fa fa-calendar">&nbsp;</span><?=date('d/m/Y',strtotime($blog['created_at']))?></p>
             </a>
         </li>
-    <?php } ?>
+    <?php } } ?>
 </section>
 <section class="sec-cate-right">
     <h4 class="cate-title">Xem nhanh theo chủ đề</h4>
-    <?php for ($i=1;$i<=10;$i++){ ?>
-        <li class="btn-category"><a href="">Chủ đề (<?=rand(10,50)?>)</a></li>
+    <?php foreach ($data['list_category'] as $key => $category) {?>
+        <li class="btn-category"><a href="<?=base_url('blog/'.$category['alias_vn'])?>"><?=$category['ten_vn']?></a></li>
     <?php } ?>
 </section>

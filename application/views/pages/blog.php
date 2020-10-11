@@ -9,22 +9,26 @@
     <div class="container">
         <div class="col-md-9" style="border-right:1px solid #ccc">
             <div class="row">
-                <?php for ($i=0;$i<10;$i++){ ?>
+                <?php foreach ($data['list_blog'] as $key => $blog) {?>
                     <div class="col-md-4 col-xs-6">
                         <div class="item-blog">
-                            <a href="">
+                            <a href="<?=base_url('blog-detail/'.$blog['alias_vn'].'-'.$blog['id'])?>">
                                 <div class="relative">
-                                    <img src="<?=base_url('upload/blog.png')?>" alt="">
+                                    <img src="<?=resizeImg($blog['hinh_anh'],254,205,0)?>" alt="">
                                     <div class="overlay">
                                         <div class="fa fa-share-alt"></div>
                                     </div>
                                 </div>
-                                <p class="title-blog">Các Chỉ Số Báo Cáo Call Center Mà Bạn Cần Biết</p>
-                                <p class="date-blog mg0"><?=date('M-Y')?></p>
-                                <p class="desc-blog">Bạn đang có dữ liệu khách hàng lớn nhưng chưa…</p>
+                                <p class="title-blog" style="height: 40px"><?=mb_substr($blog['ten_vn'], 0, 55,"UTF-8").' ...';?></p>
+                                <p class="date-blog mg0"><span class="fa fa-calendar">&nbsp;</span><?=date('d/m/Y',strtotime($blog['created_at']))?></p>
+                                <p class="desc-blog" style="height: 40px"><?=mb_substr($blog['mo_ta_vn'], 0, 70,"UTF-8").' ...';?></p>
                             </a>
                         </div>
                     </div>
+                <?php } ?>
+
+                <?php if (empty($data['list_blog'])) {?>
+                    <div class="text-center" style="color:red"><h4>Dữ liệu đang được cập nhật...</h4></div>
                 <?php } ?>
             </div>
         </div>
