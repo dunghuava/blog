@@ -102,6 +102,18 @@
                         <input type="text" class="ip-ft" placeholder="Nhập email để nhận thông tin">
                         <button type="button">ĐĂNG KÝ NGAY</button>
                     </form>
+
+                    <h3 class="footer-title">Theo dõi:</h3>
+                    <div class="contact-social-links">
+                        <ul>
+                            <li style="float: left;margin-right: 15px">
+                                <a href="https://www.facebook.com/micxm.contactcenter/" style="font-size: 25px;font-weight: bold;"><i class="fa  fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UC_GUS6PQA981lzvKG9NPz7Q" style="font-size: 25px;font-weight: bold;"><i class="fa  fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
