@@ -7,12 +7,14 @@
             </td>
         </tr>
 
+        <?php if (!empty($data['category']['hinh_anh'])) {?>
         <tr id="tr_image">
             <th width="150px" align="left"></th>
             <td>
                 <img src="<?=base_url().'upload/images/'.$data['category']['hinh_anh']?>" onclick="onDelete()" title="Bấm vào đây để xóa" style="cursor: pointer;max-height: 150px;">
             </td>
         </tr>
+        <?php } ?>
 
         <tr>
             <th width="150px" align="left">Tên danh mục</th>
@@ -54,7 +56,7 @@
         <tr>
             <th width="150px" align="left">Mô tả ngắn</th>
             <td>
-               <textarea style="width:310px" id="mo_ta_vn" name="mo_ta_vn" rows="4"><?=$data['category']['mo_ta_vn']?></textarea>
+               <textarea class="ckeditor" id="mo_ta_vn" name="mo_ta_vn" rows="4"><?=$data['category']['mo_ta_vn']?></textarea>
             </td>
         </tr>
         <tr>
@@ -120,7 +122,7 @@
             }).then((result) => {
             if (result.value) {
             	$('#tr_image').css("display","none");
-            	$('#hinh_anh').attr("required","required");
+            	// $('#hinh_anh').attr("required","required");
             }
         });
         }

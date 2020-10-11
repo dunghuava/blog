@@ -62,6 +62,8 @@ class Web extends MY_Controller {
 	public function bang_gia()
 	{
 		$data['path']='bang-gia';
+		$data['list_customer']=$this->Customer_M->all(['loai' => 1]);
+		$data['list_partner']=$this->Customer_M->all(['loai' => 2]);
 		$this->load($data);
 	}
 }

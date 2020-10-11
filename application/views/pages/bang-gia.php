@@ -107,11 +107,11 @@
         <h3 class="main-title">Khách hàng tin dùng</h3><br>
         <div class="row">
             <div class="slick-cus">
-                <?php for ($i=0;$i<=12;$i++){ ?>
+                <?php foreach ($data['list_customer'] as $customer) {?>
                 <div class="col-md-2">
                     <div class="item-small-slide">
                         <a href="">
-                            <img src="<?=base_url('upload/icon7.png')?>" alt="">
+                            <img src="<?=resizeImg($customer['hinh_anh'],145,145,0)?>" alt="">
                         </a>
                     </div>
                 </div>
@@ -125,11 +125,11 @@
         <h3 class="main-title">Đối tác tích hợp</h3><br>
         <div class="row">
             <div class="slick-cus">
-                <?php for ($i=0;$i<=12;$i++){ ?>
+                <?php foreach ($data['list_partner'] as $partner) {?>
                 <div class="col-md-2">
                     <div class="item-small-slide">
                         <a href="">
-                            <img src="<?=base_url('upload/icon7.png')?>" alt="">
+                            <img src="<?=resizeImg($partner['hinh_anh'],145,145,0)?>" alt="">
                         </a>
                     </div>
                 </div>

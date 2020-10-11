@@ -47,7 +47,7 @@
         <tr>
             <th width="150px" align="left">Mô tả ngắn</th>
             <td>
-               <textarea style="width:310px" id="mo_ta_vn" name="mo_ta_vn" rows="4"></textarea>
+               <textarea class="ckeditor" id="mo_ta_vn" name="mo_ta_vn" rows="4"></textarea>
             </td>
         </tr>
         <tr>

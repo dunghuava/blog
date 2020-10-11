@@ -36,39 +36,32 @@
 <section class="over-section" id="over-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-xs-6">
-                <div class="item-over">
-                    <p><img src="<?=base_url('upload/icon1.png')?>" alt=""></p>
-                    <p>Dịch vụ IPCALL là gì ?</p>
+            <?php  
+                $gioi_thieu=$this->Category_M->all(['id_loai'=>1]);
+            ?>
+            
+            <?php foreach ($gioi_thieu as $key => $item) {?>
+                <a href="<?=fullAddress().'#'.$item['id']?>">
+                <div class="col-md-3 col-xs-6">
+                    <div class="item-over">
+                        <p><img src="<?=resizeImg($item['hinh_anh'],48,48,0)?>" alt=""></p>
+                        <p><?= $item['ten_vn'] ?></p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="item-over">
-                    <p><img src="<?=base_url('upload/icon2.png')?>" alt=""></p>
-                    <p>Đối tượng sử dụng IPCALL</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="item-over">
-                    <p><img src="<?=base_url('upload/icon3.png')?>" alt=""></p>
-                    <p>Tại sao nên chọn IPCALL ?</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="item-over">
-                    <p><img src="<?=base_url('upload/icon4.png')?>" alt=""></p>
-                    <p>Khách hàng của IPCALL</p>
-                </div>
-            </div>
+                </a>
+            <?php } ?>
         </div>
     </div>
 </section>
-<section class="sec-content">
+<section class="sec-content" id="7">
     <div class="container">
         <h3 class="main-title">Dịch vụ IPCALL là gì ?</h3>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>IPCALL hay còn gọi là Contact Center là hệ thống tổng đài chăm sóc khách hàng, bán hàng được tích hợp qua nhiều kênh như thoại, live chat, email, sms, facebook…..tại một nơi duy nhất. Đây được xem là công cụ liên kết đa chiều giữa doanh nghiệp và khách hàng giúp tiếp cận, chăm sóc khách hàng một cách hiệu quả và nâng cao tính trải nghiệm của người dùng.</p>
+                <?php  
+                    $dich_vu=$this->Category_M->find(['id'=>7]);
+                ?>
+                <div style="text-align: left;"><?=$dich_vu['mo_ta_vn']?></div>
                 <br><p>
                     <iframe class="frm-reponsive" width="560" height="315" src="https://www.youtube.com/embed/gssduBBhbc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </p>
@@ -76,39 +69,47 @@
         </div>
     </div>
 </section>
-<section class="sec-content bg-blue">
+<section class="sec-content bg-blue" id="8">
     <div class="container">
         <h3 class="main-title">Đối tượng sử dụng IPCALL</h3>
         <div class="row">
+            <?php  
+                $doi_tuong=$this->Category_M->find(['id'=>8]);
+                $list_doi_tuong=$this->Category_M->all(['id_loai'=>8]);
+            ?>
             <div class="col-md-12 text-center">
-                <p>Đối tượng sử dụng dịch vụ IPCALL là các doanh nghiệp, các tổ chức, các cửa hàng, siêu thị,… có thể phân loại theo mục đích sử dụng như sau</p>
+                <p><?=$doi_tuong['mo_ta_vn']?></p>
                 <br>
             </div>
-            <?php for ($i=0;$i<=7;$i++){ ?>
+            <?php foreach ($list_doi_tuong as $key => $item) {?>
             <div class="col-md-3">
                 <div class="item-view">
-                    <p><img src="<?=base_url('upload/icon5.png')?>" alt=""></p>
-                    <h4><b>Telesales</b></h4>
-                    <p>Ngân hàng, bảo hiểm, tài chính, giáo dục và hầu hết các loại hình doanh nghiệp khác muốn tìm kiếm khách hàng qua điện thoại</p>
+                    <p><img src="<?=resizeImg($item['hinh_anh'],70,70,0)?>" alt=""></p>
+                    <h4><b><?=$item['ten_vn']?></b></h4>
+                    <div style="height: 90px;"><?=$item['mo_ta_vn']?></div>
                 </div>
             </div>
             <?php } ?>
         </div>
     </div>
 </section>
-<section class="sec-content">
+<section class="sec-content" id="9">
     <div class="container">
         <h3 class="main-title">Tại sao nên chọn IPCALL</h3>
         <div class="row">
+            <?php  
+                $tai_sao=$this->Category_M->find(['id'=>9]);
+                $list_tai_sao=$this->Category_M->all(['id_loai'=>9]);
+            ?>
             <div class="col-md-12 text-center">
-                <p>Đối tượng sử dụng dịch vụ IPCALL là các doanh nghiệp, các tổ chức, các cửa hàng, siêu thị,… có thể phân loại theo mục đích sử dụng như sau</p>
+                <p><?=$tai_sao['mo_ta_vn']?></p>
                 <br>
             </div>
-            <?php for ($i=0;$i<=7;$i++){ ?>
+            <?php foreach ($list_tai_sao as $key => $item) {?>
             <div class="col-md-3 col-xs-6">
                 <div class="item-view">
-                    <p><img src="<?=base_url('upload/icon6.png')?>" alt=""></p>
-                    <h4><b>Telesales</b></h4>
+                    <p><img src="<?=resizeImg($item['hinh_anh'],70,70,0)?>" alt=""></p>
+                    <h4><b><?=$item['ten_vn']?></b></h4>
                 </div>
             </div>
             <?php } ?>
@@ -150,7 +151,7 @@
         </div>
     </div>
 </section>
-<section class="sec-content">
+<section class="sec-content" id="21">
     <div class="container">
         <h3 class="main-title">Khách hàng của IPCALL</h3><br>
         <div class="row">
