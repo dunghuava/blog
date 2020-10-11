@@ -201,7 +201,7 @@
             <div class="sov text-center">
                 <div class="text-center">
                     <div class="btn-contact-now">
-                        <a href="tel:0383868205"><span class="fa fa-phone"></span>&nbsp;Liên hệ tư vấn</a>
+                        <a href="<?=base_url('lien-he')?>"><span class="fa fa-phone"></span>&nbsp;Liên hệ tư vấn</a>
                     </div>
                 </div>
             </div>

@@ -66,4 +66,10 @@ class Web extends MY_Controller {
 		$data['list_partner']=$this->Customer_M->all(['loai' => 2]);
 		$this->load($data);
 	}
+
+	public function lien_he()
+	{
+		$data['path']='lien-he';
+		$this->load($data);
+	}
 }

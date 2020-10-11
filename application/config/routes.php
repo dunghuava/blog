@@ -53,6 +53,7 @@ $route['default_controller'] = 'web';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['lien-he'] = 'web/lien_he';
 $route['admin'] = 'admin/Dasboard';
 $route['admin/login'] = 'admin/account/login';
 $route['admin/changePass'] = 'admin/account/changePass';
@@ -63,4 +64,5 @@ $route['blog'] = 'web/blog';
 $route['blog/(:any)']     = 'web/blog/$1';
 $route['blog-detail/(:any)'] = 'web/blog_detail/$1';
 $route['bang-gia'] = 'web/bang_gia';
+
 
