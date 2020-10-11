@@ -23,6 +23,7 @@ class MY_Controller extends CI_Controller {
 
 		$data['data']=$page;
 		$data['info'] = $this->Info_M->all();
+		$data['list_blog']=$this->Post_M->all('','desc');
 		$this->load->view('header', $data);
 		$this->load->view('pages/'.$data['data']['path'],$data);
 		$this->load->view('footer', $data);

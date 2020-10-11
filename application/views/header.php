@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <a href="">
-                        <img src="<?=resizeImg($info[0]['logo'],154,66,0)?>" alt="">
+                        <img src="<?=resizeImg($info[0]['logo'],154,59,0)?>" alt="">
                     </a>
                     <span id="btn-bars" class="hidden-lg hidden-md" style="color:#fff;float:right;font-size:20px;margin-top:15px">
                         <span class="fa fa-bars"></span>&nbsp;menu

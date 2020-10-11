@@ -56,10 +56,10 @@
                         <p><span class="fa fa-envelope"></span>&nbsp;Chi tiết tiện ich tính năng</p>
                     </div>
                     <div class="col-md-3">
-                        <p><span class="fa fa-address-book"></span>&nbsp;Blog</p>
+                        <p><span class="fa fa-address-book"></span>&nbsp;Blog IPCALL</p>
                     </div>
                     <div class="col-md-3">
-                        <p><span class="fa fa-phone"></span>&nbsp;Hotline: 0383868205</p>
+                        <p><span class="fa fa-phone"></span>&nbsp;Gọi hỗ trợ 24/7 hotline: <?=$info[0]['hotline']?></p>
                     </div>
                 </div>
             </div>
@@ -70,24 +70,24 @@
             <div class="row">
                 <div class="col-md-3">
                     <h3 class="footer-title">Giới thiệu</h3>
-                    <p>IPCALL là sản phẩm được nghiên cứu và phát triển bởi CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MITEK giúp các doanh nghiệp triển khai một giải pháp là sự kết hợp thống nhất các phương thức tương tác giữa khách hàng với doanh nghiệp bằng các hình thức như điện thoại, email, website, chat hay gửi SMS Brandname</p>
+                    <p><img src="<?=resizeImg($info[0]['logo'],154,59,0)?>" alt=""> IPCALL là sản phẩm được nghiên cứu và phát triển bởi CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MITEK giúp các doanh nghiệp triển khai một giải pháp là sự kết hợp thống nhất các phương thức tương tác giữa khách hàng với doanh nghiệp bằng các hình thức như điện thoại, email, website, chat hay gửi SMS Brandname</p>
                 </div>
                 <div class="col-md-3">
                     <h3 class="footer-title">Blog</h3>
-                    <?php for ($i=1;$i<=4;$i++){ ?>
+                    <?php foreach ($list_blog as $key => $blog) {?>
                     <li class="small-blog">
-                        <a href="" style="color:#fff">
+                        <a href="<?=base_url('blog-detail/'.$blog['alias_vn'].'-'.$blog['id'])?>" style="color:#fff">
                             <div style="display:flex">
-                                <img src="<?=base_url('upload/blog.png')?>" alt="">
-                                <p>Tại sao tổng đài Callcenetr cần tích hợp CRM</p>
+                                <img style="border: none" src="<?=resizeImg($blog['hinh_anh'],50,50,0)?>" alt="">
+                                <p><b><?=mb_substr($blog['ten_vn'], 0, 45,"UTF-8").' ...';?></b></p>
                             </div>
-                            <p>November, 09, 2020</p>
+                            <p><span class="fa fa-calendar">&nbsp;</span><?=date('d/m/Y',strtotime($blog['created_at']))?></p>
                         </a>
                     </li>
                     <?php } ?>
                 </div>
                 <div class="col-md-3">
-                    <h3 class="footer-title">Sản phẩm khác của MITEK</h3>
+                    <h3 class="footer-title">Sản phẩm khác của IPCALL</h3>
                     <ul class="ls-ft-pro">
                         <li><a href="">MiPBX - Tổng đài doanh nghiệp</a></li>
                         <li><a href="">MiPBX - Tổng đài doanh nghiệp</a></li>
@@ -105,12 +105,12 @@
                 </div>
             </div>
         </div>
-        <div class="bottom pbt0">
+        <div class="bottom pbt0" style="margin-bottom: 35px">
             <div class="container pbt0">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <p>© 2017. Công ty cổ phần thương mại dịch vụ MITEK. Địa chỉ: Tầng 1, Tòa nhà PVFCCO, 43 Mạc Đĩnh Chi, P. Đa Kao, Quận 1, TP. Hồ Chí Minh</p>
+                            <p><?=$info[0]['coppy_right_vn']?></p>
                         </div>
                     </div>
                 </div>
