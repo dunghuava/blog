@@ -11,6 +11,9 @@
         text-overflow: ellipsis;
         overflow: hidden;
     }
+    .btn-arrow{
+        display: none !important;
+    }
     .ls-main-menu{
         box-shadow: 0 1px 3px #000;
         position: fixed;
@@ -70,6 +73,9 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+    }
+    .btn-arrow{
+        display: none !important;
     }
 }
 
