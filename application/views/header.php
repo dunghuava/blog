@@ -69,13 +69,25 @@
                         ?>
                         <li class="have-menu">
                             <a href="<?=base_url($item['alias_vn'])?>.html"><?=$item['ten_vn']?></a>
-                            <ul class="sub-menu">
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 1</a></li>
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 2</a></li>
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 3</a></li>
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 4</a></li>
-                                <li><img src="<?=base_url('upload/icon8.png')?>" alt="">&nbsp;<a href="">Sub 5</a></li>
+
+                            <?php  
+                                $list_sub = $this->Category_M->all(['hien_thi'=>1,'id_loai'=>$item['id']]);
+                                if (!empty($list_sub) && $item['module_id'] !=1) {
+                            ?>
+                            <ul class="sub-menu" style="width: 550px">
+                                <?php 
+                                    foreach ($list_sub as $key => $sub) {
+                                ?>
+                                <li style="width: 45%"><img src="<?=resizeImg($sub['hinh_anh'],25,25,0)?>" alt="">&nbsp;
+                                    <a href="" style="font-size: 14px"><?=$sub['ten_vn']?></a>
+                                    <!-- <br>
+                                    <br>
+                                    <div style="height: 200px"><?=strip_tags(mb_substr($sub['mo_ta_vn'], 0, 10,"UTF-8").' ...');?></div> -->
+                                </li>
+                        
+                                <?php } ?>
                             </ul>
+                        <?php } ?>
                         </li>
                         <?php 
                             } 

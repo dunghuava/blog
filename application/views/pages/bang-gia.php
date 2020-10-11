@@ -8,36 +8,31 @@
 <section class="over-section" id="over-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-xs-6">
-                <div class="item-over">
-                    <p><img src="<?=base_url('upload/icon1.png')?>" alt=""></p>
-                    <p>Dịch vụ IPCALL là gì ?</p>
+            
+                <a href="<?=fullAddress().'#banggia'?>">
+                <div class="col-md-6 col-xs-6">
+                    <div class="item-over">
+                        <p><img src="<?=resizeImg('bang_gia.png',48,48,0)?>" alt=""></p>
+                        <p>Bảng giá gói dịch vụ</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="item-over">
-                    <p><img src="<?=base_url('upload/icon2.png')?>" alt=""></p>
-                    <p>Đối tượng sử dụng IPCALL</p>
+                </a>
+
+                <a href="<?=fullAddress().'#chitiet'?>">
+                <div class="col-md-6 col-xs-6">
+                    <div class="item-over">
+                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',48,48,0)?>" alt=""></p>
+                        <p>Chi tiết gói dịch vụ</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="item-over">
-                    <p><img src="<?=base_url('upload/icon3.png')?>" alt=""></p>
-                    <p>Tại sao nên chọn IPCALL ?</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="item-over">
-                    <p><img src="<?=base_url('upload/icon4.png')?>" alt=""></p>
-                    <p>Khách hàng của IPCALL</p>
-                </div>
-            </div>
+                </a>
+            
         </div>
     </div>
 </section>
-<section class="sec-content">
+<section class="sec-content" id="banggia">
     <div class="container">
-        <h3 class="main-title">Dịch vụ IPCALL là gì ?</h3>
+        <h3 class="main-title">Bảng giá gói dịch vụ</h3>
         <div class="row">
             <?php for ($i=0;$i<4;$i++){ ?>
                 <div class="col-md-3">
@@ -54,8 +49,8 @@
                             <p>+ QL vụ việc tiếp nhận + Báo cáo</p>
                             <hr>
                             <div class="text-center">
-                                <p><a href=""><b>Xem chi tiết</b></a></p>
-                                <p><a href="" class="btn btn-color">Liên hệ</a></p>
+                                <p><a href="<?=fullAddress().'#chitiet'?>"><b>Xem chi tiết</b></a></p>
+                                <p><a onclick="$('#form-dangky').addClass('opened')" href="javascript:void(0)" class="btn btn-color" style="padding: 5px 15px">Liên hệ</a></p>
                             </div>
                         </div>
                     </div>
@@ -64,7 +59,7 @@
         </div>
     </div>
 </section>
-<section class="sec-content bg-blue">
+<section class="sec-content bg-blue" id="chitiet">
     <div class="container">
         <h3 class="main-title">Chi tiết gói dịch vụ</h3><br>
         <div class="row">
