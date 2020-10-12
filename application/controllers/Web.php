@@ -75,6 +75,14 @@ class Web extends MY_Controller {
 		$data['path']='lien-he';
 		$this->load($data);
 	}
+	public function tinh_nang($alias="")
+	{
+		$alias = trim($alias,'.html');
+		$id = get_id($alias);
+		$data['info_blog']=$this->Post_M->find(['id'=>$id]);
+		$data['path']='tinh-nang';
+		$this->load($data);
+	}
 
 	public function customer_care()
 	{
