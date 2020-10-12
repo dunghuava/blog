@@ -19,7 +19,7 @@ class Web extends MY_Controller {
 		
 		$alias = trim($alias,'.html');
 		$page = $this->Category_M->one(['alias_vn'=>$alias]);
-		if (!empty ($alias) && !empty($page)){
+		if (!empty ($alias) && !empty($page) && $page['module_id']!=3){
 			switch ($page['module_id']){
 				case 0 : break;
 				case 1 : $this->blog();break;
