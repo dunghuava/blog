@@ -42,42 +42,58 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 contact-form">
-                <div class="col-md-12">
-                    <label class="midesk_label_title">Tên doanh nghiệp<span style="color: red">(*)</span></label>
-                    <input type="text" name="Tên doanh nghiệp" class="form-control" placeholder="Tên doanh nghiệp" required="">
+            <form id="form-contact" method="POST">
+                <div class="col-md-6 contact-form">
+                    <div class="col-md-12">
+                        <label class="midesk_label_title">Tên doanh nghiệp<span style="color: red">(*)</span></label>
+                        <input type="text" id="doanh_nghiep" name="doanh_nghiep" class="form-control" placeholder="Tên doanh nghiệp" required="">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="midesk_label_title">Họ tên<span style="color: red">(*)</span></label>
+                        <input type="text" id="ten" name="ten" class="form-control" placeholder="Nhập họ tên bạn" required="">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="midesk_label_title">Số điện thoại<span style="color: red">(*)</span></label>
+                        <input type="text" id="sdt" name="sdt" class="form-control" placeholder="" required="">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="midesk_label_title">Email<span style="color: red">(*)</span></label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="" required="">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="midesk_label_title">Nội dung<span style="color: red">(*)</span></label>
+                        <textarea id="noi_dung" name="noi_dung" class="form-control" placeholder="" required=""></textarea>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 20px">
+                        <button type="submit" name="submit" class="btn btn-default pull-right btn-sm">Gửi yêu cầu</button>
+                    </div>
                 </div>
-                <div class="col-md-12">
-                    <label class="midesk_label_title">Họ tên<span style="color: red">(*)</span></label>
-                    <input type="text" name="var_fullname" class="form-control" placeholder="Nhập họ tên bạn" required="">
-                </div>
-                <div class="col-md-12">
-                    <label class="midesk_label_title">Số điện thoại<span style="color: red">(*)</span></label>
-                    <input type="text" name="Số điện thoại" class="form-control" placeholder="" required="">
-                </div>
-                <div class="col-md-12">
-                    <label class="midesk_label_title">Email<span style="color: red">(*)</span></label>
-                    <input type="email" name="var_email" class="form-control" placeholder="" required="">
-                </div>
-                <div class="col-md-12">
-                    <label class="midesk_label_title">Nội dung<span style="color: red">(*)</span></label>
-                    <textarea name="var_content" class="form-control" placeholder="" required=""></textarea>
-                </div>
-                <div class="col-md-12" style="margin-top: 20px">
-                    <button type="submit" name="submit" onclick="submitForm(this)" class="btn btn-default pull-right btn-sm">Gửi yêu cầu</button>
-                </div>
-            </div>
+            </form>
         </div>
 
     </div>
     <br><br>
 </section>
-
 <script>
-    $('.ck_row').click(function (e) { 
-        e.preventDefault();
-        var row = $(this).attr('rw');
-        $('.content_'+row).slideToggle();
+    $('#form-contact').submit(function(event){  
+        event.preventDefault();  
+
+            $.ajax({  
+                url:"<?=base_url()?>web/addContact",  
+                method:"POST",  
+                data:$('#form-contact').serialize(),  
+                success: function (data) {
+                    swal(
+                        'Thông tin đã được gửi thành công!',
+                        '',
+                        'success'
+                    );
+
+                    $('#form-contact').find('input:text').val('');
+                    $('#form-contact').find('#email').val('');
+                    $('#form-contact').find('textarea').val('');
+                }
+            });  
+
     });
 </script>

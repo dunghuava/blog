@@ -11,6 +11,7 @@ class Web extends MY_Controller {
 		$this->load->model('Customer_M');
 		$this->load->model('Category_M');
 		$this->load->model('Post_M');
+		$this->load->model('Contact_M');
 	}
 	
 	public function index($alias="")
@@ -79,4 +80,19 @@ class Web extends MY_Controller {
 		$data['path']='customer-care';
 		$this->load($data);
 	}
+
+	public function addContact()
+    {
+        $post = $this->input->post();
+
+        $data_insert = array(
+            'doanh_nghiep' => $post['doanh_nghiep'],
+            'ten' => $post['ten'], 
+            'sdt' => $post['sdt'], 
+            'email' => $post['email'], 
+            'noi_dung' => $post['noi_dung'], 
+        );
+
+        $this->Contact_M->create($data_insert);
+    }
 }

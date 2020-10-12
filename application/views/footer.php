@@ -10,31 +10,31 @@
             <tr>
                 <td>
                     <p>Tên doanh nghiệp <span style="color:red">(*)</span></p>
-                    <input type="text" class="input" required>
+                    <input type="text" id="doanh_nghiep" name="doanh_nghiep" class="input" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>Họ tên <span style="color:red">(*)</span></p>
-                    <input type="text" class="input" required>
+                    <input type="text" id="ten" name="ten" class="input" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>Số điện thoại <span style="color:red">(*)</span></p>
-                    <input type="text" class="input" required>
+                    <input type="text" id="sdt" name="sdt" class="input" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>Email <span style="color:red">(*)</span></p>
-                    <input type="text" class="input" required>
+                    <input type="text" id="email" name="email" class="input" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>Nội dung <span style="color:red"></span></p>
-                    <textarea name="" id="" rows="3"></textarea>
+                    <textarea name="noi_dung" id="noi_dung" rows="3" required></textarea>
                 </td>
             </tr>
             <tr>
@@ -98,9 +98,9 @@
                 </div>
                 <div class="col-md-3">
                     <h3 class="footer-title">Đăng ký</h3>
-                    <form action="" class="frm-ft">
-                        <input type="text" class="ip-ft" placeholder="Nhập email để nhận thông tin">
-                        <button type="button">ĐĂNG KÝ NGAY</button>
+                    <form action="" class="frm-ft" id="form-email">
+                        <input id="email" name="email" type="text" class="ip-ft" placeholder="Nhập email để nhận thông tin" required="" style="color: black;">
+                        <button type="submit">ĐĂNG KÝ NGAY</button>
                     </form>
 
                     <h3 class="footer-title">Theo dõi:</h3>
@@ -129,7 +129,62 @@
             </div>
         </div>
     </footer>
+    <!-- <script src="<?=base_url('assets/js/sweetalert2.js')?>"></script> -->
     <script src="<?=base_url('assets/lib/bootstrap/js/bootstrap.js')?>"></script>
     <script src="<?=base_url('assets/js/web.js?v='.time())?>"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        
+        $('#form-dangky').submit(function(event){  
+        event.preventDefault();  
+
+            $.ajax({  
+                url:"<?=base_url()?>web/addContact",  
+                method:"POST",  
+                data:$('#form-dangky').serialize(),  
+                success: function (data) {
+                    swal(
+                        'Thông tin đã được gửi thành công!',
+                        '',
+                        'success'
+                    );
+
+                    $('#form-dangky').removeClass('opened');
+
+                    $('#form-dangky').find('input:text').val('');
+                    $('#form-dangky').find('#email').val('');
+                    $('#form-dangky').find('textarea').val('');
+                }
+            });  
+
+        });
+
+        $('#form-email').submit(function(event){  
+        event.preventDefault();  
+
+            $.ajax({  
+                url:"<?=base_url()?>web/addContact",  
+                method:"POST",  
+                data:$('#form-email').serialize(),  
+                success: function (data) {
+                    swal(
+                        'Thông tin đã được gửi thành công!',
+                        '',
+                        'success'
+                    );
+
+                    $('#form-email').find('input:text').val('');
+                    $('#form-email').find('#email').val('');
+                    $('#form-email').find('textarea').val('');
+                }
+            });  
+
+        });
+
+        
+
+    </script>
+
 </body>
 </html>

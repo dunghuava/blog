@@ -93,7 +93,7 @@
                             } 
                         ?>
 
-                        <li><a href="<?=base_url('lien-he')?>" class="btn btn-color" style="padding: 5px 15px;background: #248a63;">Liên hệ</a></li>
+                        <li><a href="<?=base_url('lien-he-tu-van-va-hop-tac-voi-ipcall')?>" class="btn btn-color" style="padding: 5px 15px;background: #248a63;">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
