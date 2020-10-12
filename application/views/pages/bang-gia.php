@@ -98,42 +98,9 @@
         </div>
     </div>
 </section>
-<section class="sec-content">
-    <div class="container">
-        <h3 class="main-title">Khách hàng tin dùng</h3><br>
-        <div class="row">
-            <div class="slick-cus">
-                <?php foreach ($data['list_customer'] as $customer) {?>
-                <div class="col-md-2">
-                    <div class="item-small-slide">
-                        <a href="">
-                            <img src="<?=resizeImg($customer['hinh_anh'],145,145,0)?>" alt="">
-                        </a>
-                    </div>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="sec-content bg-blue">
-    <div class="container">
-        <h3 class="main-title">Đối tác tích hợp</h3><br>
-        <div class="row">
-            <div class="slick-cus">
-                <?php foreach ($data['list_partner'] as $partner) {?>
-                <div class="col-md-2">
-                    <div class="item-small-slide">
-                        <a href="">
-                            <img src="<?=resizeImg($partner['hinh_anh'],145,145,0)?>" alt="">
-                        </a>
-                    </div>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
-</section>
+
+<?php include ('list-khachhang.php') ?>
+<?php include ('list-doitac.php') ?>
 <?php include ('button-lienhe.php') ?>
 
 <script>

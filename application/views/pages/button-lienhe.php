@@ -5,7 +5,7 @@
         <div class="sov text-center">
             <div class="text-center">
                 <div class="btn-contact-now">
-                    <a href="<?=base_url('lien-he-tu-van-va-hop-tac-voi-ipcall')?>"><span class="fa fa-phone"></span>&nbsp;Liên hệ tư vấn</a>
+                    <a href="<?=base_url('lien-he-tu-van-va-hop-tac-voi-ipcall.html')?>"><span class="fa fa-phone"></span>&nbsp;Liên hệ tư vấn</a>
                 </div>
             </div>
         </div>
