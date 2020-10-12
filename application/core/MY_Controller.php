@@ -6,6 +6,7 @@ class MY_Controller extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Info_M');
+		$this->load->model('Contact_M');
 	}
 	public function include($page=array())
 	{
@@ -14,6 +15,7 @@ class MY_Controller extends CI_Controller {
 		if (!$this->session->has_userdata('admin_infor')){
 			redirect(base_url('admin/login'),'location');
 		}
+		$data['list_contact']=$this->Contact_M->all(['kiem_tra' => 0]);
 		$this->admin_infor = $this->session->get_userdata('admin_infor');
 		$data['admin_infor']=$this->admin_infor['admin_infor'];
         $data['data']=$page;
