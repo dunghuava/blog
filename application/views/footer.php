@@ -76,7 +76,7 @@
                     <h3 class="footer-title">Blog</h3>
                     <?php foreach ($list_blog as $key => $blog) {?>
                     <li class="small-blog">
-                        <a href="<?=base_url('blog-detail/'.$blog['alias_vn'].'-'.$blog['id'])?>" style="color:#fff">
+                        <a href="<?=base_url('p/'.$blog['alias_vn'].'-'.$blog['id'])?>.html" style="color:#fff">
                             <div style="display:flex">
                                 <img style="border: none" src="<?=resizeImg($blog['hinh_anh'],50,50,0)?>" alt="">
                                 <p><b><?=mb_substr($blog['ten_vn'], 0, 45,"UTF-8").' ...';?></b></p>

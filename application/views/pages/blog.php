@@ -12,7 +12,7 @@
                 <?php foreach ($data['list_blog'] as $key => $blog) {?>
                     <div class="col-md-4 col-xs-6">
                         <div class="item-blog">
-                            <a href="<?=base_url('blog-detail/'.$blog['alias_vn'].'-'.$blog['id'])?>">
+                            <a href="<?=base_url('p/'.$blog['alias_vn'].'-'.$blog['id'])?>.html">
                                 <div class="relative">
                                     <img src="<?=resizeImg($blog['hinh_anh'],254,205,0)?>" alt="">
                                     <div class="overlay">

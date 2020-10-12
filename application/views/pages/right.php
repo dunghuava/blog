@@ -5,7 +5,7 @@
     <?php foreach ($data['list_category'] as $key => $category) {
         $count = $this->Post_M->all(['id_loai' => $category['id']]);
     ?>
-        <li><a href="<?=base_url('blog/'.$category['alias_vn'])?>"><?=$category['ten_vn'].' ('.count($count).')';?></a></li>
+        <li><a href="<?=base_url('blog/'.$category['alias_vn'])?>"><?=$category['ten_vn'].' ('.count($count).')';?>.html</a></li>
     <?php } ?>
 </section>
 <section class="sec-cate-right">
@@ -14,7 +14,7 @@
         if ($key<3) {
     ?>
         <li class="small-blog">
-            <a href="<?=base_url('blog-detail/'.$blog['alias_vn'].'-'.$blog['id'])?>">
+            <a href="<?=base_url('p/'.$blog['alias_vn'].'-'.$blog['id'])?>.html">
                 <div style="display:flex">
                     <img style="border: none" src="<?=resizeImg($blog['hinh_anh'],50,50,0)?>" alt="">
                     <p><b><?=mb_substr($blog['ten_vn'], 0, 45,"UTF-8").' ...';?></b></p>
@@ -27,6 +27,6 @@
 <section class="sec-cate-right">
     <h4 class="cate-title">Xem nhanh theo chủ đề</h4>
     <?php foreach ($data['list_category'] as $key => $category) {?>
-        <li class="btn-category"><a href="<?=base_url('blog/'.$category['alias_vn'])?>"><?=$category['ten_vn']?></a></li>
+        <li class="btn-category"><a href="<?=base_url('blog/'.$category['alias_vn'])?>"><?=$category['ten_vn']?>.html</a></li>
     <?php } ?>
 </section>

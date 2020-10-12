@@ -37,6 +37,7 @@ class Web extends MY_Controller {
 	}
 	public function blog($alias = '')
 	{	
+		$alias = trim($alias,'.html');
 		$info_category = $this->Category_M->find(['alias_vn'=>$alias]);
 		if ($alias!='') {
 			$data['list_blog']=$this->Post_M->all(['id_loai'=>$info_category['id']],'desc');
@@ -52,7 +53,7 @@ class Web extends MY_Controller {
 	}
 	public function blog_detail($alias = '')
 	{
-
+		$alias = trim($alias,'.html');
 		$id = get_id($alias);
 		$data['info_blog']=$this->Post_M->find(['id'=>$id]);
 		$data['list_blog_nearest']=$this->Post_M->all('','desc');

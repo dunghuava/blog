@@ -61,9 +61,7 @@ $route['admin/changePass'] = 'admin/account/changePass';
 $route['admin/logout'] = 'admin/account/logout';
 
 $route['(:any)'] = 'web/index/$1';
-$route['blog'] = 'web/blog';
 $route['blog/(:any)']     = 'web/blog/$1';
-$route['blog-detail/(:any)'] = 'web/blog_detail/$1';
-$route['bang-gia'] = 'web/bang_gia';
+$route['p/(:any)'] = 'web/blog_detail/$1';
 
 
