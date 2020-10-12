@@ -24,13 +24,13 @@
                 <div class="col-md-6">
                     <div class="text-left">
                         <li><span class="fa fa-home"></span><a href="">Trang chủ</a></li>
-                        <li><span class="fa fa-phone"></span><a href=""><?=$info[0]['hotline']?></a></li>
-                        <li><span class="fa fa-envelope"></span><a href=""><?=$info[0]['email']?></a></li>
+                        <li><span class="fa fa-phone"></span><a href="tel:<?=$info[0]['hotline']?>"><?=$info[0]['hotline']?></a></li>
+                        <li><span class="fa fa-envelope"></span><a href="mailto:<?=$info[0]['email']?>"><?=$info[0]['email']?></a></li>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-right">
-                        <li><span class="fa fa-question-circle"></span><a href="<?=base_url('cham-soc-khach-hang')?>">FAQ</a></li>
+                        <li><span class="fa fa-question-circle"></span><a href="<?=base_url('cham-soc-khach-hang')?>.html">FAQ</a></li>
                         <li><span class="fa fa-phone"></span><a onclick="$('#form-dangky').addClass('opened')" href="javascript:void(0)">Đăng ký thử nghiệm</a></li>
                         <li><span class="fa fa-facebook"></span><a href=""></a></li>
                         <li><span class="fa fa-youtube"></span><a href=""></a></li>
@@ -93,7 +93,7 @@
                             } 
                         ?>
 
-                        <li><a href="<?=base_url('lien-he-tu-van-va-hop-tac-voi-ipcall')?>" class="btn btn-color" style="padding: 5px 15px;background: #248a63;">Liên hệ</a></li>
+                        <li><a href="<?=base_url('lien-he-tu-van-va-hop-tac-voi-ipcall.html')?>" class="btn btn-color" style="padding: 5px 15px;background: #248a63;">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>

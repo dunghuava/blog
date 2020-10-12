@@ -5,7 +5,7 @@
     <?php foreach ($data['list_category'] as $key => $category) {
         $count = $this->Post_M->all(['id_loai' => $category['id']]);
     ?>
-        <li><a href="<?=base_url('blog/'.$category['alias_vn'])?>"><?=$category['ten_vn'].' ('.count($count).')';?>.html</a></li>
+        <li><a href="<?=base_url('blog/'.$category['alias_vn'])?>.html"><?=$category['ten_vn'].' ('.count($count).')';?></a></li>
     <?php } ?>
 </section>
 <section class="sec-cate-right">
@@ -27,6 +27,6 @@
 <section class="sec-cate-right">
     <h4 class="cate-title">Xem nhanh theo chủ đề</h4>
     <?php foreach ($data['list_category'] as $key => $category) {?>
-        <li class="btn-category"><a href="<?=base_url('blog/'.$category['alias_vn'])?>"><?=$category['ten_vn']?>.html</a></li>
+        <li class="btn-category"><a href="<?=base_url('blog/'.$category['alias_vn'])?>.html"><?=$category['ten_vn']?></a></li>
     <?php } ?>
 </section>

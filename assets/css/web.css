@@ -99,6 +99,10 @@ img {
   height: auto !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main-nav .top-nav {
   padding: 9px 0px;
   background: #094e34;

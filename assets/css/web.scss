@@ -1,6 +1,9 @@
 @import "_common.scss";
 @import "_variable.scss";
 
+html {
+    scroll-behavior: smooth;
+}
 .main-nav{
     .top-nav{
         padding: 9px 0px;
