@@ -24,6 +24,7 @@ class Web extends MY_Controller {
 				case 0 : break;
 				case 1 : $this->blog();break;
 				case 2 : $this->bang_gia();break;
+				case 3 : $this->lien_he();break;
 				default : break;
 			}
 		}else{

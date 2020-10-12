@@ -22,7 +22,7 @@
                     </td>
                     <td class="text-center">
                         <?php if (!empty($val['hinh_anh'])){ ?>
-                            <img onclick="onDeleteImg(<?=$val['id']?>,'<?=$val['hinh_anh']?>')" style="cursor:pointer;max-height: 100px;max-width: 150px;" src="<?=base_url('upload/images/'.$val['hinh_anh'])?>" alt="">
+                            <img onclick="onDeleteImg(<?=$val['id']?>,'<?=$val['hinh_anh']?>')" style="cursor:pointer;" src="<?=resizeImg($val['hinh_anh'],100,90,0)?>" alt="">
                         <?php } ?>
                     </td>
                     <td>

@@ -43,7 +43,7 @@
                     </td>
                     <td align="center">
                         <?php if (!empty($val['hinh_anh'])){ ?>
-                            <img src="<?=resizeImg($val['hinh_anh'],50,35)?>" alt="">
+                            <img src="<?=resizeImg($val['hinh_anh'],100,90,0)?>" alt="">
                         <?php } ?>
                     </td>
                     <td align="center">

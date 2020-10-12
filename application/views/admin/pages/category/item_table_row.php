@@ -5,7 +5,7 @@
     <td><a style="color:#000" href="<?=base_url('admin/category/edit/'.$val['id'])?>"><?=$str.' '.$val['ten_vn']?></a></td>
     <td align="center" class="text-center">
         <?php if (!empty($val['hinh_anh'])){ ?>
-            <img onclick="onDeleteImg(<?=$val['id']?>,'<?=$val['hinh_anh']?>')" style="cursor:pointer;" src="<?=resizeImg($val['hinh_anh'],50,35)?>" alt="">
+            <img onclick="onDeleteImg(<?=$val['id']?>,'<?=$val['hinh_anh']?>')" style="cursor:pointer;" src="<?=resizeImg($val['hinh_anh'],50,50,0)?>" alt="">
         <?php } ?>
     </td>
     <td>[

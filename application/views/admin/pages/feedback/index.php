@@ -24,7 +24,7 @@
                     </td>
                     <td class="text-center">
                         <?php if (!empty($val['hinh_anh'])){ ?>
-                            <img style="cursor:pointer;" src="<?=resizeImg($val['hinh_anh'],50,35)?>" alt="">
+                            <img style="cursor:pointer;" src="<?=resizeImg($val['hinh_anh'],100,90,0)?>" alt="">
                         <?php } ?>
                     </td>
                     <td>
