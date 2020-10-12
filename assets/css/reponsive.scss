@@ -55,11 +55,14 @@
                     display: none;
                 }
                 li{
-                    width: 100%;
+                    width: 100% !important;
                     padding-left: 0px !important;
                     a{
                         font-weight: unset;
                         color: #ffffff !important;
+                    }
+                    p.sub-title{
+                        display: none !important;
                     }
                 }
             }
