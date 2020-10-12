@@ -311,10 +311,17 @@ html {
                 position: absolute;
             }
             li{
+                padding: 8px 0px 8px 30px !important;
                 width: 30.30%;
                 a{
                     color: $main_color !important;
                     font-weight: bold;
+                }
+                p.sub-title{
+                    padding: 0px 34px;
+                    font-size: 12px;
+                    max-height: 33px;
+                    overflow: hidden;
                 }
             }
         }

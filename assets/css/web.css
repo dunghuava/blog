@@ -466,12 +466,20 @@ html {
 }
 
 .ls-main-menu li.have-menu ul.sub-menu li {
+  padding: 8px 0px 8px 30px !important;
   width: 30.30%;
 }
 
 .ls-main-menu li.have-menu ul.sub-menu li a {
   color: #0C714B !important;
   font-weight: bold;
+}
+
+.ls-main-menu li.have-menu ul.sub-menu li p.sub-title {
+  padding: 0px 34px;
+  font-size: 12px;
+  max-height: 33px;
+  overflow: hidden;
 }
 
 .ls-main-menu li.have-menu:hover .sub-menu {

@@ -80,9 +80,8 @@
                                 ?>
                                 <li style="width: 45%"><img src="<?=resizeImg($sub['hinh_anh'],25,25,0)?>" alt="">&nbsp;
                                     <a href="" style="font-size: 14px"><?=$sub['ten_vn']?></a>
-                                    <!-- <br>
                                     <br>
-                                    <div style="height: 200px"><?=strip_tags(mb_substr($sub['mo_ta_vn'], 0, 10,"UTF-8").' ...');?></div> -->
+                                    <p class="sub-title"><?=strip_tags(mb_substr($sub['mo_ta_vn'], 0, 100,"UTF-8").' ...');?></p>
                                 </li>
                         
                                 <?php } ?>

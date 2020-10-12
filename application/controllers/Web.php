@@ -17,14 +17,19 @@ class Web extends MY_Controller {
 	public function index($alias="")
 	{	
 		
-		$alias = trim($alias,'.html');
+		$alias = str_replace('.html','',$alias);
 		$page = $this->Category_M->one(['alias_vn'=>$alias]);
-		if (!empty ($alias) && !empty($page) && $page['module_id']!=3){
+				
+		if (!empty ($alias) && !empty($page)){
+
 			switch ($page['module_id']){
 				case 0 : break;
 				case 1 : $this->blog();break;
 				case 2 : $this->bang_gia();break;
 				case 3 : $this->lien_he();break;
+				case 4 : 
+				case 5 :
+				case 6 : $this->tinh_nang();break;
 				default : break;
 			}
 		}else{
