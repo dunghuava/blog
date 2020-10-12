@@ -12,6 +12,9 @@
                         </h2>
                         <h3>Case management  - Quản lý chăm sóc khách hàng đa kênh hợp nhất <br>
                             Hợp nhất đa kênh omni-channel như thoại, email, website, live chat, sms, social media (facebook, zalo,...) tại một giao diện duy nhất.    </h3>
+                            <br>
+                            <br>
+                            <button type="button" onclick="$('#form-dangky').addClass('opened')" class="btn btn-default btn-sm">Tư vấn triển khai</button>
                     </div>
                 </div>
             </div>
@@ -27,6 +30,9 @@
                             CRM Contact Center <br>
                         </h2>
                         <h3> Giúp nâng cao hiệu suất làm việc của nhân viên telesales với chiến dịch quy số tự động Predictive Dialer</h3>
+                        <br>
+                        <br>
+                        <button type="button" onclick="$('#form-dangky').addClass('opened')" class="btn btn-default btn-sm">Tư vấn triển khai</button>
                     </div>
                 </div>
             </div>
