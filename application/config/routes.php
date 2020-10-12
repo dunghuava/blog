@@ -53,7 +53,8 @@ $route['default_controller'] = 'web';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['lien-he'] = 'web/lien_he';
+$route['lien-he-tu-van-va-hop-tac-voi-ipcall'] = 'web/lien_he';
+$route['cham-soc-khach-hang'] = 'web/customer_care';
 $route['admin'] = 'admin/Dasboard';
 $route['admin/login'] = 'admin/account/login';
 $route['admin/changePass'] = 'admin/account/changePass';

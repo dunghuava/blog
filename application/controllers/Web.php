@@ -72,4 +72,11 @@ class Web extends MY_Controller {
 		$data['path']='lien-he';
 		$this->load($data);
 	}
+
+	public function customer_care()
+	{
+		$data['list_question']=$this->Question_M->all();
+		$data['path']='customer-care';
+		$this->load($data);
+	}
 }
