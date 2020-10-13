@@ -16,7 +16,7 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-body text-center">
-         <h4>Hiện đang ngoài giờ làm việc, xin quý khách vui lòng gọi vào số hotline: 19001238</h4>
+         <h4><b>Hiện đang ngoài giờ làm việc, xin quý khách vui lòng gọi vào số hotline: 0383868205</b></h4>
          <p>Xin cảm ơn !</p>
       </div>
     </div>

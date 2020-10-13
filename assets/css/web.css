@@ -648,6 +648,12 @@ html {
   font-size: 18px;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#socical_network .item:hover {
+  font-size: 24px;
 }
 
 #socical_network .item.fa-zalo {

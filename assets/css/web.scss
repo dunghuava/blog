@@ -453,7 +453,10 @@ html {
         font-size: 18px;
         color: #fff;
         cursor: pointer;
-
+        transition: all 0.2s;
+        &:hover{
+            font-size: 24px;
+        }
         &.fa-zalo{
             background: #185AEF url(zaloico.png);
             background-size: 30px 30px;
