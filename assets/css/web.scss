@@ -94,7 +94,7 @@ html {
         top: 0px;
         left: 0px;
         right: 0px;
-        z-index: 9999;
+        z-index: 999;
         background: #fff;
     }
     .item-over{
@@ -431,4 +431,34 @@ html {
         color: $main_color;
     }
     .t{font-size: 11px;}
+}
+
+#socical_network{
+    position: fixed;
+    bottom: 30%;
+    right: 2%;
+    z-index: 999;
+
+    .item{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        background: #185AEF;
+        margin-bottom: 10px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+
+        &.fa-zalo{
+            background: #185AEF url(zaloico.png);
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
 }

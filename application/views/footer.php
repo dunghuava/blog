@@ -1,4 +1,6 @@
 
+    <?php include ('pages/socical-network.php') ?>
+    
     <form action="" id="form-dangky">
         <table>
             <tr>
