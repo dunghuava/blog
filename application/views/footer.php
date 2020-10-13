@@ -1,6 +1,6 @@
 
     <?php include ('pages/socical-network.php') ?>
-    
+
     <form action="" id="form-dangky">
         <table>
             <tr>
@@ -131,7 +131,7 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="<?=base_url('assets/js/sweetalert2.js')?>"></script> -->
+    <script src="<?=base_url('assets/js/sweetalert2.js')?>"></script>
     <script src="<?=base_url('assets/lib/bootstrap/js/bootstrap.js')?>"></script>
     <script src="<?=base_url('assets/js/web.js?v='.time())?>"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">

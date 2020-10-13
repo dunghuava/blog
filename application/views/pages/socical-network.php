@@ -6,6 +6,9 @@
     .modal-dialog{
         margin: 10% auto !important;
     }
+    .zalo-chat-widget{
+        display:none;
+    }
 </style>
 <!-- Modal -->
 <div id="callback" class="modal fade" role="dialog">
@@ -25,7 +28,7 @@
             <span class="fa fa-facebook"></span>
         </div>
     </div>
-    <div title="Zalo" class="item fa-zalo">
+    <div onclick="$('.zalo-chat-widget').toggle()" title="Zalo" class="item fa-zalo">
         <div class="icon fa-zalo">
             <span class="fa fa-zalo"></span>
         </div>
@@ -41,3 +44,5 @@
         </div>
     </div>
 </div>
+<div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
+<script src="https://sp.zalo.me/plugins/sdk.js"></script>

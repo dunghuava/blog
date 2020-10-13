@@ -46,11 +46,11 @@ img {
 }
 
 .btn-arrow.btn-next {
-  right: -10px;
+  right: -20px;
 }
 
 .btn-arrow.btn-prev {
-  left: -10px;
+  left: -20px;
 }
 
 .slick-dots {
