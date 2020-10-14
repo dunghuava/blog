@@ -153,10 +153,14 @@ class Post extends MY_Controller {
 
 	public function get_option_category($cate_module_id=0){
 		$where['id_loai']=0;
+		if ($cate_module_id!=0){
+			//$where['module_id']=$cate_module_id;
+		}
 		$oder_by= 'asc';
 		$all = $this->Category_M->all($where,$oder_by);
 		$str='';
 		foreach ($all as $val){
+			$str.='<option value="'.$val['id'].'">'.$val['ten_vn'].'</option>';
 			$sub1 = $this->Category_M->all(['id_loai'=>$val['id']],$oder_by);
 			if (count($sub1) >0){
 				foreach ($sub1 as $val1){

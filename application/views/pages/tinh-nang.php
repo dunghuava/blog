@@ -1,3 +1,10 @@
+<style>
+    .nav-tabs{
+        border-bottom:0px;
+        width:fit-content;
+        margin:auto;
+    }
+</style>
 <section class="sec-slider">
     <div class="main-slider">
         <div class="slider-item">
@@ -59,13 +66,37 @@
         </div>
     </div>
 </section>
-<?php foreach ($submenu as $key =>$item){ ?>
+<?php 
+    foreach ($submenu as $key =>$item){ 
+    $post = $this->Post_M->all(['id_loai'=>$item['id']]);
+?>
 <section id="<?=$item['id']?>" class="sec-content <?=$key%2==0 ? 'bg-blue':''?>" id="7">
     <div class="container">
         <h3 class="main-title"><?=$item['ten_vn']?></h3>
         <div class="row">
             <div class="col-md-12 text-center">
-               
+                <ul class="nav nav-tabs">
+                    <?php foreach ($post as $i =>$p){ ?>
+                        <li class="<?=$i==0 ? 'active':'no-active'?>" style="background: #0c714b !important;margin:5px;border-radius:8px">
+                            <a style="color:#fff;text-decoration:none;background: #0c714b !important;border:none !important;border-radius:8px" data-toggle="tab" href="#tab_<?=$p['id']?>"><?=$p['ten_vn']?></a>
+                        </li>
+                    <?php } ?>
+                </ul>
+                <div class="tab-content">
+                    <?php foreach ($post as $k =>$p){ ?>
+                        <div id="tab_<?=$p['id']?>" class="tab-pane fade in <?=$k==0 ? 'active':'no-active'?>">
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                    <img src="<?=resizeImg($p['hinh_anh'],350,350,0)?>" alt="">
+                                </div>
+                                <div class="col-md-6 text-left"><br>
+                                    <h3 style="color:red"><?=$p['ten_vn']?></h3>
+                                    <p><?=$p['noi_dung_vn']?></p>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
         </div>
     </div>

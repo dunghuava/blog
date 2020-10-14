@@ -471,6 +471,7 @@ html {
 }
 
 .ls-main-menu li.have-menu ul.sub-menu li a {
+  padding: 10px 0px;
   color: #0C714B !important;
   font-weight: bold;
 }
