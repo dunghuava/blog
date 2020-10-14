@@ -1,7 +1,7 @@
 <?php 
 	$data['list_partner']=$this->Customer_M->all(['loai' => 2]);
 ?>
-<section class="sec-content bg-blue">
+<section class="sec-content <?=isset($setbg) ? $setbg:''?>">
     <div class="container">
         <h3 class="main-title">Đối tác tích hợp</h3><br>
         <div class="row">

@@ -43,7 +43,7 @@ function dd ($data){
 	echo '</pre>';
 }
 function resizeImg ($image='',$w=100,$h=100,$zc=2){
-	if (!file_exists('upload/images/'.$image) || empty($image)){
+	if (!file_exists('upload/images/'.$image)){
 		$image='nophoto.png';
 	}
 	return base_url('thumb.php?src='.base_url('upload/images/'.$image.'&w='.$w.'&h='.$h.'&zc='.$zc));

@@ -153,32 +153,23 @@ class Post extends MY_Controller {
 
 	public function get_option_category($cate_module_id=0){
 		$where['id_loai']=0;
-		// if ($cate_module_id!=0){
-		// 	$where['cate_module_id']=$cate_module_id;
-		// }
 		$oder_by= 'asc';
 		$all = $this->Category_M->all($where,$oder_by);
 		$str='';
 		foreach ($all as $val){
-			// if ($val['module_id'] == $cate_module_id) {
-			// 	$str.='<option value="'.$val['id'].'">'.$val['ten_vn'].'</option>';
-			// }
-			
-			$sub1 = $this->Category_M->all(['id_loai'=>$val['id'],'module_id'=> $cate_module_id],$oder_by);
-			// echo'<pre>';
-			// print_r($sub1);
+			$sub1 = $this->Category_M->all(['id_loai'=>$val['id']],$oder_by);
 			if (count($sub1) >0){
 				foreach ($sub1 as $val1){
 					$str.='<option value="'.$val1['id'].'">|__'.$val1['ten_vn'].'</option>';
-					$sub2 = $this->Category_M->all(['id_loai'=>$val1['id'],'module_id'=> $cate_module_id],$oder_by);
+					$sub2 = $this->Category_M->all(['id_loai'=>$val1['id']],$oder_by);
 					if (count($sub2) >0){
 						foreach ($sub2 as $val2){
 							$str.='<option value="'.$val2['id'].'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__'.$val2['ten_vn'].'</option>';
-							$sub3 = $this->Category_M->all(['id_loai'=>$val2['id'],'module_id'=> $cate_module_id],$oder_by);
+							$sub3 = $this->Category_M->all(['id_loai'=>$val2['id']],$oder_by);
 							if (count($sub3) >0){
 								foreach ($sub3 as $val3){
 									$str.='<option value="'.$val3['id'].'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__'.$val3['ten_vn'].'</option>';
-									$sub4 = $this->Category_M->all(['id_loai'=>$val3['id'],'module_id'=> $cate_module_id],$oder_by);
+									$sub4 = $this->Category_M->all(['id_loai'=>$val3['id']],$oder_by);
 									if (count($sub4) >0){
 										foreach ($sub4 as $val4){
 											$str.='<option value="'.$val4['id'].'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__'.$val4['ten_vn'].'</option>';

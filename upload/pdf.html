@@ -1,0 +1,663 @@
+
+<!-- saved from url=(0056)http://localhost/schoolmail/learning/story/edit/2/page=1 -->
+<html style="width: 8.5in!important;height: 12in!important" class="k-webkit k-webkit85"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<style type="text/css">
+#template { font-size: 14px; color: #000; text-transform: uppercase; border-radius: 5px; border: 1px solid #ccc; width: 13em; padding: 5px 10px; box-sizing: border-box; margin-bottom: 1.5em }
+.items {
+    /*height: 29.7cm;
+    width: 21cm;*/
+    -webkit-box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);   
+     width: 8.5in;
+    height: 12in;
+    padding: 0.119in;
+    float: left;
+    margin: 0 auto;
+    margin-right: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    overflow: hidden;
+    display: block;
+}
+.items.page-none, .error-none, .area-none { display: none; }
+#error { font-family: 'Arial'; font-size: 16px; color: #f00; margin-top: 15px }
+#print-data { margin-bottom: 20px; }
+.item { position: relative; width: 100%; float: left; display: block; }
+.item.ajax_style:nth-child(1) { margin-bottom: 20px }
+.ajax_style .item_comment{ font-size: 14px; font-family: 'Arial'; }
+.item_comment{ width: 100%; overflow: hidden; }
+.item_photo {  margin: auto; position: relative; }
+.item_photo img { max-width: 100%; max-height: 100%; display: block; margin: auto; object-fit: contain; vertical-align: middle; }
+.item_comment:hover, .item_photo:hover { cursor: move; }
+.story_stamp { position: absolute; width: 100px; height: 100px; right: 7%; bottom: 10%; z-index: 99; cursor: pointer; }
+.item-last-page-content{ margin-top: 1.5rem; width: 8.5in; box-sizing: border-box; }
+.item-last-page-content .webdm-form-area{ box-sizing: border-box; font-size: 14px; font-family: 'Arial'; }
+.item_photo_box{ position: relative; }
+/* template1 */
+.item_layout1 .item_photo,
+.item_layout2 .item_photo, 
+.item_layout1 .item_comment,
+.item_layout2 .item_comment,
+.item_layout3{ width: 49%; }
+
+.item_layout1 .item_photo, 
+.items .item_layout1:nth-child(2) .item_comment,
+.items .item_layout2 .item_photo,
+.item_layout3:nth-child(1){ float: left; }
+
+.item_layout1 .item_comment, 
+.items .item_layout1:nth-child(2) .item_photo,
+.items .item_layout2 .item_comment,
+.item_layout3:nth-child(2){ float: right; }
+
+/* layout 1 */
+.item_layout1 .item_photo, .item_layout1 .item_comment{ width: 49%; }
+
+/* layout 2 */
+
+/* layout 3 */
+.item_layout3 .item_photo{ margin-bottom: 20px; }
+.item_layout3 .item_photo, .item_layout3 .item_comment{ float: none; }
+
+/* horizontal */
+.items.horizontal { width: 29.7cm; height: 21cm; flex-direction: row; flex-flow: wrap; align-items: center; }
+.items.horizontal .item { width: 50% }
+.items.horizontal .item:nth-child(2) { float: right; }
+
+.export-app {
+    display: table;
+    width: 100%;
+    height: 750px;
+    padding: 0;
+}
+.export-app .demo-section {
+    margin: 0 auto;
+    border: 0;
+}
+
+.charts-wrapper {
+    height: 250px;
+    padding: 0 0 20px;
+}
+
+#applications,
+#users,
+#referrals {
+    display: inline-block;
+    width: 50%;
+    height: 240px;
+    vertical-align: top;
+}
+#applications,
+#referrals {
+    width: 24%;
+    height: 250px;
+}
+
+.customer-photo {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: 40px 44px;
+    background-position: center center;
+    vertical-align: middle;
+    line-height: 41px;
+    box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2);
+}
+.customer-name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 41px;
+    padding-left: 10px;
+}
+
+.demo-section.content-wrapper,
+.demo-section.k-content.export-app {
+    display: block !important;
+}
+
+.demo-section.export-app {
+    height: auto;
+}
+</style>
+    <!-- <base href="https://demos.telerik.com/kendo-ui/pdf-export/page-layout">
+    <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; } -->
+    <title></title>
+   <link rel="stylesheet" href="./pdf_files/kendo.common.min.css">
+<!--      <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.black.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.black.mobile.min.css" /> -->
+
+    <script src="./pdf_files/jquery.min.js.tải xuống"></script>
+    <script src="./pdf_files/jszip.min.js.tải xuống"></script>
+    <script src="./pdf_files/kendo.all.min.js.tải xuống"></script>
+</head>
+<body style="width: 8.5in!important;height: 12in!important">
+
+<div id="example" style="width: 8.5in!important;height: 12in!important">
+    <div class="box wide hidden-on-narrow">
+        <div class="box-col">
+            <h4>Select Page size</h4>
+            <select id="paper" style="width: 100px;">
+                <option value="size-a4" selected="">A4</option>
+                <option value="size-letter">Letter</option>
+                <option value="size-executive">Executive</option>
+            </select>
+        </div>
+        <div class="box-col">
+            <h4>Get PDF</h4>
+            <button class="export-pdf k-button" onclick="getPDF(&#39;.pdf-page&#39;)">Export</button>
+        </div>
+    </div>
+
+    <div class="page-container hidden-on-narrow">
+        <div class="pdf-page demo-section k-content export-app wide hidden-on-narrow content-wrapper" id="content">
+            	    <div id="print-data" class="" style="width: 8.5in;height: 12in">
+	    			        		         
+		        	<div data-page="1" data-layout="1" class="items items-page-1   clearfix"> 
+		        					        		<div class="item ajax_style item_layout1" data-image-id="5">
+			        			<div class="item_photo item_photo_5 removeStyle" style="position: relative;top: 16px;left: -3px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/265c519f94907b0c9b81ce030989aee4.jpg">
+				        											        				<div class="story_stamp story_stamp_5"></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_5  removeStyle" style="position: relative;top: 16px;left: -6px; width: 49%;">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: normal;font-size: 13px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        					        				    			        		        			        		<div class="item ajax_style item_layout1" data-image-id="6">
+			        			<div class="item_photo item_photo_6 removeStyle" style="position: relative;top: 8px;left: 2px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="width: 100%">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/6503b1319ee884121c36367ea1e7d19d.jpg">
+				        											        				<div class="story_stamp story_stamp_6"></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_6  removeStyle" style="position: relative;top: 10px;left: -2px; width: 49%;">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: normal;font-size: 13px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        			 
+		        				</div> 
+		        					        				    			        		         
+		        	<div data-page="2" data-layout="1" class="items items-page-2 page-none  clearfix"> 
+		        					        		<div class="item ajax_style item_layout1" data-image-id="7">
+			        			<div class="item_photo item_photo_7 removeStyle" style="position: relative;top: 0px;left: -4px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/ab3c0c0dcbf343d61d97f1a94a9085cb.jpg">
+				        											        				<div class="story_stamp story_stamp_7"></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_7  removeStyle" style="position: relative;top: -2px;left: 8px; ">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: normal;font-size: 13px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        					        				    			        		        			        		<div class="item ajax_style item_layout1" data-image-id="8">
+			        			<div class="item_photo item_photo_8 removeStyle" style="position: relative;top: -6px;left: -7px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/403e65d0230cebc7991706a827e8c87d.jpg">
+				        											        				<div class="story_stamp story_stamp_8"></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_8  removeStyle" style="">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: normal;font-size: 13px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        			 
+		        				</div> 
+		        					        				    			        		         
+		        	<div data-page="3" data-layout="1" class="items items-page-3 page-none  clearfix"> 
+		        					        		<div class="item ajax_style item_layout1" data-image-id="9">
+			        			<div class="item_photo item_photo_9 removeStyle" style="">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/bb50112e9382ae8bff91b525d001a8ef.jpg">
+				        											        				<div class="story_stamp story_stamp_9"></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_9  removeStyle" style="">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: normal;font-size: 13px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        					        				    			        		        			        		<div class="item ajax_style item_layout1" data-image-id="10">
+			        			<div class="item_photo item_photo_10 removeStyle" style="">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/80d74649d6ccb1e29b156fbf140a8d48.jpg">
+				        											        				<div class="story_stamp story_stamp_10"></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_10  removeStyle" style="">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: normal;font-size: 13px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        			 
+		        				</div> 
+		        					        						        			<div class="clearfix"></div>
+				        		<div class="item-last-page-content webdm-form-group area-none">
+				        			<textarea id="story_last_page_comment" class="webdm-form-area" data-last-page="3">Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.</textarea>
+				        		</div>
+				        		    		    </div>
+
+		    <div id="print-data" class="page-break" style="width: 8.5in;height: 12in">
+	    			        		         
+		        	<div data-page="1" data-layout="2" class="items items-page-1 page-none  clearfix" style="background: url(http://localhost/schoolmail/uploads/learning_data/template/52045c1a6c0646d2a8967c2b172e62d5.svg) center center / cover no-repeat; width: 8.5in!important;height: 12in!important"> 
+		        					        		<div class="item ajax_style item_layout2" data-image-id="5">
+			        			<div class="item_photo item_photo_5 removeStyle" style="position: relative;top: 16px;left: -3px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/265c519f94907b0c9b81ce030989aee4.jpg">
+				        											        				<div class="story_stamp story_stamp_5" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/4c86ee2c49b21569de96c7cc4d6e2826.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_5  removeStyle" style="position: relative;top: 16px;left: -6px; width: 49%;">
+			        					<div class="item_comment_style" style="font-weight: bold;font-style: normal;color: rgb(0, 0, 0);font-size: 12px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        					        				    			        		        			        		<div class="item ajax_style item_layout2" data-image-id="6">
+			        			<div class="item_photo item_photo_6 removeStyle" style="position: relative;top: 8px;left: 2px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="width: 100%">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/6503b1319ee884121c36367ea1e7d19d.jpg">
+				        											        				<div class="story_stamp story_stamp_6" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/4c86ee2c49b21569de96c7cc4d6e2826.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_6  removeStyle" style="position: relative;top: 10px;left: -2px; width: 49%;">
+			        					<div class="item_comment_style" style="font-weight: bold;font-style: normal;color: rgb(0, 0, 0);font-size: 12px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        			 
+		        				</div> 
+		        					        				    			        		         
+		        	<div data-page="2" data-layout="2" class="items items-page-2   clearfix" style="background: url(http://localhost/schoolmail/uploads/learning_data/template/52045c1a6c0646d2a8967c2b172e62d5.svg) center center / cover no-repeat; width: 8.5in!important;height: 12in!important"> 
+		        					        		<div class="item ajax_style item_layout2" data-image-id="7">
+			        			<div class="item_photo item_photo_7 removeStyle" style="position: relative;top: 0px;left: -4px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/ab3c0c0dcbf343d61d97f1a94a9085cb.jpg">
+				        											        				<div class="story_stamp story_stamp_7" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/4c86ee2c49b21569de96c7cc4d6e2826.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_7  removeStyle" style="position: relative;top: -2px;left: 8px; ">
+			        					<div class="item_comment_style" style="font-weight: bold;font-style: normal;color: rgb(0, 0, 0);font-size: 12px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        					        				    			        		        			        		<div class="item ajax_style item_layout2" data-image-id="8">
+			        			<div class="item_photo item_photo_8 removeStyle" style="position: relative;top: -6px;left: -7px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/403e65d0230cebc7991706a827e8c87d.jpg">
+				        											        				<div class="story_stamp story_stamp_8" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/4c86ee2c49b21569de96c7cc4d6e2826.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_8  removeStyle" style="">
+			        					<div class="item_comment_style" style="font-weight: bold;font-style: normal;color: rgb(0, 0, 0);font-size: 12px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        			 
+		        				</div> 
+		        					        				    			        		         
+		        	<div data-page="3" data-layout="2" class="items items-page-3 page-none  clearfix" style="background: url(http://localhost/schoolmail/uploads/learning_data/template/52045c1a6c0646d2a8967c2b172e62d5.svg) center center / cover no-repeat; width: 8.5in!important;height: 12in!important"> 
+		        					        		<div class="item ajax_style item_layout2" data-image-id="9">
+			        			<div class="item_photo item_photo_9 removeStyle" style="">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/bb50112e9382ae8bff91b525d001a8ef.jpg">
+				        											        				<div class="story_stamp story_stamp_9" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/4c86ee2c49b21569de96c7cc4d6e2826.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_9  removeStyle" style="">
+			        					<div class="item_comment_style" style="font-weight: bold;font-style: normal;color: rgb(0, 0, 0);font-size: 12px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        					        				    			        		        			        		<div class="item ajax_style item_layout2" data-image-id="10">
+			        			<div class="item_photo item_photo_10 removeStyle" style="">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/80d74649d6ccb1e29b156fbf140a8d48.jpg">
+				        											        				<div class="story_stamp story_stamp_10" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/4c86ee2c49b21569de96c7cc4d6e2826.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_10  removeStyle" style="">
+			        					<div class="item_comment_style" style="font-weight: bold;font-style: normal;color: rgb(0, 0, 0);font-size: 12px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        			 
+		        				</div> 
+		        					        						        			<div class="clearfix"></div>
+				        		<div class="item-last-page-content webdm-form-group area-none">
+				        			<textarea id="story_last_page_comment" class="webdm-form-area" data-last-page="3">Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.</textarea>
+				        		</div>
+				        		    		    </div>
+
+		    <div id="print-data" class="page-break" style="width: 8.5in;height: 12in">
+	    			        		         
+		        	<div data-page="1" data-layout="3" class="items items-page-1 page-none  clearfix" style="background: url(http://localhost/schoolmail/uploads/learning_data/template/507f0cbe2c18e8d341e01fae313596e8.svg) center center / cover no-repeat; width: 8.5in!important;height: 12in!important"> 
+		        					        		<div class="item ajax_style item_layout3" data-image-id="5">
+			        			<div class="item_photo item_photo_5 removeStyle" style="position: relative;top: 16px;left: -3px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/265c519f94907b0c9b81ce030989aee4.jpg">
+				        											        				<div class="story_stamp story_stamp_5" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/80ba739c6e73f3dbb1dddd56559fbb84.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_5  removeStyle" style="position: relative;top: 16px;left: -6px; width: 49%;">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: italic;color: rgb(255, 0, 0);font-size: 14px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        					        				    			        		        			        		<div class="item ajax_style item_layout3" data-image-id="6">
+			        			<div class="item_photo item_photo_6 removeStyle" style="position: relative;top: 8px;left: 2px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="width: 100%">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/6503b1319ee884121c36367ea1e7d19d.jpg">
+				        											        				<div class="story_stamp story_stamp_6" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/80ba739c6e73f3dbb1dddd56559fbb84.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_6  removeStyle" style="position: relative;top: 10px;left: -2px; width: 49%;">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: italic;color: rgb(255, 0, 0);font-size: 14px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        			 
+		        				</div> 
+		        					        				    			        		         
+		        	<div data-page="2" data-layout="3" class="items items-page-2 page-none  clearfix" style="background: url(http://localhost/schoolmail/uploads/learning_data/template/507f0cbe2c18e8d341e01fae313596e8.svg) center center / cover no-repeat; width: 8.5in!important;height: 12in!important"> 
+		        					        		<div class="item ajax_style item_layout3" data-image-id="7">
+			        			<div class="item_photo item_photo_7 removeStyle" style="position: relative;top: 0px;left: -4px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/ab3c0c0dcbf343d61d97f1a94a9085cb.jpg">
+				        											        				<div class="story_stamp story_stamp_7" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/80ba739c6e73f3dbb1dddd56559fbb84.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_7  removeStyle" style="position: relative;top: -2px;left: 8px; ">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: italic;color: rgb(255, 0, 0);font-size: 14px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        					        				    			        		        			        		<div class="item ajax_style item_layout3" data-image-id="8">
+			        			<div class="item_photo item_photo_8 removeStyle" style="position: relative;top: -6px;left: -7px; ">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/403e65d0230cebc7991706a827e8c87d.jpg">
+				        											        				<div class="story_stamp story_stamp_8" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/80ba739c6e73f3dbb1dddd56559fbb84.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_8  removeStyle" style="">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: italic;color: rgb(255, 0, 0);font-size: 14px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        			 
+		        				</div> 
+		        					        				    			        		         
+		        	<div data-page="3" data-layout="3" class="items items-page-3   clearfix" style="background: url(http://localhost/schoolmail/uploads/learning_data/template/507f0cbe2c18e8d341e01fae313596e8.svg) center center / cover no-repeat; width: 8.5in!important;height: 12in!important"> 
+		        					        		<div class="item ajax_style item_layout3" data-image-id="9">
+			        			<div class="item_photo item_photo_9 removeStyle" style="">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/bb50112e9382ae8bff91b525d001a8ef.jpg">
+				        											        				<div class="story_stamp story_stamp_9" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/80ba739c6e73f3dbb1dddd56559fbb84.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_9  removeStyle" style="">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: italic;color: rgb(255, 0, 0);font-size: 14px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        					        				    			        		        			        		<div class="item ajax_style item_layout3" data-image-id="10">
+			        			<div class="item_photo item_photo_10 removeStyle" style="">
+			        				<div class="box-setValue box-setValue-photo">
+		        					</div>
+			        					<div class="item_photo_box" style="">
+				        					<img onerror="this.src=&#39;https://via.placeholder.com/200&#39;" src="./pdf_files/80d74649d6ccb1e29b156fbf140a8d48.jpg">
+				        											        				<div class="story_stamp story_stamp_10" style="background: url(http://localhost/schoolmail//uploads/learning_data/stamp/80ba739c6e73f3dbb1dddd56559fbb84.png) center center / cover; "></div>
+						        									        		</div>
+			        				</div>
+			        				<div class="item_comment item_comment_10  removeStyle" style="">
+			        					<div class="item_comment_style" style="font-weight: normal;font-style: italic;color: rgb(255, 0, 0);font-size: 14px;	">
+			        						Đã bao giờ bạn tự hỏi thế giới của các bạn nhỏ trông như thế nào?<br>
+<br>
+Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.<br>
+<br>
+Vẽ tranh tường Tropical (rừng mưa nhiệt đới) được ứng dụng mạnh mẽ trong sáng tạo đa dạng không gian như văn phòng,quán cafe, trà sữa.<br>
+<br>
+Với bàn tay tài hoa của những hoạ sĩ tại ANINA, sẽ mang đến cho bạn bức tranh chủ để tropical được lột tả theo những đường lối vẽ riêng biệt, phù hợp với xúc cảm và cá tính của bạn,<br>
+<br>
+- Bạn có thể lựa chọn hình thức tả thực, gợi cảm giác thoải mái, hoà			        					</div>
+			        				</div>
+		        				</div>
+		        			 
+		        				</div> 
+		        					        						        			<div class="clearfix"></div>
+				        		<div class="item-last-page-content webdm-form-group area-none">
+				        			<textarea id="story_last_page_comment" class="webdm-form-area" data-last-page="3">Đã bao giờ bạn ngắm nhìn những bức vẽ ngờ nghệch của con và cố gắng hiểu suy nghĩ, tình cảm của chúng gửi gắm trong mỗi bức tranh. Hoạt động tạo hình của trẻ em không chỉ là sở thích mà nó còn phản ánh cách suy nghĩ, nhận thức về cuộc sống muôn màu.</textarea>
+				        		</div>
+				        		    		    </div>
+
+	        </div>
+    </div>
+    
+    <div class="responsive-message"></div>
+
+    <style>
+        /*
+            Use the DejaVu Sans font for display and embedding in the PDF file.
+            The standard PDF fonts have no support for Unicode characters.
+        */
+        .pdf-page {
+            font-family: "DejaVu Sans", "Arial", sans-serif;
+        }
+    </style>
+
+    <script>
+        // Import DejaVu Sans font for embedding
+
+        // NOTE: Only required if the Kendo UI stylesheets are loaded
+        // from a different origin, e.g. cdn.kendostatic.com
+        kendo.pdf.defineFont({
+            "DejaVu Sans"             : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans.ttf",
+            "DejaVu Sans|Bold"        : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Bold.ttf",
+            "DejaVu Sans|Bold|Italic" : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+            "DejaVu Sans|Italic"      : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf"
+        });
+    </script>
+
+    <!-- Load Pako ZLIB library to enable PDF compression -->
+    <script src="./pdf_files/pako.min.js.tải xuống"></script>
+
+    <script src="./pdf_files/jquery-2.2.4.min.js.tải xuống"></script>
+    <script src="./pdf_files/jspdf.min.js.tải xuống"></script>
+
+    
+
+    <script>
+
+
+      function getPDF(selector) {
+      	kendo.drawing.drawDOM($(selector), {
+        paperSize: "auto",
+        forcePageBreak: ".page-break"
+      }).then(function(group){
+          kendo.drawing.pdf.saveAs(group, "Invoice.pdf");
+        });
+      }
+
+    </script>
+    
+
+</div>
+
+
+</body></html>

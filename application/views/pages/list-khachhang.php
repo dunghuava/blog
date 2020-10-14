@@ -1,7 +1,7 @@
 <?php 
 	$data['list_customer']=$this->Customer_M->all(['loai' => 1]);
 ?>
-<section class="sec-content">
+<section class="sec-content <?=isset($setbg) ? $setbg:''?>">
     <div class="container">
         <h3 class="main-title">Khách hàng tin dùng</h3><br>
         <div class="row">

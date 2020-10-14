@@ -21,7 +21,6 @@ class Web extends MY_Controller {
 		$page = $this->Category_M->one(['alias_vn'=>$alias]);
 				
 		if (!empty ($alias) && !empty($page) && $page['module_id']!=3){
-
 			switch ($page['module_id']){
 				case 0 : break;
 				case 1 : $this->blog();break;
@@ -29,7 +28,7 @@ class Web extends MY_Controller {
 				// case 3 : $this->lien_he();break;
 				case 4 : 
 				case 5 :
-				case 6 : $this->tinh_nang();break;
+				case 6 : $this->tinh_nang($alias);break;
 				default : break;
 			}
 		}else{
@@ -43,7 +42,7 @@ class Web extends MY_Controller {
 	}
 	public function blog($alias = '')
 	{	
-		$alias = trim($alias,'.html');
+		$alias = str_replace('.html','',$alias);
 		$info_category = $this->Category_M->find(['alias_vn'=>$alias]);
 		if ($alias!='') {
 			$data['list_blog']=$this->Post_M->all(['id_loai'=>$info_category['id']],'desc');
@@ -59,7 +58,7 @@ class Web extends MY_Controller {
 	}
 	public function blog_detail($alias = '')
 	{
-		$alias = trim($alias,'.html');
+		$alias = str_replace('.html','',$alias);
 		$id = get_id($alias);
 		$data['info_blog']=$this->Post_M->find(['id'=>$id]);
 		$data['list_blog_nearest']=$this->Post_M->all('','desc');
@@ -80,10 +79,9 @@ class Web extends MY_Controller {
 	}
 	public function tinh_nang($alias="")
 	{
-		$alias = trim($alias,'.html');
-		$id = get_id($alias);
-		$data['info_blog']=$this->Post_M->find(['id'=>$id]);
+		$alias = str_replace('.html','',$alias);
 		$data['path']='tinh-nang';
+		$data['id']=$this->Category_M->one(['alias_vn'=>$alias])['id'];
 		$this->load($data);
 	}
 
