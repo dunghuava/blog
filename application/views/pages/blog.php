@@ -1,3 +1,11 @@
+<style type="text/css">
+    @media only screen and (max-width: 600px){
+        .title-blog, .desc-blog {
+            height: 70px!important;
+        }
+    }
+
+</style>
 <section class="sec-page-title main-color">
     <div class="container">
         <div class="col-md-12">
