@@ -82,8 +82,15 @@
         FB.CustomerChat.showDialog();
     }
     function zalo(){
+      $('.zalo-chat-widget').css("display","none");
         $('.zalo-chat-widget').toggle();
         $('#drag-holder').trigger('click')
     }
+
+     
+
+    // $('.zs-func-minimize').click(function(){  
+    //     $('.zalo-chat-widget').css("display","none");
+    // });
 </script>
 

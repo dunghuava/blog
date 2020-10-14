@@ -56,11 +56,11 @@
                         <li class="btn-close hidden-lg hidden-md text-right" style="color:#fff;font-size:20px">
                             <span class="fa fa-close"></span>
                         </li>
-                        <li class="hidden-lg hidden-md">
+                        <!-- <li class="hidden-lg hidden-md">
                             <a href="">
                                 <img src="<?=base_url('upload/logo.png')?>" alt="">
                             </a>
-                        </li>
+                        </li> -->
                         <li><a href="<?=base_url()?>">Trang chủ</a></li>
                         <?php 
                             $all_category = $this->Category_M->all(['hien_thi'=>1,'id_loai'=>0]);

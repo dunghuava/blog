@@ -3,7 +3,7 @@
         <div class="slider-item">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 hidden-xs">
+                    <div class="col-md-6">
                         <img src="<?=base_url('upload/img01.png')?>" alt="">
                     </div>
                     <div class="col-md-6">
@@ -15,6 +15,7 @@
                             <br>
                             <br>
                             <button type="button" onclick="$('#form-dangky').addClass('opened')" class="btn btn-default btn-sm">Tư vấn triển khai</button>
+                            <br><br>
                     </div>
                 </div>
             </div>
@@ -33,6 +34,7 @@
                         <br>
                         <br>
                         <button type="button" onclick="$('#form-dangky').addClass('opened')" class="btn btn-default btn-sm">Tư vấn triển khai</button>
+                        <br><br>
                     </div>
                 </div>
             </div>
@@ -113,7 +115,7 @@
             </div>
             <?php foreach ($list_tai_sao as $key => $item) {?>
             <div class="col-md-3 col-xs-6">
-                <div class="item-view">
+                <div class="item-view" style="height: 150px;">
                     <p><img src="<?=resizeImg($item['hinh_anh'],70,70,0)?>" alt=""></p>
                     <h4><b><?=$item['ten_vn']?></b></h4>
                 </div>
