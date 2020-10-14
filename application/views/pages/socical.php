@@ -43,7 +43,7 @@
         logged_out_greeting="Chat với chúng tôi hoặc gọi 19001238.">
         </div>
     </div>
-    <div onclick="$('.zalo-chat-widget').toggle()" title="Zalo" class="item fa-zalo">
+    <div onclick="zalo()" title="Zalo" class="item fa-zalo">
         <div class="icon fa-zalo">
             <span class="fa fa-zalo"></span>
         </div>
@@ -81,6 +81,9 @@
     function facebook() {
         FB.CustomerChat.showDialog();
     }
-
+    function zalo(){
+        $('.zalo-chat-widget').toggle();
+        $('#drag-holder').trigger('click')
+    }
 </script>
 

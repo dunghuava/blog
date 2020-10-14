@@ -1,5 +1,5 @@
 
-    <?php include ('pages/socical-network.php') ?>
+    <?php include ('pages/socical.php') ?>
 
     <form action="" id="form-dangky">
         <table>
