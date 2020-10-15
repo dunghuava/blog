@@ -76,7 +76,9 @@
                 </div>
                 <div class="col-md-3">
                     <h3 class="footer-title">Blog</h3>
-                    <?php foreach ($list_blog as $key => $blog) {?>
+                    <?php foreach ($list_blog as $key => $blog) {
+                        if ($key < 4) {
+                    ?>
                     <li class="small-blog">
                         <a href="<?=base_url('p/'.$blog['alias_vn'].'-'.$blog['id'])?>.html" style="color:#fff">
                             <div style="display:flex">
@@ -86,7 +88,7 @@
                             <p><span class="fa fa-calendar">&nbsp;</span><?=date('d/m/Y',strtotime($blog['created_at']))?></p>
                         </a>
                     </li>
-                    <?php } ?>
+                    <?php } } ?>
                 </div>
                 <div class="col-md-3">
                     <h3 class="footer-title">Sản phẩm khác của IPCALL</h3>
