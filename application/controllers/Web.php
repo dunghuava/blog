@@ -43,15 +43,23 @@ class Web extends MY_Controller {
 	{	
 		$alias = str_replace('.html','',$alias);
 		$info_category = $this->Category_M->find(['alias_vn'=>$alias]);
-		if ($alias!='') {
+		$data['info_category']= $info_category;
+
+		if ($info_category['id_loai'] ==0) {
+			$data['list_blog']=$this->Post_M->getListPost_byCategory($info_category['id']);
+			$data['list_blog_nearest']=$this->Post_M->getListPost_byCategory($info_category['id']);
+			$data['list_category']=$this->Category_M->all(['id_loai'=>$info_category['id']]);
+		}
+		else{
 			$data['list_blog']=$this->Post_M->all(['id_loai'=>$info_category['id']],'desc');
-		}else{
-			$data['list_blog']=$this->Post_M->all('','desc');
+			$data['list_blog_nearest']=$this->Post_M->getListPost_byCategory($info_category['id_loai']);
+			$data['list_category']=$this->Category_M->all(['id_loai'=>$info_category['id_loai']]);
 		}
 
-		$data['list_blog_nearest']=$this->Post_M->all('','desc');
 		
-		$data['list_category']=$this->Category_M->all(['id_loai'=>6]);
+		
+		
+		
 		$data['path']='blog';
 		$this->load($data);
 	}
@@ -60,8 +68,19 @@ class Web extends MY_Controller {
 		$alias = str_replace('.html','',$alias);
 		$id = get_id($alias);
 		$data['info_blog']=$this->Post_M->find(['id'=>$id]);
-		$data['list_blog_nearest']=$this->Post_M->all('','desc');
-		$data['list_category']=$this->Category_M->all(['id_loai'=>6]);
+		$info_category = $this->Category_M->find(['id'=>$data['info_blog']['id_loai']]);
+		$data['info_category']= $info_category;
+
+		if ($info_category['id_loai'] ==0) {
+			$data['list_blog']=$this->Post_M->getListPost_byCategory($info_category['id']);
+			$data['list_blog_nearest']=$this->Post_M->getListPost_byCategory($info_category['id']);
+			$data['list_category']=$this->Category_M->all(['id_loai'=>$info_category['id']]);
+		}
+		else{
+			$data['list_blog']=$this->Post_M->all(['id_loai'=>$info_category['id']],'desc');
+			$data['list_blog_nearest']=$this->Post_M->getListPost_byCategory($info_category['id_loai']);
+			$data['list_category']=$this->Category_M->all(['id_loai'=>$info_category['id_loai']]);
+		}
 		$data['path']='blog-detail';
 		$this->load($data);
 	}

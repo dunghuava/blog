@@ -9,7 +9,7 @@
 <section class="sec-page-title main-color">
     <div class="container">
         <div class="col-md-12">
-            <h2 style="color:#fff">Blog</h2>
+            <h2 style="color:#fff"><?=$data['info_category']['ten_vn']?></h2>
         </div>
     </div>
 </section>
@@ -17,7 +17,8 @@
     <div class="container">
         <div class="col-md-9" style="border-right:1px solid #ccc">
             <div class="row">
-                <?php foreach ($data['list_blog'] as $key => $blog) {?>
+                <?php 
+                foreach ($data['list_blog'] as $key => $blog) {?>
                     <div class="col-md-4 col-xs-6">
                         <div class="item-blog">
                             <a href="<?=base_url('p/'.$blog['alias_vn'].'-'.$blog['id'])?>.html">

@@ -1,7 +1,7 @@
 <section class="sec-page-title main-color">
     <div class="container">
         <div class="col-md-12">
-            <h2 style="color:#fff">Blog</h2>
+            <h2 style="color:#fff"><?=$data['info_category']['ten_vn']?></h2>
         </div>
     </div>
 </section>
