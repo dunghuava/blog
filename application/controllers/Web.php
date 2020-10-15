@@ -12,6 +12,7 @@ class Web extends MY_Controller {
 		$this->load->model('Category_M');
 		$this->load->model('Post_M');
 		$this->load->model('Contact_M');
+		$this->load->model('Content_M');
 	}
 	
 	public function index($alias="")
@@ -23,12 +24,10 @@ class Web extends MY_Controller {
 		if (!empty ($alias) && !empty($page) && $page['module_id']!=3){
 			switch ($page['module_id']){
 				case 0 : break;
-				case 1 : $this->blog();break;
+				case 1 : $this->blog($alias);break;
 				case 2 : $this->bang_gia();break;
-				// case 3 : $this->lien_he();break;
-				case 4 : 
-				case 5 :
-				case 6 : $this->tinh_nang($alias);break;
+				case 3 : $this->lien_he();break;
+				case 4 : $this->tinh_nang($alias);break;
 				default : break;
 			}
 		}else{

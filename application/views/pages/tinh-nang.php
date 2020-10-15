@@ -5,53 +5,12 @@
         margin:auto;
     }
 </style>
-<section class="sec-slider">
-    <div class="main-slider">
-        <div class="slider-item">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 hidden-xs">
-                        <img src="<?=base_url('upload/img01.png')?>" alt="">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>
-                            CRM Contact Center <br>
-                        </h2>
-                        <h3>Case management  - Quản lý chăm sóc khách hàng đa kênh hợp nhất <br>
-                            Hợp nhất đa kênh omni-channel như thoại, email, website, live chat, sms, social media (facebook, zalo,...) tại một giao diện duy nhất.    </h3>
-                            <br>
-                            <br>
-                            <button type="button" onclick="$('#form-dangky').addClass('opened')" class="btn btn-default btn-sm">Tư vấn triển khai</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-item">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="<?=base_url('upload/img02.png')?>" alt="">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>
-                            CRM Contact Center <br>
-                        </h2>
-                        <h3> Giúp nâng cao hiệu suất làm việc của nhân viên telesales với chiến dịch quy số tự động Predictive Dialer</h3>
-                        <br>
-                        <br>
-                        <button type="button" onclick="$('#form-dangky').addClass('opened')" class="btn btn-default btn-sm">Tư vấn triển khai</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+<?php include ('slider.php') ?>
 <section class="over-section" id="over-section">
     <div class="container">
         <div class="row">
             <?php  
-                $submenu=$this->Category_M->all(['id_loai'=>$data['id']]);
+                $submenu=$this->Category_M->all(['id_loai'=>$data['id'],'hien_thi'=>1]);
             ?>
             <?php foreach ($submenu as $key => $item) {?>
                 <a href="<?=fullAddress().'#'.$item['id']?>">
@@ -68,7 +27,7 @@
 </section>
 <?php 
     foreach ($submenu as $key =>$item){ 
-    $post = $this->Post_M->all(['id_loai'=>$item['id']]);
+    $post = $this->Post_M->all(['id_loai'=>$item['id'],'hien_thi'=>1]);
 ?>
 <section id="<?=$item['id']?>" class="sec-content <?=$key%2==0 ? 'bg-blue':''?>" id="7">
     <div class="container">
@@ -87,7 +46,7 @@
                         <div id="tab_<?=$p['id']?>" class="tab-pane fade in <?=$k==0 ? 'active':'no-active'?>">
                             <div class="row">
                                 <div class="col-md-6 text-center">
-                                    <img src="<?=resizeImg($p['hinh_anh'],350,350,0)?>" alt="">
+                                    <img src="<?=base_url('upload/images/'.$p['hinh_anh'])?>" alt="">
                                 </div>
                                 <div class="col-md-6 text-left"><br>
                                     <h3 style="color:red"><?=$p['ten_vn']?></h3>
