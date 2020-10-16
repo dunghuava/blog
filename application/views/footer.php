@@ -81,7 +81,8 @@
             <div class="row">
                 <div class="col-md-3">
                     <h3 class="footer-title">Giới thiệu</h3>
-                    <p><img src="<?=resizeImg($info[0]['logo'],190,80,0)?>" alt=""> IPCALL là sản phẩm được nghiên cứu và phát triển bởi CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MITEK giúp các doanh nghiệp triển khai một giải pháp là sự kết hợp thống nhất các phương thức tương tác giữa khách hàng với doanh nghiệp bằng các hình thức như điện thoại, email, website, chat hay gửi SMS Brandname</p>
+                    <p><img src="<?=resizeImg($info[0]['logo'],190,80,0)?>" alt=""><?=strip_tags($info[0]['mo_ta_vn'])?>
+                     </p>
                 </div>
                 <div class="col-md-3">
                     <h3 class="footer-title">Blog</h3>
