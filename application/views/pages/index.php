@@ -162,18 +162,3 @@
     </div>
 </section>
 <?php include ('button-lienhe.php') ?>
-
-<?php if (!check_isMobile()){ ?>
-    <script>
-        window.onscroll = function() {myFunction()};
-        var navbar = document.getElementById("over-section");
-        var sticky = navbar.offsetTop;
-        function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-        }
-    </script>
-<?php } ?>

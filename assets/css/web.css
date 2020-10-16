@@ -663,4 +663,26 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+#backtop {
+  position: fixed;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 14px;
+  bottom: 15%;
+  right: -100px;
+  cursor: pointer;
+  z-index: 999;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: #0C714B;
+}
+
+#backtop:hover {
+  background: orange;
+}
+
+#backtop.ok {
+  right: 2%;
+}
 /*# sourceMappingURL=web.css.map */

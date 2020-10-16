@@ -106,3 +106,13 @@
     $('li.have-menu .sub-menu').hide();
 </script>
 <?php } ?>
+
+<div id="backtop"  title="Về đầu trang">
+    <span class="fa fa-arrow-up"></span>
+</div>
+<script>
+    $("#backtop").click(function() {
+        $("html,body").animate({ scrollTop: 0 },200);
+        return false;
+    });
+</script>

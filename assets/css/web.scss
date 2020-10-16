@@ -466,3 +466,22 @@ html {
         }
     }
 }
+
+#backtop{
+    position: fixed;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 14px;
+    bottom: 15%;
+    right: -100px;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.2s;
+    background: $main_color;
+    &:hover{
+        background: orange;
+    }
+    &.ok{
+        right:2%;
+    }
+}
