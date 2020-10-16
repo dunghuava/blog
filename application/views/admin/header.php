@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="<?=base_url('assets/lib/font-awesome/css/font-awesome.min.css')?>">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="<?=base_url('assets/css/sweetalert2.css')?>">
+    <link rel="stylesheet" href="<?=base_url('assets/toastr.min.css')?>">
     <link rel="stylesheet" href="<?=base_url('assets/css/datetimepicker.css')?>">
     <script src="<?=base_url('assets/lib/jquery.min.js')?>"></script>
+    <script src="<?=base_url('assets/toastr.min.js')?>"></script>
 
     <style type="text/css">
       .dataTables_wrapper .dataTables_filter input {
@@ -45,3 +47,11 @@
   </tr>
 </table>
     
+<?php 
+  $reponse = $this->session->flashdata('reponse');
+  if (!empty($reponse)){  
+?>
+    <script>toastr.success('Được gửi từ myAdmin', '<?=$reponse['message']?>')</script>
+<?php 
+    } 
+?>
