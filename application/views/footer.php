@@ -52,16 +52,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <p><span class="fa fa-cog"></span>&nbsp;Hỗ trợ 24/7</p>
+                        <a href="tel:<?=$info[0]['hotline']?>" style="color: white;text-decoration: none">
+                            <p><span class="fa fa-cog"></span>&nbsp;Hỗ trợ 24/7</p>
+                        </a>
+                        
                     </div>
                     <div class="col-md-3">
-                        <p><span class="fa fa-envelope"></span>&nbsp;Chi tiết tiện ich tính năng</p>
+                        <a href="<?=base_url('tinh-nang')?>.html" style="color: white;text-decoration: none">
+                            <p><span class="fa fa-envelope"></span>&nbsp;Chi tiết tiện ich tính năng</p>
+                        </a>
                     </div>
                     <div class="col-md-3">
-                        <p><span class="fa fa-address-book"></span>&nbsp;Blog IPCALL</p>
+                        <a href="<?=base_url('blog')?>.html" style="color: white;text-decoration: none">
+                            <p><span class="fa fa-address-book"></span>&nbsp;Blog IPCALL</p>
+                        </a>
                     </div>
                     <div class="col-md-3">
-                        <p><span class="fa fa-phone"></span>&nbsp;Gọi hỗ trợ 24/7 hotline: <?=$info[0]['hotline']?></p>
+                        <a href="tel:<?=$info[0]['hotline']?>" style="color: white;text-decoration: none">
+                            <p><span class="fa fa-phone"></span>&nbsp;Gọi hỗ trợ 24/7 hotline: <?=$info[0]['hotline']?></p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -72,7 +81,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <h3 class="footer-title">Giới thiệu</h3>
-                    <p><img src="<?=resizeImg($info[0]['logo'],154,59,0)?>" alt=""> IPCALL là sản phẩm được nghiên cứu và phát triển bởi CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MITEK giúp các doanh nghiệp triển khai một giải pháp là sự kết hợp thống nhất các phương thức tương tác giữa khách hàng với doanh nghiệp bằng các hình thức như điện thoại, email, website, chat hay gửi SMS Brandname</p>
+                    <p><img src="<?=resizeImg($info[0]['logo'],190,80,0)?>" alt=""> IPCALL là sản phẩm được nghiên cứu và phát triển bởi CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ MITEK giúp các doanh nghiệp triển khai một giải pháp là sự kết hợp thống nhất các phương thức tương tác giữa khách hàng với doanh nghiệp bằng các hình thức như điện thoại, email, website, chat hay gửi SMS Brandname</p>
                 </div>
                 <div class="col-md-3">
                     <h3 class="footer-title">Blog</h3>
@@ -111,10 +120,10 @@
                     <div class="contact-social-links">
                         <ul>
                             <li style="float: left;margin-right: 15px">
-                                <a href="https://www.facebook.com/micxm.contactcenter/" style="font-size: 25px;font-weight: bold;"><i class="fa  fa-facebook"></i></a>
+                                <a href="<?=$info[0]['facebook']?>" style="font-size: 25px;font-weight: bold;"><i class="fa  fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/channel/UC_GUS6PQA981lzvKG9NPz7Q" style="font-size: 25px;font-weight: bold;color: red"><i class="fa  fa-youtube"></i></a>
+                                <a href="<?=$info[0]['youtube']?>" style="font-size: 25px;font-weight: bold;color: red"><i class="fa  fa-youtube"></i></a>
                             </li>
                         </ul>
                     </div>

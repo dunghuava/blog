@@ -32,8 +32,8 @@
                     <div class="text-right">
                         <li><span class="fa fa-question-circle"></span><a href="<?=base_url('cham-soc-khach-hang')?>.html">FAQ</a></li>
                         <li><span class="fa fa-phone"></span><a onclick="$('#form-dangky').addClass('opened')" href="javascript:void(0)">Đăng ký thử nghiệm</a></li>
-                        <li><span class="fa fa-facebook"></span><a href=""></a></li>
-                        <li><span class="fa fa-youtube"></span><a href=""></a></li>
+                        <li><span class="fa fa-facebook"></span><a href="<?=$info[0]['facebook']?>"></a></li>
+                        <li><span class="fa fa-youtube"></span><a href="<?=$info[0]['youtube']?>"></a></li>
                     </div>
                 </div>
             </div>    
@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <a href="">
-                        <img src="<?=resizeImg($info[0]['logo'],154,59,0)?>" alt="">
+                        <img src="<?=resizeImg($info[0]['logo'],190,80,0)?>" alt="">
                     </a>
                     <span id="btn-bars" class="hidden-lg hidden-md" style="color:#fff;float:right;font-size:20px;margin-top:15px">
                         <span class="fa fa-bars"></span>&nbsp;menu
