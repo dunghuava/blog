@@ -25,18 +25,18 @@
             <div class="col-md-6">
                 <div class="contact-address" style="color:#333333">
                     <h3 class="main-title main-title1" style="text-align: left;">Địa chỉ liên hệ</h3>
-                    <p> CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ IPCALL</p>
-                    <p> Tầng 1, Tòa nhà PVFCCO, 43 Mạc Đĩnh Chi, P.Đa Kao, Quận 1, Tp.HCM   <br> Địa chỉ giao dịch: 271/10 An Dương Vương, P.3, Q.5, Tp. HCM</p
+                    <p><?=$info[0]['mo_ta_vn']?></p>
+                    <p><?=$info[0]['dia_chi_vn']?></p
                     >
-                    <p><i class="fa  fa-phone"></i>  Hotline: 19001238 hoặc (028)7777 0888</p>
-                    <p><i class="fa  fa-envelope-o"></i> Email: ipcall@gmail.com</p>
+                    <p><i class="fa  fa-phone"></i>  Hotline: <?=$info[0]['hotline']?></p>
+                    <p><i class="fa  fa-envelope-o"></i> Email: <?=$info[0]['email']?></p>
                     <div class="contact-social-links">
                         <ul>
                             <li style="float: left;margin-right: 15px">
-                                <a href="https://www.facebook.com/micxm.contactcenter/" style="font-size: 25px;font-weight: bold;"><i class="fa  fa-facebook"></i></a>
+                                <a href="<?=$info[0]['facebook']?>" style="font-size: 25px;font-weight: bold;"><i class="fa  fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/channel/UC_GUS6PQA981lzvKG9NPz7Q" style="font-size: 25px;font-weight: bold;color: red"><i class="fa  fa-youtube"></i></a>
+                                <a href="<?=$info[0]['youtube']?>" style="font-size: 25px;font-weight: bold;color: red"><i class="fa  fa-youtube"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -44,23 +44,23 @@
             </div>
             <form id="form-contact" method="POST">
                 <div class="col-md-6 contact-form">
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="margin-bottom: 10px">
                         <label class="midesk_label_title">Tên doanh nghiệp<span style="color: red">(*)</span></label>
                         <input type="text" id="doanh_nghiep" name="doanh_nghiep" class="form-control" placeholder="Tên doanh nghiệp" required="">
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="margin-bottom: 10px">
                         <label class="midesk_label_title">Họ tên<span style="color: red">(*)</span></label>
                         <input type="text" id="ten" name="ten" class="form-control" placeholder="Nhập họ tên bạn" required="">
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="margin-bottom: 10px">
                         <label class="midesk_label_title">Số điện thoại<span style="color: red">(*)</span></label>
                         <input type="text" id="sdt" name="sdt" class="form-control" placeholder="" required="">
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="margin-bottom: 10px">
                         <label class="midesk_label_title">Email<span style="color: red">(*)</span></label>
                         <input type="email" id="email" name="email" class="form-control" placeholder="" required="">
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="margin-bottom: 10px">
                         <label class="midesk_label_title">Nội dung<span style="color: red">(*)</span></label>
                         <textarea id="noi_dung" name="noi_dung" class="form-control" placeholder="" required=""></textarea>
                     </div>
