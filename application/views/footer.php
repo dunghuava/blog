@@ -103,11 +103,11 @@
                 <div class="col-md-3">
                     <h3 class="footer-title">Sản phẩm khác của IPCALL</h3>
                     <ul class="ls-ft-pro">
-                        <li><a href="">MiPBX - Tổng đài doanh nghiệp</a></li>
-                        <li><a href="">MiPBX - Tổng đài doanh nghiệp</a></li>
-                        <li><a href="">MiPBX - Tổng đài doanh nghiệp</a></li>
-                        <li><a href="">MiPBX - Tổng đài doanh nghiệp</a></li>
-                        <li><a href="">MiPBX - Tổng đài doanh nghiệp</a></li>
+                        <?php foreach ($sanpham_khac as $key => $sanpham) {
+                            if ($key < 5) {
+                        ?>
+                            <li style="margin: 15px;"><a href="<?=$sanpham['url']?>"><?=$sanpham['ten_vn']?></a></li>
+                        <?php } } ?>
                     </ul>
                 </div>
                 <div class="col-md-3">

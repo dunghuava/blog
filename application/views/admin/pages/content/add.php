@@ -33,6 +33,14 @@
                 </select>
             </td>
         </tr>
+
+        <tr>
+            <th width="150px" align="left">Liên kết (url)</th>
+            <td>
+               <input value="<?=$content['url']?>" style="width:300px" type="text" name="url" id="url">
+            </td>
+        </tr>
+
         <tr>
             <th width="150px" align="left">Mô tả ngắn</th>
             <td>

@@ -7,6 +7,8 @@ class MY_Controller extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Info_M');
 		$this->load->model('Contact_M');
+		$this->load->model('Content_M');
+		$this->load->model('Post_M');
 	}
 	public function include($page=array())
 	{
@@ -26,6 +28,7 @@ class MY_Controller extends CI_Controller {
 		$data['data']=$page;
 		$data['info'] = $this->Info_M->all();
 		$data['list_blog']=$this->Post_M->getListPost_byCategory(6);
+		$data['sanpham_khac']=$this->Content_M->all(['id_loai'=>15]);
 		$this->load->view('header', $data);
 		$this->load->view('pages/'.$data['data']['path'],$data);
 		$this->load->view('footer', $data);

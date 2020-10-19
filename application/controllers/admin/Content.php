@@ -2,22 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Content extends MY_Controller {
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/Content
-	 *	- or -
-	 * 		http://example.com/index.php/Content/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/Content/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -50,6 +34,7 @@ class Content extends MY_Controller {
 				'mo_ta_vn'		=>$post['mo_ta_vn'],
 				'noi_dung_vn'	=>$post['noi_dung_vn'],
 				'id_loai'		=>$post['id_loai'],
+				'url'		=>$post['url'],
 				'hien_thi'		=>isset($post['hien_thi']) ? 1:0,
 			);
 			if (isset($_FILES['hinh_anh']['name'])){
@@ -84,6 +69,7 @@ class Content extends MY_Controller {
 				'mo_ta_vn'		=>$post['mo_ta_vn'],
 				'noi_dung_vn'	=>$post['noi_dung_vn'],
 				'id_loai'		=>$post['id_loai'],
+				'url'		    =>$post['url'],
 				'hien_thi'		=>isset($post['hien_thi']) ? 1:0,
 			);
 			if (isset($_FILES['hinh_anh']['name'])){
