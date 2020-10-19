@@ -199,7 +199,6 @@
         
 
     </script>
-    <?php if (!check_isMobile()){ ?>
         <script>
             window.onscroll = function() {myFunction()};
             var navbar = document.getElementById("over-section");
@@ -210,13 +209,14 @@
                 }else{
                     $('#backtop').removeClass('ok');
                 }
-                if (window.pageYOffset >= sticky) {
-                    navbar.classList.add("sticky")
-                } else {
-                    navbar.classList.remove("sticky");
-                }
+                <?php if (!check_isMobile()){ ?>
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky")
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                <?php } ?>
             }
         </script>
-    <?php } ?>
 </body>
 </html>
