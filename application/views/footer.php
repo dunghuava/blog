@@ -211,12 +211,20 @@
                 }
                 <?php if (!check_isMobile()){ ?>
                     if (window.pageYOffset >= sticky) {
-                        navbar.classList.add("sticky")
+                        navbar.classList.add("sticky");
+                        $('#page-break').show();
                     } else {
                         navbar.classList.remove("sticky");
+                        $('#page-break').hide();
                     }
                 <?php } ?>
             }
+            $(document).ready(function () {
+                if (location.pathname!='/'){
+                    var offset = $('#blockslide').offset();                   
+                    $("html,body").animate({ scrollTop:offset.top },200);
+                }
+            });
         </script>
 </body>
 </html>

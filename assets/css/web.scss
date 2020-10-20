@@ -292,13 +292,24 @@ html {
 .ls-main-menu{
     li.have-menu{
         position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 160%;
+            padding: 15px;
+            background: transparent;
+            top: 70%;
+            left: -80%;
+            right: -80%;
+            margin: auto;
+        }
         ul.sub-menu{
             position: absolute;
             width: 500px;
             background: #ffffff;
             z-index: 999;
             right: 0%;
-            top: 100%;
+            top: 95%;
             border-radius: 5px;
             display: none;
             animation: fadeOut 0.4s;
@@ -306,7 +317,7 @@ html {
                 content: '';
                 border: 17px solid transparent;
                 border-bottom: 17px solid #ffffff;
-                top: -30px;
+                top: -26px;
                 right: 30px;
                 position: absolute;
             }

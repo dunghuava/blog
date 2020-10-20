@@ -26,3 +26,4 @@
         <?php } ?>
     </div>
 </section>
+<div id="blockslide"></div>

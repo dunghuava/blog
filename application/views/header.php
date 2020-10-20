@@ -80,7 +80,7 @@
                                     foreach ($list_sub as $key => $sub) {
                                 ?>
                                 <li style="width: 45%"><img src="<?=resizeImg($sub['hinh_anh'],25,25,0)?>" alt="">&nbsp;
-                                    <a href="" style="font-size: 14px"><?=$sub['ten_vn']?></a>
+                                    <a href="<?=base_url($item['alias_vn'])?>.html#<?=$sub['id']?>" style="font-size: 14px"><?=$sub['ten_vn']?></a>
                                     <br>
                                     <p class="sub-title"><?=strip_tags(mb_substr($sub['mo_ta_vn'], 0, 100,"UTF-8").' ...');?></p>
                                 </li>
@@ -100,6 +100,7 @@
         </div>
     </div>
 </nav>
+<div style="display:none" id="page-break"><br><br></div>
 <?php 
     if (check_isMobile()){
 ?>
