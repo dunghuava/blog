@@ -28,10 +28,10 @@
                 <?php  
                     $dich_vu=$this->Category_M->find(['id'=>7]);
                 ?>
-                <div style="text-align: left;"><?=$dich_vu['mo_ta_vn']?></div>
-                <br><p>
+                <div><?=$dich_vu['mo_ta_vn']?></div>
+                <!-- <br><p>
                     <iframe class="frm-reponsive" width="560" height="315" src="https://www.youtube.com/embed/gssduBBhbc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
+                </p> -->
             </div>
         </div>
     </div>
