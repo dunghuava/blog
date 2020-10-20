@@ -20,7 +20,7 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-body text-center">
-         <h4><b>Hiện đang ngoài giờ làm việc, xin quý khách vui lòng gọi vào số hotline: 0383868205</b></h4>
+         <h4><b>Xin quý khách vui lòng gọi vào số hotline: <?=$info[0]['hotline']?></b></h4>
          <p>Xin cảm ơn !</p>
       </div>
     </div>
@@ -54,9 +54,15 @@
         </div>
     </div>
     <div title="Callback" class="item">
+      <?php if (!check_isMobile()){ ?>
         <div data-toggle="modal" data-target="#callback" class="icon">
             <span class="fa fa-phone"></span>
         </div>
+      <?php }else{ ?>
+        <a href="tel:<?=$info[0]['hotline']?>" class="icon" style="color: white;">
+            <span class="fa fa-phone"></span>
+        </a>
+      <?php } ?>
     </div>
 </div>
 <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>

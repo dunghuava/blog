@@ -13,7 +13,7 @@
                 <a href="<?=fullAddress().'#banggia'?>">
                 <div class="col-md-6 col-xs-6">
                     <div class="item-over">
-                        <p><img src="<?=resizeImg('bang_gia.png',48,48,0)?>" alt=""></p>
+                        <p><img src="<?=resizeImg('bang_gia.png',38,38,0)?>" alt=""></p>
                         <p>Bảng giá gói dịch vụ</p>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <a href="<?=fullAddress().'#chitiet'?>">
                 <div class="col-md-6 col-xs-6">
                     <div class="item-over">
-                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',48,48,0)?>" alt=""></p>
+                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',38,38,0)?>" alt=""></p>
                         <p>Chi tiết gói dịch vụ</p>
                     </div>
                 </div>

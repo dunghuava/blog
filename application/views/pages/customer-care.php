@@ -20,7 +20,7 @@
                 <a href="<?=fullAddress().'#cauhoi'?>">
                 <div class="col-md-2 col-xs-6">
                     <div class="item-over">
-                        <p><img src="<?=resizeImg('bang_gia.png',48,48,0)?>" alt=""></p>
+                        <p><img src="<?=resizeImg('bang_gia.png',38,38,0)?>" alt=""></p>
                         <p>Câu hỏi thường gặp</p>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                 <a href="<?=fullAddress().'#doisoat'?>">
                 <div class="col-md-2 col-xs-6">
                     <div class="item-over">
-                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',48,48,0)?>" alt=""></p>
+                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',38,38,0)?>" alt=""></p>
                         <p>Hướng dẫn đối soát</p>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                 <a href="<?=fullAddress().'#thanhtoan'?>">
                 <div class="col-md-2 col-xs-6">
                     <div class="item-over">
-                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',48,48,0)?>" alt=""></p>
+                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',38,38,0)?>" alt=""></p>
                         <p>Hướng dẫn thanh toán</p>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                 <a href="<?=fullAddress().'#khieunai'?>">
                 <div class="col-md-2 col-xs-6">
                     <div class="item-over">
-                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',48,48,0)?>" alt=""></p>
+                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',38,38,0)?>" alt=""></p>
                         <p>Giải quyết sự cố khiếu nại</p>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                 <a href="<?=fullAddress().'#sudung'?>">
                 <div class="col-md-2 col-xs-6">
                     <div class="item-over">
-                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',48,48,0)?>" alt=""></p>
+                        <p><img src="<?=resizeImg('chtiet_dich_vu.png',38,38,0)?>" alt=""></p>
                         <p>Sử dụng Yealink T19E2</p>
                     </div>
                 </div>

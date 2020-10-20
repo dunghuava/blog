@@ -73,7 +73,7 @@
 
                             <?php  
                                 $list_sub = $this->Category_M->all(['hien_thi'=>1,'id_loai'=>$item['id']]);
-                                if (!empty($list_sub) && $item['module_id'] !=1) {
+                                if (!empty($list_sub)) {
                             ?>
                             <ul class="sub-menu" style="width: 550px">
                                 <?php 

@@ -16,7 +16,7 @@
                 <a href="<?=fullAddress().'#'.$item['id']?>">
                 <div class="col-md-3 col-xs-6">
                     <div class="item-over">
-                        <p><img src="<?=resizeImg($item['hinh_anh'],48,48,0)?>" alt=""></p>
+                        <p><img src="<?=resizeImg($item['hinh_anh'],38,38,0)?>" alt=""></p>
                         <p><?= $item['ten_vn'] ?></p>
                     </div>
                 </div>
