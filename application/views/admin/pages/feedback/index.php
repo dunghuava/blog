@@ -41,6 +41,8 @@
                             [Xem / Sửa]
                         </a>
 
+                        <br>
+                        <br>
 
                         <a style="color:red;cursor: pointer;" onclick="onDelete(<?=$val['id']?>)" >[Xóa]</a>
 

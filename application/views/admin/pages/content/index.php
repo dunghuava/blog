@@ -53,6 +53,8 @@
                         <a href="<?=base_url('admin/content/edit/'.$val['id'])?>">
                             [Xem / Sửa]
                         </a>
+                        <br>
+                        <br>
                         <a style="color:red;cursor: pointer;" onclick="onDelete(<?=$val['id']?>)" >[Xóa]</a>
                     </td>
                 </tr>
