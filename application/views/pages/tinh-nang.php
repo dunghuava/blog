@@ -9,7 +9,7 @@
                 $submenu=$this->Category_M->all(['id_loai'=>$data['id'],'hien_thi'=>1]);
             ?>
             <?php foreach ($submenu as $key => $item) {?>
-                <a href="<?=fullAddress().'#'.$item['id']?>">
+                <a href="javascript:scrollID(<?=$item['id']?>)">
                 <div class="col-md-3 col-xs-6">
                     <div class="item-over">
                         <p><img src="<?=resizeImg($item['hinh_anh'],38,38,0)?>" alt=""></p>

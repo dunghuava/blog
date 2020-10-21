@@ -214,16 +214,27 @@
                         navbar.classList.add("sticky");
                     } else {
                         navbar.classList.remove("sticky");
-                        
                     }
                 <?php } ?>
             }
             $(document).ready(function () {
                 if (location.pathname!='/'){
                     var offset = $('#blockslide').offset();                   
-                    $("html,body").animate({ scrollTop:offset.top },200);
+                    $("html,body").animate({ scrollTop:(offset.top-50) },200);
                 }
             });
+        </script>
+        <script>
+            function scrollID(id){
+                var offset = $('#'+id).offset();   
+                if ($('#over-section').hasClass('sticky')){   
+                    console.log('has sticky');             
+                    $("html,body").animate({ scrollTop:(offset.top-80) },200);
+                }else{
+                    console.log('not sticky'); 
+                    $("html,body").animate({ scrollTop:(offset.top-150) },200);
+                }
+            }
         </script>
 </body>
 </html>

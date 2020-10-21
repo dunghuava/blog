@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="<?=base_url('assets/lib/slick/slick.css')?>">
     <script src="<?=base_url('assets/lib/jquery.min.js')?>"></script>
     <script src="<?=base_url('assets/lib/slick/slick.min.js')?>"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 <nav class="main-nav <?=check_isMobile() ? 'mobile':''?>">
     <?php 
     if (!check_isMobile()){ ?>
