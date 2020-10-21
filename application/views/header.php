@@ -100,7 +100,6 @@
         </div>
     </div>
 </nav>
-<div style="display:none" id="page-break"><br><br></div>
 <?php 
     if (check_isMobile()){
 ?>

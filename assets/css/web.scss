@@ -1,7 +1,8 @@
 @import "_common.scss";
 @import "_variable.scss";
 
-html {
+html ,body{
+    height: 100%;
     scroll-behavior: smooth;
 }
 .main-nav{
@@ -303,6 +304,18 @@ html {
             right: -80%;
             margin: auto;
         }
+        &::before{
+            content: '';
+            position: absolute;
+            top:70%;
+            height: 2px;
+            background: #fff;
+            width: 0%;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            transition: all 0.4s;
+        }
         ul.sub-menu{
             position: absolute;
             width: 500px;
@@ -340,6 +353,9 @@ html {
         &:hover{
             .sub-menu{
                 display: block;
+            }
+            &::before{
+                width: 100%;
             }
         }
     }
@@ -494,5 +510,38 @@ html {
     }
     &.ok{
         right:2%;
+    }
+}
+
+.nav-my-tab{
+    .btn-tab-content{
+        display: none;
+    }
+    .btn-tab{
+        padding: 9px 15px;
+        background: #0C714B;
+        display: inline-block;
+        color: #fff;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &.active{
+            background: #59d0a3;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -70%;
+                left: 0;
+                right: 0;
+                width: 0;
+                height: 0;
+                margin: -15px auto 0;
+                border-style: solid;
+                border-width: 15px;
+                border-color: transparent;
+                border-top-color: #59d0a3;
+            }
+        }
     }
 }

@@ -99,7 +99,8 @@ img {
   height: auto !important;
 }
 
-html {
+html, body {
+  height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -455,6 +456,20 @@ html {
   margin: auto;
 }
 
+.ls-main-menu li.have-menu::before {
+  content: '';
+  position: absolute;
+  top: 70%;
+  height: 2px;
+  background: #fff;
+  width: 0%;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
 .ls-main-menu li.have-menu ul.sub-menu {
   position: absolute;
   width: 500px;
@@ -497,6 +512,10 @@ html {
 
 .ls-main-menu li.have-menu:hover .sub-menu {
   display: block;
+}
+
+.ls-main-menu li.have-menu:hover::before {
+  width: 100%;
 }
 
 @-webkit-keyframes fadeOut {
@@ -696,5 +715,39 @@ html {
 
 #backtop.ok {
   right: 2%;
+}
+
+.nav-my-tab .btn-tab-content {
+  display: none;
+}
+
+.nav-my-tab .btn-tab {
+  padding: 9px 15px;
+  background: #0C714B;
+  display: inline-block;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.nav-my-tab .btn-tab.active {
+  background: #59d0a3;
+  position: relative;
+}
+
+.nav-my-tab .btn-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -70%;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: -15px auto 0;
+  border-style: solid;
+  border-width: 15px;
+  border-color: transparent;
+  border-top-color: #59d0a3;
 }
 /*# sourceMappingURL=web.css.map */

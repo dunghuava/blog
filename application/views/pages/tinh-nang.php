@@ -1,9 +1,5 @@
 <style>
-    .nav-tabs{
-        border-bottom:0px;
-        width:fit-content;
-        margin:auto;
-    }
+    
 </style>
 <?php include ('slider.php') ?>
 <section class="over-section" id="over-section">
@@ -34,21 +30,22 @@
         <h3 class="main-title"><?=$item['ten_vn']?></h3>
         <div class="row">
             <div class="col-md-12 text-center">
-                <ul class="nav nav-tabs">
+                <ul class="nav-my-tab">
                     <?php foreach ($post as $i =>$p){ ?>
-                        <li class="<?=$i==0 ? 'active':'no-active'?>" style="background: #0c714b !important;margin:5px;border-radius:8px">
-                            <a style="color:#fff;text-decoration:none;background: #0c714b !important;border:none !important;border-radius:8px" data-toggle="tab" href="#tab_<?=$p['id']?>"><?=$p['ten_vn']?></a>
+                        <li idloai="<?=$p['id_loai']?>" idshow="tab_<?=$p['id']?>" class="btn-tab <?=$p['id_loai']?> <?=$i==0 ? 'active':''?>">
+                           <?=$p['ten_vn']?></a>
                         </li>
                     <?php } ?>
+                    <br>
                 </ul>
                 <div class="tab-content">
                     <?php foreach ($post as $k =>$p){ ?>
-                        <div id="tab_<?=$p['id']?>" class="tab-pane fade in <?=$k==0 ? 'active':'no-active'?>">
+                        <div id="tab_<?=$p['id']?>" class="btn-tab-content <?=$p['id_loai']?>" style="display:<?=$k==0 ? 'block':'none'?>">
                             <div class="row">
                                 <div class="col-md-6 text-center">
                                     <img src="<?=base_url('upload/images/'.$p['hinh_anh'])?>" alt="">
                                 </div>
-                                <div class="col-md-6 text-left"><br>
+                                <div class="col-md-6 text-left">
                                     <h3 style="color:red"><?=$p['ten_vn']?></h3>
                                     <p><?=$p['noi_dung_vn']?></p>
                                 </div>
@@ -69,3 +66,15 @@
     $setbg='';
     include ('button-lienhe.php') 
 ?>
+<script>
+ $('.btn-tab').click(function (e) { 
+     e.preventDefault();
+     var content = $(this).attr('idshow');
+     var idloai = $(this).attr('idloai');
+
+     $('.btn-tab.'+idloai).removeClass('active');
+     $(this).addClass('active');
+     $('.btn-tab-content.'+idloai).hide();
+     $('#'+content).show();
+ });
+</script>

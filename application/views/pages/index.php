@@ -1,5 +1,4 @@
 <?php include ('slider.php') ?>
-
 <section class="over-section" id="over-section">
     <div class="container">
         <div class="row">

@@ -212,10 +212,9 @@
                 <?php if (!check_isMobile()){ ?>
                     if (window.pageYOffset >= sticky) {
                         navbar.classList.add("sticky");
-                        $('#page-break').show();
                     } else {
                         navbar.classList.remove("sticky");
-                        $('#page-break').hide();
+                        
                     }
                 <?php } ?>
             }
