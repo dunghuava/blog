@@ -46,7 +46,7 @@
                                     <img src="<?=base_url('upload/images/'.$p['hinh_anh'])?>" alt="">
                                 </div>
                                 <div class="col-md-6 text-left">
-                                    <h3 style="color:red"><?=$p['ten_vn']?></h3>
+                                    <!-- <h3 style="color:red"><?=$p['ten_vn']?></h3> -->
                                     <p><?=$p['noi_dung_vn']?></p>
                                 </div>
                             </div>
