@@ -6,6 +6,9 @@
     <script src="<?=base_url('assets/js/datetimepicker.js')?>"></script>
     <script src="<?=base_url('assets/js/sweetalert2.js')?>"></script>
 
+    <script src="plugins/ckeditor/ckeditor.js"></script>
+    <script src="plugins/ckfinder/ckfinder.js"></script>
+
     <script>
 
         
