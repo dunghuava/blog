@@ -291,6 +291,27 @@ html ,body{
 }
 
 .ls-main-menu{
+    li{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top:70%;
+            height: 2px;
+            background: #fff;
+            width: 0%;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            transition: all 0.4s;
+        }
+        &:hover{
+            &::before{
+                width: 100%;
+            }
+        }
+
+    }
     li.have-menu{
         position: relative;
         &::after{
@@ -303,18 +324,6 @@ html ,body{
             left: -80%;
             right: -80%;
             margin: auto;
-        }
-        &::before{
-            content: '';
-            position: absolute;
-            top:70%;
-            height: 2px;
-            background: #fff;
-            width: 0%;
-            left: 0px;
-            right: 0px;
-            margin: auto;
-            transition: all 0.4s;
         }
         ul.sub-menu{
             position: absolute;
@@ -465,7 +474,7 @@ html ,body{
     position: fixed;
     bottom: 30%;
     right: 2%;
-    z-index: 999;
+    z-index: 800;
 
     .item{
         width: 50px;

@@ -35,22 +35,41 @@
         li{
             padding: 10px !important;
             display: block !important;
+            position: relative;
+            &::before{
+                display: none;
+            }
         }
         li.have-menu{
             position: relative;
             &::after{
-                content: '\f107';
-                font-family: 'FontAwesome';
-                color: #ffffff;
-                right: 10px;
-                top: 8px;
-                position: absolute;
+                content: '\f107' !important;
+                font-family: 'FontAwesome' !important;
+                color: #ffffff !important;
+                right: 10px !important;
+                top: 8px !important;
+                position: absolute !important;
+                left: unset;
+                padding: 0px;
+                width: fit-content;
+            }
+
+            &:hover{
+                .sub-menu{
+                    display: none;
+                }
+
             }
             ul.sub-menu{
                 width: 100% !important;
                 position: relative !important;
                 background: $main_color !important;
 
+                li{
+                    a{
+                        color: red !important;
+                    }
+                }
                 &::after{
                     display: none !important;
                 }
@@ -59,13 +78,25 @@
                 }
                 li{
                     width: 100% !important;
-                    padding-left: 0px !important;
+                    padding-left: 10px !important;
+                    position: relative;
                     a{
                         font-weight: unset;
                         color: #ffffff !important;
                     }
                     p.sub-title{
                         display: none !important;
+                    }
+                    &::before{
+                        content: '-';
+                        display: block;
+                        position: absolute;
+                        top: 8px;
+                        left: 5px;
+                        right: 100%;
+                        height: auto;
+                        margin: unset;
+                        color: #fff;
                     }
                 }
             }

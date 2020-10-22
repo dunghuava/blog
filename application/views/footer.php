@@ -235,6 +235,13 @@
                     $("html,body").animate({ scrollTop:(offset.top-150) },200);
                 }
             }
+            $(window).on('click',function(){
+                if (!$('.ls-main-menu').hasClass('closed')){
+                    $('body').css({'overflow':'hidden'});
+                }else{
+                    $('body').css({'overflow':'auto'});
+                }
+            });
         </script>
 </body>
 </html>

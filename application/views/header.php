@@ -68,12 +68,12 @@
                             $all_category = $this->Category_M->all(['hien_thi'=>1,'id_loai'=>0]);
                             foreach ($all_category as $item)
                             {
+                            $list_sub = $this->Category_M->all(['hien_thi'=>1,'id_loai'=>$item['id']]);
                         ?>
-                        <li class="have-menu">
+                        <li class="<?=!empty($list_sub) ? 'have-menu':''?>">
                             <a href="<?=base_url($item['alias_vn'])?>.html"><?=$item['ten_vn']?></a>
 
                             <?php  
-                                $list_sub = $this->Category_M->all(['hien_thi'=>1,'id_loai'=>$item['id']]);
                                 if (!empty($list_sub)) {
                             ?>
                             <ul class="sub-menu" style="width: 550px">

@@ -440,6 +440,28 @@ html, body {
   border: double;
 }
 
+.ls-main-menu li {
+  position: relative;
+}
+
+.ls-main-menu li::before {
+  content: '';
+  position: absolute;
+  top: 70%;
+  height: 2px;
+  background: #fff;
+  width: 0%;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.ls-main-menu li:hover::before {
+  width: 100%;
+}
+
 .ls-main-menu li.have-menu {
   position: relative;
 }
@@ -454,20 +476,6 @@ html, body {
   left: -80%;
   right: -80%;
   margin: auto;
-}
-
-.ls-main-menu li.have-menu::before {
-  content: '';
-  position: absolute;
-  top: 70%;
-  height: 2px;
-  background: #fff;
-  width: 0%;
-  left: 0px;
-  right: 0px;
-  margin: auto;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
 }
 
 .ls-main-menu li.have-menu ul.sub-menu {
@@ -662,7 +670,7 @@ html, body {
   position: fixed;
   bottom: 30%;
   right: 2%;
-  z-index: 999;
+  z-index: 800;
 }
 
 #socical_network .item {
