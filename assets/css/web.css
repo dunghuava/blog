@@ -518,6 +518,11 @@ html, body {
   overflow: hidden;
 }
 
+.ls-main-menu li.have-menu ul.sub-menu li::before {
+  content: '';
+  display: none !important;
+}
+
 .ls-main-menu li.have-menu:hover .sub-menu {
   display: block;
 }
