@@ -126,7 +126,7 @@ img {
     z-index: 999;
     height: 100%;
     overflow-y: auto;
-    width: calc(100% - 150px);
+    width: calc(100% - 110px);
     -webkit-transition: all 1s;
     transition: all 1s;
   }
