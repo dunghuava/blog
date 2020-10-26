@@ -209,13 +209,11 @@
                 }else{
                     $('#backtop').removeClass('ok');
                 }
-                <?php if (!check_isMobile()){ ?>
-                    if (window.pageYOffset >= sticky) {
-                        navbar.classList.add("sticky");
-                    } else {
-                        navbar.classList.remove("sticky");
-                    }
-                <?php } ?>
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
+                } else {
+                    navbar.classList.remove("sticky");
+                }
             }
             $(document).ready(function () {
                 if (location.pathname!='/'){
