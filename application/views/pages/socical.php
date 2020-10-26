@@ -27,6 +27,8 @@
   </div>
 </div>
 <div id="socical_network">
+  <?php  if (!check_isMobile()){ ?>
+  
     <div onclick="facebook()" title="Facebook" class="item">
         <div class="icon">
             <span class="fa fa-facebook"></span>
@@ -43,6 +45,16 @@
         logged_out_greeting="Chat với chúng tôi hoặc gọi 19001238.">
         </div>
     </div>
+
+  <?php }else{ ?>
+
+    <div onclick="location.href='https://m.me/107857070823040'" title="Facebook" class="item">
+        <div class="icon">
+            <span class="fa fa-facebook"></span>
+        </div>
+    </div>
+  <?php } ?>
+
     <div onclick="zalo()" title="Zalo" class="item fa-zalo">
         <div class="icon fa-zalo">
             <span class="fa fa-zalo"></span>

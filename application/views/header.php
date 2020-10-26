@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
     <?php include ('pages/seo.php') ?>
+    <link rel="icon" type="image/png" href="<?=base_url('upload/images/').$info[0]['icon']?>" />
+    <link rel="Shortcut Icon" type="image/png" href="<?=base_url('upload/images/').$info[0]['icon']?>" />
     <base href="<?=base_url()?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=base_url('assets/lib/bootstrap/css/bootstrap.min.css')?>">
